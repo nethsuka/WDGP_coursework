@@ -1,44 +1,51 @@
 let cart_items = [
     {
+        id : 0,
         name : 'Swimming Goggles',
-        quantity : 0,
+        quantity : 1,
         price : 200,
         image : 'img/goggle.jfif'
 
     },
     {
+        id : 1,
         name : 'Diving maskes',
-        quantity : 0,
+        quantity : 1,
         price : 800,
         image : 'img/diving mask.jpg'
     },
     {
+        id : 2,
         name : 'Swimming suit',
-        quantity : 0,
+        quantity : 1,
         price : 100,
         image : 'img/suit.jfif'
     },
     {
+        id : 3,
         name : 'Underwater watch band',
-        quantity : 0,
+        quantity : 1,
         price : 700,
         image : 'img/watch.jfif'
     },
     {
+        id : 4,
         name : 'Swimming bags',
-        quantity : 0,
+        quantity : 1,
         price : 500,
         image : 'img/bag.jfif'
     },
     {
+        id : 5,
         name : 'Swimming cap',
-        quantity : 0,
+        quantity : 1,
         price : 200,
         image : 'img/swimmimg_cap.jfif'
     },
     {
+        id : 6,
         name : 'Life Jacket',
-        quantity : 0,
+        quantity : 1,
         price : 130,
         image : 'img/jacket.jfif'
     },
@@ -61,8 +68,17 @@ let cart = [];
 
 
     function addToBasket(a){
-        cart.push(cart_items[a]);
-        displayCart();
+
+        for(let obj of cart){
+            if(obj.id == cart_items[a].id){
+                obj.quantity++;
+                displayCart();
+                getTotal()
+                return;
+            }
+        }
+        cart.push({...cart_items[a]});  // ...cart_items[a]  this methode is used to copy and object which is creating a new object 
+        displayCart();                  // from the original object
         getTotal()
     }
 
@@ -73,7 +89,7 @@ let cart = [];
             document.querySelector('.basket-item').innerHTML = "<p>Your cart is empty !</p>";
         }else{
             document.querySelector('.container2').innerHTML = cart.map(item => {
-                let {name , image, price } = item;
+                let {id, name , image, price , quantity} = item;
                 return(
                     `<div class="basket-item">
                     <img src="${image}" alt="" style="float:left;height:50px;margin-right:10px">
@@ -81,7 +97,7 @@ let cart = [];
                     <span>price : ${price}</span><br>
                     <div class="q-box">
                         <button class="plus">+</button>
-                        <span class="quantity_num">01</span>
+                        <span class="quantity_num">${quantity}</span>
                         <button class="min">-</button>
                     </div>`+
                     "<button  class='delete_btn' onclick='deleteItem("+(j++)+")'>Delete</button>"+
@@ -98,13 +114,17 @@ let cart = [];
     }
 
     function increaseCartNum(){
-        document.getElementById('cart_num').innerHTML = cart.length;
+        let numOfItems = 0;
+        for(let item of cart){
+            numOfItems += item.quantity;
+        }
+        document.getElementById('cart_num').innerHTML = numOfItems;
     }
 
     function getTotal(){
         let tot = 0;
         for(let item of cart){
-            tot += item.price;
+            tot += item.price*item.quantity;
         }
         document.getElementById('total_count').innerHTML = tot;
     }
