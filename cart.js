@@ -1,4 +1,4 @@
-let cart_items = [
+let product_list = [
     {
         id : 0,
         name : 'Swimming Goggles',
@@ -51,35 +51,58 @@ let cart_items = [
     },
 ];
 
-let cart = [];
 
-    let container = document.querySelector('.container');
-    cart_items.forEach((item, index) => {
+    let cart = [];
+
+    product_list.forEach((item) => {
         let itemHTML = `
             <div class="item-box">
                 <img src="${item.image}" alt="${item.name}"><br>
                 <p>${item.name}</p>
                 <p>$ ${item.price}.00</p>
-                <button class='add-cart' onclick='addToBasket(${index})'>Add to cart</button>
+                <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
             </div>`;
-        container.innerHTML += itemHTML;
+        document.querySelector('.container').innerHTML += itemHTML;
     });
 
 
-    function addToBasket(a){
+    function getvalue(){
+        let searchTearm = document.getElementById('searchName').value;
+        let i = 0;
+        document.querySelector('.container').innerHTML = " ";
+        for(let item of product_list){
+            if(item.name.toLowerCase().includes(searchTearm.toLowerCase())){
+                let itemHTML = `
+            <div class="item-box">
+                <img src="${item.image}" alt="${item.name}"><br>
+                <p>${item.name}</p>
+                <p>$ ${item.price}.00</p>
+                <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
+            </div>`;
+        document.querySelector('.container').innerHTML += itemHTML;
+            }
+        }
+    }
+
+
+    function addToBasket(id){
+        let p = product_list.find(item => item.id == id )
+        console.log(p);
         for(let obj of cart){
-            if(obj.id == cart_items[a].id){
+            if(obj.id == p.id){
                 obj.quantity++;
                 displayCart();
                 getTotal()
                 return;
             }
         }
-        cart.push({...cart_items[a]});  // ...cart_items[a]  this methode is used to copy and object which is creating a new object 
-        displayCart();                  // from the original object
+        cart.push({...p});
+        console.log(cart);
+        displayCart();
         getTotal()
     }
 
+    
     function displayCart(){
         increaseCartNum();
         if(cart.length==0){
@@ -104,12 +127,14 @@ let cart = [];
         }
     }
 
-    function deleteItem(a){
-        cart.splice(a, 1);
+    //Fuction that delete selected items from the basket
+    function deleteItem(index){
+        cart.splice(index, 1);
         displayCart();
         getTotal()
     }
 
+    //Fuction that itarate the number of items in the cart
     function increaseCartNum(){
         let numOfItems = 0;
         for(let item of cart){
