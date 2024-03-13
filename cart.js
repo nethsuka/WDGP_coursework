@@ -1,4 +1,4 @@
-let product_list = [
+const product_list = [
     {
         id : 0,
         name : 'Swimming Goggles',
@@ -56,48 +56,58 @@ let product_list = [
 
     product_list.forEach((item) => {
         let itemHTML = `
-            <div class="item-box">
-                <img src="${item.image}" alt="${item.name}"><br>
-                <p>${item.name}</p>
-                <p>Rs. ${item.price}.00</p>
-                <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
-            </div>`;
+                    <div class="item-box">
+                        <img src="${item.image}" alt="${item.name}"><br>
+                        <p>${item.name}</p>
+                        <p>Rs. ${item.price}.00</p>
+                        <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
+                    </div>`;
         document.querySelector('.container').innerHTML += itemHTML;
     });
+    displayCart();
+    getTotal();
 
 
-    function getvalue(){
-        let searchTearm = document.getElementById('searchName').value;
-        let i = 0;
+    function searchProducts(test){
+        // let searchTearm = document.getElementById('searchName').value;
+        // let i = 0;
         document.querySelector('.container').innerHTML = " ";
-        for(let item of product_list){
-            if(item.name.toLowerCase().includes(searchTearm.toLowerCase())){
-                let itemHTML = `
-            <div class="item-box">
-                <img src="${item.image}" alt="${item.name}"><br>
-                <p>${item.name}</p>
-                <p>Rs. ${item.price}.00</p>
-                <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
-            </div>`;
-        document.querySelector('.container').innerHTML += itemHTML;
-            }
+
+        let filteredCart = product_list.filter(obj => obj.name.toLowerCase().includes(test.toLowerCase()));
+        if(filteredCart.length==0){
+            document.querySelector('.container').innerHTML = "<div id='empty-msg'><p>There is no such item on the showcase.</p></div>";
+        }else{
+            // for(let item of product_list){
+            //     if(item.name.toLowerCase().includes(test.toLowerCase())){
+                filteredCart.forEach(item => {
+                    let itemHTML = `
+                                <div class="item-box">
+                                    <img src="${item.image}" alt="${item.name}"><br>
+                                    <p>${item.name}</p>
+                                    <p>Rs. ${item.price}.00</p>
+                                    <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
+                                </div>`;
+                document.querySelector('.container').innerHTML += itemHTML; })
+            //     }
+            // }
         }
     }
 
 
     function addToBasket(id){
-        let p = product_list.find(item => item.id == id )
-        console.log(p);
+        let p = product_list.find(item => item.id == id );
         for(let obj of cart){
             if(obj.id == p.id){
                 obj.quantity++;
+                // let index = cart.findIndex(element => element.id == p.id)
+                // EelementPriceIncrease(index);
                 displayCart();
                 getTotal()
                 return;
             }
         }
-        cart.push({...p});
-        console.log(cart);
+        cart.push({...p});  // {...p} this methode is used to copy an object from the original array
+        console.log(cart);  // to check
         displayCart();
         getTotal()
     }
@@ -155,6 +165,7 @@ let product_list = [
     // Function to increment quantity
     function incrementQuantity(index) {
         cart[index].quantity++;
+        // EelementPriceIncrease(index);
         displayCart();
         getTotal();
     }
@@ -164,6 +175,12 @@ let product_list = [
         if (cart[index].quantity > 1) {
             cart[index].quantity--;
         }
+        // EelementPriceIncrease(index);
         displayCart();
         getTotal();
     }
+
+    // function EelementPriceIncrease(index){
+    //     let element = product_list.find(item => item.id == cart[index].id);     !!! when we enable this function you need change
+    //     cart[index].price = element.price * cart[index].quantity;                   the logic of getTotal() function
+    // }
