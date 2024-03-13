@@ -54,21 +54,19 @@ let cart_items = [
 let cart = [];
 
     let container = document.querySelector('.container');
-    let i = 0;
-    cart_items.forEach(item => {
+    cart_items.forEach((item, index) => {
         let itemHTML = `
             <div class="item-box">
                 <img src="${item.image}" alt="${item.name}"><br>
                 <p>${item.name}</p>
-                <p>$ ${item.price}.00</p>`+
-                "<button class='add-cart' onclick='addToBasket("+(i++)+")'>Add to cart</button>"+
-            `</div>`;
+                <p>$ ${item.price}.00</p>
+                <button class='add-cart' onclick='addToBasket(${index})'>Add to cart</button>
+            </div>`;
         container.innerHTML += itemHTML;
     });
 
 
     function addToBasket(a){
-
         for(let obj of cart){
             if(obj.id == cart_items[a].id){
                 obj.quantity++;
@@ -83,12 +81,11 @@ let cart = [];
     }
 
     function displayCart(){
-        j=0;
         increaseCartNum();
         if(cart.length==0){
-            document.querySelector('.basket-item').innerHTML = "<p>Your cart is empty !</p>";
+            document.querySelector('.basket-item').innerHTML = "<p style='text-align:left'>Your cart is empty !</p>";
         }else{
-            document.querySelector('.container2').innerHTML = cart.map(item => {
+            document.querySelector('.container2').innerHTML = cart.map((item, index)=> {
                 let {id, name , image, price , quantity} = item;
                 return(
                     `<div class="basket-item">
@@ -96,12 +93,12 @@ let cart = [];
                     <span>name : ${name}</span><br>
                     <span>price : ${price}</span><br>
                     <div class="q-box">
-                        <button class="plus">+</button>
+                        <button class="plus" onclick="incrementQuantity(${index})">+</button>
                         <span class="quantity_num">${quantity}</span>
-                        <button class="min">-</button>
-                    </div>`+
-                    "<button  class='delete_btn' onclick='deleteItem("+(j++)+")'>Delete</button>"+
-                `</div>`
+                        <button class="min" onclick="decrementQuantity(${index})">-</button>
+                    </div>
+                    <button  class='delete_btn' onclick='deleteItem(${index})'>Delete</button>
+                </div>`
                 )
             }).join("<br>")
         }
@@ -121,10 +118,27 @@ let cart = [];
         document.getElementById('cart_num').innerHTML = numOfItems;
     }
 
+    //Fuction that get the total of the basket
     function getTotal(){
         let tot = 0;
         for(let item of cart){
             tot += item.price*item.quantity;
         }
         document.getElementById('total_count').innerHTML = tot;
+    }
+
+    // Function to increment quantity
+    function incrementQuantity(index) {
+        cart[index].quantity++;
+        displayCart();
+        getTotal();
+    }
+
+    // Function to decrement quantity
+    function decrementQuantity(index) {
+        if (cart[index].quantity > 1) {
+            cart[index].quantity--;
+        }
+        displayCart();
+        getTotal();
     }
