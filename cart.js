@@ -76,7 +76,7 @@ let product_list = [
             <div class="item-box">
                 <img src="${item.image}" alt="${item.name}"><br>
                 <p>${item.name}</p>
-                <p>$ ${item.price}.00</p>
+                <p>Rs. ${item.price}.00</p>
                 <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
             </div>`;
         document.querySelector('.container').innerHTML += itemHTML;
