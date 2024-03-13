@@ -9,7 +9,7 @@ let product_list = [
     },
     {
         id : 1,
-        name : 'Diving maskes',
+        name : 'Diving masks',
         quantity : 1,
         price : 800,
         image : 'img/diving mask.jpg'
@@ -59,7 +59,7 @@ let product_list = [
             <div class="item-box">
                 <img src="${item.image}" alt="${item.name}"><br>
                 <p>${item.name}</p>
-                <p>$ ${item.price}.00</p>
+                <p>Rs. ${item.price}.00</p>
                 <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
             </div>`;
         document.querySelector('.container').innerHTML += itemHTML;
@@ -114,7 +114,7 @@ let product_list = [
                     `<div class="basket-item">
                     <img src="${image}" alt="" style="float:left;height:50px;margin-right:10px">
                     <span>name : ${name}</span><br>
-                    <span>price : ${price}</span><br>
+                    <span>price :Rs. ${price}</span><br>
                     <div class="q-box">
                         <button class="plus" onclick="incrementQuantity(${index})">+</button>
                         <span class="quantity_num">${quantity}</span>
