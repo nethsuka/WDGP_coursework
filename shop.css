@@ -71,7 +71,7 @@ h3{
     display: flex;
     justify-content: space-between;
 }
-.basket-item{
+.basket-item,.empty_msg{
     background-color: rgb(231, 231, 90);
     border-radius: 5px;
     padding: 10px;
@@ -91,6 +91,12 @@ h3{
 }
 .basket p{
     text-align: right;
+}
+.container2{
+    width: 100%; 
+    height: 60%;
+    overflow-x: hidden; 
+    overflow-y: auto;
 }
 .q-box{
     background-color: white;
@@ -155,4 +161,27 @@ h3{
     margin-right: 20px;
     margin-top: 20px;
     color: rgb(81, 80, 80);
+}
+#checkout-btn{
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(109, 225, 124);
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    top: 22px;
+    right: 10px;
+}
+#cart-clear-btn{
+    padding: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(255, 191, 127);
+    border-radius: 10px;
+    position: relative;
+    right: 35%;
+    cursor: pointer;
 }

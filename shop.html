@@ -40,11 +40,15 @@
                     <span>price : 2222</span><br>
                     <span class="plus">+</span><span class="quantity_num">01</span><span class="min">+</span>
                     <button>delete</button> -->
-                    <span>Your cart is empty !</span>
+                    <!-- <span>Your cart is empty !</span>-->
                 </div>
             </div>
             <hr>
-            <p><b>Total  :  Rs <span id="total_count"></span>.00</b></p>
+            <p>
+                <button id="cart-clear-btn" onclick="clearCart()">Checkout</button>
+                <b>Total  :  Rs <span id="total_count"></span>.00</b><br>
+                <button id="checkout-btn" onclick="checkout()">Checkout</button>
+            </p>
         </div>
     </div>
 

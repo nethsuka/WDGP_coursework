@@ -109,14 +109,14 @@ const product_list = [
         cart.push({...p});  // {...p} this methode is used to copy an object from the original array
         console.log(cart);  // to check
         displayCart();
-        getTotal()
+        getTotal();
     }
 
     
     function displayCart(){
         increaseCartNum();
         if(cart.length==0){
-            document.querySelector('.basket-item').innerHTML = "<p style='text-align:left'>Your cart is empty !</p>";
+            document.querySelector('.container2').innerHTML = "<p class='empty_msg' style='text-align:left'>Your cart is empty !</p>";
         }else{
             document.querySelector('.container2').innerHTML = cart.map((item, index)=> {
                 let {id, name , image, price , quantity} = item;
@@ -184,3 +184,25 @@ const product_list = [
     //     let element = product_list.find(item => item.id == cart[index].id);     !!! when we enable this function you need change
     //     cart[index].price = element.price * cart[index].quantity;                   the logic of getTotal() function
     // }
+
+    // Function to checkout
+    function checkout() {
+        if(cart.length==0){
+            // document.getElementById('Checkout-btn').disabled = true;
+            alert("you cannot checkout without having at least one item");
+        }else{
+            alert("proccessed to checkout");
+        }
+    }
+
+    // Function to clear the cart
+    function clearCart(){
+        if(cart.length != 0){
+            cart.length = 0;
+            document.querySelector('.container2').innerHTML = "<p class='empty_msg' style='text-align:left'>Your cart is empty !</p>";
+            displayCart();
+            getTotal();
+        }else{
+            alert("your cart is already empty");
+        }
+    }
