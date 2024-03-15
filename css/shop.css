@@ -83,7 +83,7 @@ h3{
     cursor: pointer;
     border-radius: 5px;
     position: relative;
-    bottom: 20px;
+    bottom: 27px;
 }
 .delete_btn:hover{
     background-color: rgb(109, 121, 255);

@@ -141,7 +141,7 @@ const product_list = [
                         <span class="quantity_num">${quantity}</span>
                         <button class="min" onclick="decrementQuantity(${index})">-</button>
                     </div>
-                    <button  class='delete_btn' onclick='deleteItem(${index})'>Delete</button>
+                    <button  class='delete_btn' onclick='deleteItem(${index})'><img src="img/dele-ico.png" alt="delete-ico" style="height:17px;"></button>
                 </div>`
                 )
             }).join("<br>")

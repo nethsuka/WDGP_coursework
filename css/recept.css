@@ -1,0 +1,32 @@
+body{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-family: sans-serif;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(198, 236, 162);
+    padding: 3px;
+    border-radius: 10px;
+}
+.content{
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+}
+.content p{
+    color: rgb(61, 189, 55);
+}
+table{
+    border: 2px solid rgb(158, 161, 170);
+    border-collapse: collapse;
+    margin: auto;
+}
+td{
+    padding: 15px;
+    text-align: left;
+}

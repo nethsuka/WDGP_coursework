@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.basket{
+.order-summery{
     border: 2px solid rgb(109, 132, 224);
     background-color: rgb(220, 223, 250);
     /* width: 300px; */
@@ -70,6 +70,29 @@ legend{
 progress{
     width: 100%;
     height: 20px;
+}
+.container2{
+    background-color: white;
+    border-radius: 5px;
+}
+.order-summery-item{
+    padding: 5px;
+}
+.order-summery-item img{
+    height: 60px;
+    margin-right: 10px;
+    float: left;
+}
+.References_no,.order-total{
+    background-color: #6baaee;
+    padding: 5px;
+    border-radius: 5px;
+}
+#container2-title{
+    background-color: #6baaee;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 5px;
 }
 /* WebKit (Safari, Chrome) */
 progress::-webkit-progress-bar {
