@@ -67,7 +67,14 @@ const product_list = [
     displayCart();
     getTotal();
 
+    if(localStorage.getItem("cart")){
+        cart = JSON.parse(localStorage.getItem("cart")); // get 'cart' string array from local storage
+        displayCart();                                   // and converting it into it's original format
+        getTotal();
+    }
 
+
+    // Function that search products
     function searchProducts(test){
         // let searchTearm = document.getElementById('searchName').value;
         // let i = 0;
@@ -94,6 +101,7 @@ const product_list = [
     }
 
 
+    // Function that add items to the cart array
     function addToBasket(id){
         let p = product_list.find(item => item.id == id );
         for(let obj of cart){
@@ -101,18 +109,21 @@ const product_list = [
                 obj.quantity++;
                 // let index = cart.findIndex(element => element.id == p.id)
                 // EelementPriceIncrease(index);
+                saveToLocalStorage();
                 displayCart();
-                getTotal()
+                getTotal();
                 return;
             }
         }
         cart.push({...p});  // {...p} this methode is used to copy an object from the original array
         console.log(cart);  // to check
+        saveToLocalStorage();
         displayCart();
         getTotal();
     }
 
     
+    // Function that display items in cart
     function displayCart(){
         increaseCartNum();
         if(cart.length==0){
@@ -140,6 +151,7 @@ const product_list = [
     //Fuction that delete selected items from the basket
     function deleteItem(index){
         cart.splice(index, 1);
+        saveToLocalStorage();
         displayCart();
         getTotal()
     }
@@ -166,6 +178,7 @@ const product_list = [
     function incrementQuantity(index) {
         cart[index].quantity++;
         // EelementPriceIncrease(index);
+        saveToLocalStorage();
         displayCart();
         getTotal();
     }
@@ -176,6 +189,7 @@ const product_list = [
             cart[index].quantity--;
         }
         // EelementPriceIncrease(index);
+        saveToLocalStorage();
         displayCart();
         getTotal();
     }
@@ -199,10 +213,17 @@ const product_list = [
     function clearCart(){
         if(cart.length != 0){
             cart.length = 0;
+            saveToLocalStorage();
             document.querySelector('.container2').innerHTML = "<p class='empty_msg' style='text-align:left'>Your cart is empty !</p>";
             displayCart();
             getTotal();
         }else{
             alert("your cart is already empty");
         }
+    }
+
+    // Function that save the cart array to local storage in browser
+    function saveToLocalStorage(){
+        let local_cart = JSON.stringify(cart);
+        localStorage.setItem("cart", local_cart);
     }
