@@ -1,0 +1,50 @@
+body{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(198, 236, 162);
+    padding: 3px;
+    border-radius: 10px;
+}
+#hole{
+    display: flex;
+    justify-content: space-between;
+}
+.basket{
+    border: 2px solid rgb(109, 132, 224);
+    background-color: rgb(220, 223, 250);
+    width: 300px;
+    height: 500px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+.container{
+    margin-top: 10px;
+    width: 100%;
+    margin-right: 20px;
+}
+.field{
+    border-radius: 10px;
+    padding: 15px;
+    line-height: 2;
+    background-color: rgb(220, 245, 245);
+    padding-left: 40px;
+    margin-bottom: 10px;
+}
+.sub-container input{
+    border: none;
+    width: 250px;
+    height: 20px;
+}
+legend{
+    background-color: rgb(209, 176, 240);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    border-radius: 5px;
+}

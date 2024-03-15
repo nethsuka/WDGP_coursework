@@ -107,8 +107,8 @@ const product_list = [
         for(let obj of cart){
             if(obj.id == p.id){
                 obj.quantity++;
-                // let index = cart.findIndex(element => element.id == p.id)
-                // EelementPriceIncrease(index);
+                let index = cart.findIndex(element => element.id == p.id)
+                EelementPriceIncrease(index);
                 saveToLocalStorage();
                 displayCart();
                 getTotal();
@@ -169,7 +169,7 @@ const product_list = [
     function getTotal(){
         let tot = 0;
         for(let item of cart){
-            tot += item.price*item.quantity;
+            tot += item.price;
         }
         document.getElementById('total_count').innerHTML = tot;
     }
@@ -177,7 +177,7 @@ const product_list = [
     // Function to increment quantity
     function incrementQuantity(index) {
         cart[index].quantity++;
-        // EelementPriceIncrease(index);
+        EelementPriceIncrease(index);
         saveToLocalStorage();
         displayCart();
         getTotal();
@@ -188,16 +188,17 @@ const product_list = [
         if (cart[index].quantity > 1) {
             cart[index].quantity--;
         }
-        // EelementPriceIncrease(index);
+        EelementPriceIncrease(index);
         saveToLocalStorage();
         displayCart();
         getTotal();
     }
 
-    // function EelementPriceIncrease(index){
-    //     let element = product_list.find(item => item.id == cart[index].id);     !!! when we enable this function you need change
-    //     cart[index].price = element.price * cart[index].quantity;                   the logic of getTotal() function
-    // }
+    // Function that increase the price of an item in the cart
+    function EelementPriceIncrease(index){
+        let element = product_list.find(item => item.id == cart[index].id);     //!!! when we enable this function you need change
+        cart[index].price = element.price * cart[index].quantity;                   //the logic of getTotal() function
+    }
 
     // Function to checkout
     function checkout() {
@@ -206,6 +207,7 @@ const product_list = [
             alert("you cannot checkout without having at least one item");
         }else{
             alert("proccessed to checkout");
+            window.location.href = 'checkout.html';
         }
     }
 

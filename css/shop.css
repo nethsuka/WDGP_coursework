@@ -1,3 +1,7 @@
+body{
+    margin-left: 100px;
+    margin-right: 100px;
+}
 .item-box{
     width: 100px;
     height: 230px;
@@ -7,7 +11,6 @@
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-
 }
 img{
     /* width: 80px; */
@@ -32,10 +35,6 @@ img{
     padding: 15px;
     margin-top: 20px;
     border-radius: 10px;
-}
-body{
-    margin-left: 100px;
-    margin-right: 100px;
 }
 #header{
     display: flex;
