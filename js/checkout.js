@@ -1,10 +1,5 @@
 
-if(JSON.parse(sessionStorage.getItem('cart')).length == 0){
-    alert("You cannot go to checkout process with having empty cart");
-    window.location.href = "shop.html";
-}else{
-    var cart = JSON.parse(sessionStorage.getItem('cart'));
-}
+var cart = JSON.parse(sessionStorage.getItem('cart'));
 
 // Math.random() genarate random floting point numbers
 // Math.floor() converts then into round numbers

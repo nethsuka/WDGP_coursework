@@ -6,7 +6,13 @@
     <title>Checkout</title>
     <link rel="stylesheet" href="css/checkout.css">
 
-    <!-- <script src="cart.js"></script> -->
+    <script>
+        let sessionCart = sessionStorage.getItem('cart');
+        if(sessionCart === null){
+            alert("You cannot go to checkout process with having empty cart");
+            window.location.href = "shop.html";
+        }
+    </script>
 </head>
 <body>
 
