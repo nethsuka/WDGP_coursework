@@ -67,8 +67,8 @@ const product_list = [
     displayCart();
     getTotal();
 
-    if(localStorage.getItem("cart")){
-        cart = JSON.parse(localStorage.getItem("cart")); // get 'cart' string array from local storage
+    if(sessionStorage.getItem("cart")){
+        cart = JSON.parse(sessionStorage.getItem("cart")); // get 'cart' string array from local storage
         displayCart();                                   // and converting it into it's original format
         getTotal();
     }
@@ -134,8 +134,8 @@ const product_list = [
                 return(
                     `<div class="basket-item">
                     <img src="${image}" alt="" style="float:left;height:50px;margin-right:10px">
-                    <span>name : ${name}</span><br>
-                    <span>price :Rs. ${price}</span><br>
+                    <span> ${name}</span><br>
+                    <span> Rs. ${price}</span><br>
                     <div class="q-box">
                         <button class="plus" onclick="incrementQuantity(${index})">+</button>
                         <span class="quantity_num">${quantity}</span>
@@ -204,7 +204,7 @@ const product_list = [
     function checkout() {
         if(cart.length==0){
             // document.getElementById('Checkout-btn').disabled = true;
-            alert("you cannot checkout without having at least one item");
+            alert("you cannot checkout with having empty cart");
         }else{
             alert("proccessed to checkout");
             window.location.href = 'checkout.html';
@@ -227,5 +227,5 @@ const product_list = [
     // Function that save the cart array to local storage in browser
     function saveToLocalStorage(){
         let local_cart = JSON.stringify(cart);
-        localStorage.setItem("cart", local_cart);
+        sessionStorage.setItem("cart", local_cart);
     }

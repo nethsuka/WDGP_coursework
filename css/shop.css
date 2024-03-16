@@ -74,6 +74,7 @@ h3{
     background-color: rgb(231, 231, 90);
     border-radius: 5px;
     padding: 10px;
+    line-height: 1.2;
 }
 .delete_btn{
     float: right;

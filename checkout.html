@@ -25,39 +25,39 @@
                 <div class="sub-container">
                     <fieldset class="field">
                     <legend>Paymet Details</legend>
-                    <label for="">Card Number : </label><br>
+                    <label for="card_number">Card Number : </label><br>
                     <input type="number" id="card_number"><br>
-                    <label for="">Card Holder Name : </label><br>
-                    <input type="text" id=""><br>
-                    <label for="">Expiry Date : </label><br>
-                    <input type="date" id=""><br>
-                    <label for="">CCV : </label><br>
-                    <input type="number" id=""><br>
+                    <label for="holder_name">Card Holder Name : </label><br>
+                    <input type="text" id="holder_name"><br>
+                    <label for="Expiry_date">Expiry Date : </label><br>
+                    <input type="date" id="Expiry_date"><br>
+                    <label for="ccv">CCV : </label><br>
+                    <input type="number" id="ccv"><br>
                     <button>RESET</button>
                     </fieldset> 
                 </div>
                 <div class="sub-container">
                     <fieldset class="field">
                         <legend>Customer Information</legend>
-                        <label for="">Email : </label><br>
-                        <input type="email" id="" placeholder="myname@host.com"><br>
-                        <label for="">Phone Number : </label><br>
-                        <input type="tel" id="" placeholder="+94 759028394"><br>
+                        <label for="email">Email : </label><br>
+                        <input type="email" id="email" placeholder="myname@host.com"><br>
+                        <label for="phone_no">Phone Number : </label><br>
+                        <input type="tel" id="phone_no" placeholder="+94 759028394"><br>
                         <label for="">Full Name : </label><br>
-                        <input type="text" id="" placeholder="First Name" class="input-name">
-                        <input type="text" id="" placeholder="Last Name" class="input-name"><br>
-                        <label for="">Address : </label><br>
-                        <input type="text" id=""><br>
+                        <input type="text" id="fname" placeholder="First Name" class="input-name">
+                        <input type="text" id="lname" placeholder="Last Name" class="input-name"><br>
+                        <label for="address">Address : </label><br>
+                        <input type="text" id="address"><br>
                         <button>RESET</button>
                     </fieldset> 
                     </div>
                 <div>
                     <fieldset class="field">
                         <legend>Paymet method</legend>
-                        <label for="">Cach On Delivery : </label>
-                        <input type="radio" id="card_number" name="pay_method" value="onDelivery">
-                        <label for="">Card Card : </label>
-                        <input type="radio" id="card_number" name="pay_method" value="card"><br><br>
+                        <label for="cod">Cach On Delivery : </label>
+                        <input type="radio" id="cod" name="pay_method" value="onDelivery">
+                        <label for="credit">Credit Card : </label>
+                        <input type="radio" id="credit" name="pay_method" value="card"><br><br>
                     <button id="order-btn">PLACE ORDER NOW</button>
                     </fieldset> 
                     </div>
@@ -69,9 +69,9 @@
         <div class="order-summery">
             <h3 class="References_no">References No : rit94403</h3>
             <hr>
-            <div class="container2">
+            <div class="item-container2">
                 <h3 id="container2-title">Order Summery</h3>
-                <div class="order-summery-item">
+                <!-- <div class="order-summery-item">
                     <img src="img/bag.jfif" alt="">
                     <span>name : item name</span><br>
                     <span>price : 2222</span><br>
@@ -88,14 +88,14 @@
                     <span>name : item name</span><br>
                     <span>price : 2222</span><br>
                     <span>quantity : 1</span>
-                </div>
+                </div> -->
             </div>
             <hr>
-            <h3 class="order-total">Order Total : Rs 5000.00</h3>
+            <h3 class="order-total">Order Total : Rs 00.00</h3>
         </div>
     </div>
 
-    <script src=""></script>
+    <script src="js/checkout.js"></script>
 
 </body>
 </html>
