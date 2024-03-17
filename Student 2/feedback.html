@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Feedback form</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="feedback_style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="general.css">
+ 
+    
 </head>
 <body>
-    <div class="container">
+
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="#" class="active">Shop</a>
+                <a href="#" class="active">Profile</a>
+                <a href="#" class="active">About Us</a>
+            </div>
+            <label for="check" id="#btns">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+        </header>
+
+
+    <div class="content">
 
     <form id="feedback" action="" method="post"></form>
     <div class="form-content">
@@ -106,6 +130,36 @@
 </div>
 
 </div>
+
+</section>
+
+
+
+<div class="footer_cont">
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        
+        </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </footer>
+    </div>
+
     <script src="anim.js"></script>
 </body>
 </html>
