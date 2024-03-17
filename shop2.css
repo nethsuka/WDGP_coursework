@@ -7,14 +7,16 @@
     margin-right: 6.5%;
 }
 .item-box{
-    width: 100px;
-    height: 230px;
-    border: 3px solid rgb(157, 223, 250);
+    width: 15%;
+    height: 24%;
+    /* border: 3px solid rgb(157, 223, 250); */
     margin: 20px;
     float: left;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    color: white;
+    background-color: rgb(12, 12, 84);
 }
 img{
     /* width: 80px; */
@@ -33,7 +35,8 @@ img{
 }
 .basket{
     border: 2px solid rgb(109, 132, 224);
-    background-color: rgb(247, 255, 193);
+    /* background-color: rgb(247, 255, 193); */
+    background-color: rgb(12, 12, 84);
     width: 400px;
     height: 500px;
     padding: 15px;
