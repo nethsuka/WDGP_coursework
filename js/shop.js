@@ -133,7 +133,7 @@ const product_list = [
                 let {id, name , image, price , quantity} = item;
                 return(
                     `<div class="basket-item">
-                    <img src="${image}" alt="" style="float:left;height:50px;margin-right:10px">
+                    <img src="${image}" alt="" style="float:left;height:60px;margin-right:10px">
                     <span> ${name}</span><br>
                     <span> Rs. ${price}</span><br>
                     <div class="q-box">
