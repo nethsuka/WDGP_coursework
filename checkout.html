@@ -8,7 +8,7 @@
 
     <script>
         let sessionCart = sessionStorage.getItem('cart');
-        if(sessionCart === null){
+        if(sessionCart === null || JSON.parse(sessionCart).length === 0){
             alert("You cannot go to checkout process with having empty cart");
             window.location.href = "shop.html";
         }
