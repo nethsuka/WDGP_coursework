@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General page</title>
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="recept2.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        let sessionCart = sessionStorage.getItem('cart');
+        if(sessionCart === null || JSON.parse(sessionCart).length === 0){
+            alert("You cannot go to checkout process with having empty cart");
+            window.location.href = "shop.html";
+        }
+    </script>
+
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="#" class="active">Shop</a>
+                <a href="#" class="active">Profile</a>
+                <a href="#" class="active">About Us</a>
+            </div>
+            <label for="check">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+        </header>
+
+
+        <div class="main">
+            <div id="header">
+                <div><h2>Recept</h2></div>
+            </div>
+        
+            <div class="content">
+                <h2>Order Received</h2><br>
+                <p><img src="img/tick-ico.png" alt="tick_icon" style="height: 18px;position: relative;top: 3px;">  Thank you. Your order has been received.</p>
+                <br>
+                <table border="5px">
+                    <tr>
+                        <td>Order number :<br>393944</td>
+                        <td>Date :<br> 34th March</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Total :<br> Rs 2000.00</td>
+                    </tr>
+                </table>
+                <br>
+                <table border="5px">
+                    <caption><h3>Order Details</h3></caption>
+                    <tr>
+                        <td>
+                            name : item name wwuwsuwosuwo<br>
+                            price : 2222<br>
+                            quantity :  x 2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            name : item name wjww0duw90udw0<br>
+                            price : 2222<br>
+                            quantity :  x 1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            name : item name<br>
+                            price : 2222<br>
+                            quantity : x 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;font-weight: bold;">
+                            Total : Rs 2000.00
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+            
+    </section>
+
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        
+        </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </footer>
+
+        <script src="js/recept.js"></script>
+</body>
+</html>
