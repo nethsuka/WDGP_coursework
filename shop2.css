@@ -7,8 +7,8 @@
     margin-right: 6.5%;
 }
 .item-box{
-    width: 15%;
-    height: 24%;
+    width: 150px;
+    height: 250px;
     border: 2px solid rgb(109, 132, 224);
     margin: 20px;
     float: left;
@@ -28,10 +28,15 @@ img{
     border-radius: 5px;
     border: none;
     padding: 5px;
+    box-shadow: 0 4px #999;
+    font-weight: bold;
 }
 .add-cart:hover{
     background-color: rgb(255, 127, 138);
     cursor: pointer;
+}
+.add-cart:active{
+    transform: translateY(4px);
 }
 .basket{
     border: 2px solid rgb(109, 132, 224);
@@ -80,7 +85,6 @@ h3{
 }
 .basket-item,.empty_msg{
     /* background-color: rgb(231, 231, 90); */
-    /* background-color: rgb(4, 195, 216); */
     background-color: rgb(5, 185, 205);
     border-radius: 5px;
     padding: 10px;
@@ -154,16 +158,16 @@ h3{
     margin-right: 20px;
     width: 30%;
 }
-#search-bar button{
+/* #search-bar button{
     border-radius: 8px;
     border: none;
     background-color: rgb(156, 234, 235);
     padding: 5px;
-}
-#search-bar button:hover{
+} */
+/* #search-bar button:hover{
     background-color: rgb(113, 244, 178);
     cursor: pointer;
-}
+} */
 .search-bar-and-item-containor{
     width: 100%;
 }
@@ -182,11 +186,12 @@ h3{
     font-weight: bold;
     border: none;
     background-color: rgb(109, 225, 124);
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     position: relative;
     top: 22px;
     right: 10px;
+    box-shadow: 0 4px #999;
 }
 #cart-clear-btn{
     float: left;
@@ -200,4 +205,13 @@ h3{
     /* position: relative;
     right: 35%; */
     cursor: pointer;
+    box-shadow: 0 4px #999;
+}
+#checkout-btn:active{
+    background-color: rgb(255, 127, 138);
+    transform: translateY(4px);
+}
+#cart-clear-btn:active{
+    background-color: rgb(255, 127, 138);
+    transform: translateY(4px);
 }

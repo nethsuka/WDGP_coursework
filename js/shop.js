@@ -207,7 +207,7 @@ const product_list = [
             alert("you cannot checkout with having empty cart");
         }else{
             alert("proccessed to checkout");
-            window.location.href = 'checkout.html';
+            window.location.href = 'checkout02.html';
         }
     }
 
