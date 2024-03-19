@@ -49,66 +49,66 @@ function validateFormData(form){
 
     // console.log(form.card_number.value);
     if(form.card_number.value == ""){
-        document.getElementById('valid_card_no').innerHTML = "You haven't enter the card number";
+        document.getElementById('valid_card_no').innerHTML = "Enter card number:";
     }else if(form.card_number.value.length !== 16){
-        document.getElementById('valid_card_no').innerHTML = "Incorrect card number, a card number has 16 digits";
+        document.getElementById('valid_card_no').innerHTML = "Incorrect card number!";
     }else{
         var card_number = true;
     }
 
     if(form.holder_name.value == ""){
-        document.getElementById('valid_holder_name').innerHTML = "You haven't enter the name";
+        document.getElementById('valid_holder_name').innerHTML = "Enter the name";
     }else if(!isNaN(form.holder_name.value)){
-        document.getElementById('valid_holder_name').innerHTML = "You cann't enter numbers for the name";
+        document.getElementById('valid_holder_name').innerHTML = "Integers not allowed!";
     }else{
         var holder_name = true; 
     }
 
     if(form.date.value == ""){
-        document.getElementById('valid_date').innerHTML = "You haven't enter the expiry date";
+        document.getElementById('valid_date').innerHTML = "Enter card expiry date";
     }else{
         var date = true;
     }
 
     if(form.ccv.value == ""){
-        document.getElementById('valid_ccv').innerHTML = "You haven't enter the CCV";
+        document.getElementById('valid_ccv').innerHTML = "Enter the CCV";
     }else if(form.ccv.value.length !== 3 ){
-        document.getElementById('valid_ccv').innerHTML = "Invalid CCV No, CCV No has 3 digits";
+        document.getElementById('valid_ccv').innerHTML = "Invalid CCV!";
     }else{
         var ccv = true;
     }
 
     if(form.email.value == ""){
-        document.getElementById('valid_email').innerHTML = "You haven't enter an email";
+        document.getElementById('valid_email').innerHTML = "Enter an email";
     }else if(!(form.email.value.includes('@') && form.email.value.includes('.'))){
-        document.getElementById('valid_email').innerHTML = "Invalid email format";
+        document.getElementById('valid_email').innerHTML = "Invalid email format!";
     }else{
         var email = true;
     }
 
     if(form.phone_no.value == ""){
-        document.getElementById('valid_tel').innerHTML = "You haven't enter a phone number";
+        document.getElementById('valid_tel').innerHTML = "Enter the phone number";
     }else if(form.phone_no.value.length !== 10 ){
-        document.getElementById('valid_tel').innerHTML = "Invalid phone No, phone No has 10 digits";
+        document.getElementById('valid_tel').innerHTML = "Invalid phone number!";
     }else{
         var phone_no = true;
     }
 
     if(form.fname.value == "" || form.lname.value == ""){
-        document.getElementById('valid_name').innerHTML = "You haven't enter the name";
+        document.getElementById('valid_name').innerHTML = "Enter the name";
     }else{
         var fname = true;
         var lname = true;
     }
 
     if(form.address.value == ""){
-        document.getElementById('valid_address').innerHTML = "You haven't enter the address";
+        document.getElementById('valid_address').innerHTML = "Enter the address";
     }else{
         var address = true;
     }
 
     if(form.pay_method.value == ""){
-        document.getElementById('valid_choise').innerHTML = "You haven't enter the payment method";
+        document.getElementById('valid_choise').innerHTML = "Enter the payment method";
     }else{
         var pay_method = true;
     }
