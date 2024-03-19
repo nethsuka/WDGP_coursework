@@ -9,7 +9,8 @@ if(sessionStorage.getItem('Ref_no') == null){
     document.querySelector('.References_no').innerHTML = `References No : ${References_no}`;
     sessionStorage.setItem('Ref_no',References_no);
 }else{
-    var Refno = sessionStorage.getItem('Ref_no');
+    let Refno = sessionStorage.getItem('Ref_no');
+    // console.log(typeof Refno)
     document.querySelector('.References_no').innerHTML = `References No : ${Refno}`;
 }
 
@@ -115,7 +116,8 @@ function validateFormData(form){
 
     if((holder_name && card_number && date && ccv && email && phone_no && fname && lname && address && pay_method)==true){
         sessionStorage.setItem('recept_items',JSON.stringify(cart));
-        sessionStorage.setItem('copy_Ref_no',Refno);
+        console.log(sessionStorage.getItem('Ref_no'));
+        sessionStorage.setItem('copy_Ref_no',sessionStorage.getItem('Ref_no'));
         window.location.href = "recept2.html";
     }
 }
