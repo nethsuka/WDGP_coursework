@@ -12,6 +12,12 @@
             alert("You cannot go to checkout process with having empty cart");
             window.location.href = "shop.html";
         }
+
+        function handleFormSubmit() {
+        // form submission handling
+        // Prevent the default form submission behavior
+        return false;
+        }
     </script>
 </head>
 <body>
@@ -26,45 +32,54 @@
 
     <div id="hole">
         <div class="container">
-            <progress value="1" max="3"></progress>
-            <form action="">
+            <div id="process-bar"><progress value="1" max="9"></progress></div>
+            <form name="form" onsubmit="return handleFormSubmit()">
                 <div class="sub-container">
                     <fieldset class="field">
                     <legend>Paymet Details</legend>
                     <label for="card_number">Card Number : </label><br>
-                    <input type="number" id="card_number"><br>
+                    <input type="number" name="card_number" id="card_number" onblur="updateProgressBar(this.value)" placeholder="0000-0000-0000-0000"><br>
+                    <p id="valid_card_no" class="errors"></p>
                     <label for="holder_name">Card Holder Name : </label><br>
-                    <input type="text" id="holder_name"><br>
+                    <input type="text" name="holder_name" id="holder_name" onblur="updateProgressBar(this.value)"><br>
+                    <p id="valid_holder_name" class="errors"></p>
                     <label for="Expiry_date">Expiry Date : </label><br>
-                    <input type="date" id="Expiry_date"><br>
+                    <input type="date" name="date" id="Expiry_date" onblur="updateProgressBar(this.value)"><br>
+                    <p id="valid_date" class="errors"></p>
                     <label for="ccv">CCV : </label><br>
-                    <input type="number" id="ccv"><br>
-                    <button>RESET</button>
+                    <input type="number" name="ccv" id="ccv" onblur="updateProgressBar(this.value)" placeholder="000"><br>
+                    <p id="valid_ccv" class="errors"></p>
                     </fieldset> 
                 </div>
                 <div class="sub-container">
                     <fieldset class="field">
                         <legend>Customer Information</legend>
                         <label for="email">Email : </label><br>
-                        <input type="email" id="email" placeholder="myname@host.com"><br>
+                        <input type="email" id="email" name="email" placeholder="myname@host.com" onblur="updateProgressBar(this.value)"><br>
+                        <p id="valid_email" class="errors"></p>
                         <label for="phone_no">Phone Number : </label><br>
-                        <input type="tel" id="phone_no" placeholder="+94 759028394"><br>
+                        <input type="tel" id="phone_no" name="phone_no" placeholder="0759028394" onblur="updateProgressBar(this.value)"><br>
+                        <p id="valid_tel" class="errors"></p>
                         <label for="">Full Name : </label><br>
-                        <input type="text" id="fname" placeholder="First Name" class="input-name">
-                        <input type="text" id="lname" placeholder="Last Name" class="input-name"><br>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" class="input-name">
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" class="input-name" onblur="updateProgressBar(this.value)"><br>
+                        <p id="valid_name" class="errors"></p>
                         <label for="address">Address : </label><br>
-                        <input type="text" id="address"><br>
-                        <button>RESET</button>
+                        <input type="text" id="address" name="address" onblur="updateProgressBar(this.value)"><br>
+                        <p id="valid_address" class="errors"></p>
+                        <input type="button" value="RESET" onclick="clearFormData(this.form)" id="reset-btn">
                     </fieldset> 
                     </div>
                 <div>
                     <fieldset class="field">
                         <legend>Paymet method</legend>
                         <label for="cod">Cach On Delivery : </label>
-                        <input type="radio" id="cod" name="pay_method" value="onDelivery">
+                        <input type="radio" id="cod" name="pay_method" value="onDelivery" onblur="updateProgressBar(this.value)">
                         <label for="credit">Credit Card : </label>
-                        <input type="radio" id="credit" name="pay_method" value="card"><br><br>
-                    <button id="order-btn">PLACE ORDER NOW</button>
+                        <input type="radio" id="credit" name="pay_method" value="card" onblur="updateProgressBar(this.value)">
+                        <p id="valid_choise" class="errors"></p>
+                        <br>
+                    <input type="button" id="order-btn" onclick="validateFormData(form)" value="PLACE ORDER NOW"/>
                     </fieldset> 
                     </div>
             </form>

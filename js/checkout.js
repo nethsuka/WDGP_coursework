@@ -9,10 +9,11 @@ if(sessionStorage.getItem('Ref_no') == null){
     document.querySelector('.References_no').innerHTML = `References No : ${References_no}`;
     sessionStorage.setItem('Ref_no',References_no);
 }else{
-    let Refno = sessionStorage.getItem('Ref_no');
+    var Refno = sessionStorage.getItem('Ref_no');
     document.querySelector('.References_no').innerHTML = `References No : ${Refno}`;
 }
 
+let element;
 let total = 0;
 cart.forEach(item => {
     element = `<div class="order-summery-item">
@@ -113,6 +114,8 @@ function validateFormData(form){
 
 
     if((holder_name && card_number && date && ccv && email && phone_no && fname && lname && address && pay_method)==true){
+        sessionStorage.setItem('recept_items',JSON.stringify(cart));
+        sessionStorage.setItem('copy_Ref_no',Refno);
         window.location.href = "recept2.html";
     }
 }
