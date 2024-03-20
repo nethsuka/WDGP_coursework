@@ -7,8 +7,8 @@ let total = 0;
 recept_items.forEach(element => {
     content = `<tr>
                 <td>
-                    name : ${element.name}<br>
-                    price : ${element.price/element.quantity} X ${element.quantity} = ${element.price}
+                    Name : ${element.name}<br>
+                    Price : ${element.price/element.quantity} X ${element.quantity} = ${element.price}
                 </td>
             </tr>`;
 

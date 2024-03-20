@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>General page</title>
+    <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/checkout.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <script>
         let sessionCart = sessionStorage.getItem('cart');
@@ -19,104 +22,171 @@
         return false;
         }
     </script>
+    <style>
+        .my_lable{
+            color: black;
+        }
+    </style>
+
 </head>
 <body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="#" class="active">Shop</a>
+                <a href="#" class="active">Profile</a>
+                <a href="#" class="active">About Us</a>
+            </div>
+            <label for="check">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+        </header>
 
-    <div id="header">
-        <div><h2>Checkout Process</h2></div>
-        <!-- <div id="cart">
-            <img src="img/shopping-cart-removebg-preview.png" alt="">
-            <span id="cart_num">0</span>
-        </div> -->
-    </div>
 
-    <div id="hole">
-        <div class="container">
-            <div id="process-bar"><progress value="1" max="9"></progress></div>
-            <form name="form" onsubmit="return handleFormSubmit()">
-                <div class="sub-container">
-                    <fieldset class="field">
-                    <legend>Paymet Details</legend>
-                    <label for="card_number">Card Number : </label><br>
-                    <input type="number" name="card_number" id="card_number" onblur="updateProgressBar(this.value)" placeholder="0000-0000-0000-0000"><br>
-                    <p id="valid_card_no" class="errors"></p>
-                    <label for="holder_name">Card Holder Name : </label><br>
-                    <input type="text" name="holder_name" id="holder_name" onblur="updateProgressBar(this.value)"><br>
-                    <p id="valid_holder_name" class="errors"></p>
-                    <label for="Expiry_date">Expiry Date : </label><br>
-                    <input type="date" name="date" id="Expiry_date" onblur="updateProgressBar(this.value)"><br>
-                    <p id="valid_date" class="errors"></p>
-                    <label for="ccv">CCV : </label><br>
-                    <input type="number" name="ccv" id="ccv" onblur="updateProgressBar(this.value)" placeholder="000"><br>
-                    <p id="valid_ccv" class="errors"></p>
-                    </fieldset> 
-                </div>
-                <div class="sub-container">
-                    <fieldset class="field">
-                        <legend>Customer Information</legend>
-                        <label for="email">Email : </label><br>
-                        <input type="email" id="email" name="email" placeholder="myname@host.com" onblur="updateProgressBar(this.value)"><br>
-                        <p id="valid_email" class="errors"></p>
-                        <label for="phone_no">Phone Number : </label><br>
-                        <input type="tel" id="phone_no" name="phone_no" placeholder="0759028394" onblur="updateProgressBar(this.value)"><br>
-                        <p id="valid_tel" class="errors"></p>
-                        <label for="">Full Name : </label><br>
-                        <input type="text" id="fname" name="fname" placeholder="First Name" class="input-name">
-                        <input type="text" id="lname" name="lname" placeholder="Last Name" class="input-name" onblur="updateProgressBar(this.value)"><br>
-                        <p id="valid_name" class="errors"></p>
-                        <label for="address">Address : </label><br>
-                        <input type="text" id="address" name="address" onblur="updateProgressBar(this.value)"><br>
-                        <p id="valid_address" class="errors"></p>
-                        <input type="button" value="RESET" onclick="clearFormData(this.form)" id="reset-btn">
-                    </fieldset> 
-                    </div>
-                <div>
-                    <fieldset class="field">
-                        <legend>Paymet method</legend>
-                        <label for="cod">Cach On Delivery : </label>
-                        <input type="radio" id="cod" name="pay_method" value="onDelivery" onblur="updateProgressBar(this.value)">
-                        <label for="credit">Credit Card : </label>
-                        <input type="radio" id="credit" name="pay_method" value="card" onblur="updateProgressBar(this.value)">
-                        <p id="valid_choise" class="errors"></p>
-                        <br>
-                    <input type="button" id="order-btn" onclick="validateFormData(form)" value="PLACE ORDER NOW"/>
-                    </fieldset> 
-                    </div>
-            </form>
-        </div>
-            
-        <!-- </div> -->
+        <div class="main">
 
-        <div class="order-summery">
-            <h3 class="References_no">References No : rit94403</h3>
-            <hr>
-            <div class="item-container2">
-                <h3 id="container2-title">Order Summery</h3>
-                <!-- <div class="order-summery-item">
-                    <img src="img/bag.jfif" alt="">
-                    <span>name : item name</span><br>
-                    <span>price : 2222</span><br>
-                    <span>quantity : 1</span>
-                </div>
-                <div class="order-summery-item">
-                    <img src="img/bag.jfif" alt="">
-                    <span>name : item name</span><br>
-                    <span>price : 2222</span><br>
-                    <span>quantity : 1</span>
-                </div>
-                <div class="order-summery-item">
-                    <img src="img/bag.jfif" alt="">
-                    <span>name : item name</span><br>
-                    <span>price : 2222</span><br>
-                    <span>quantity : 1</span>
+            <div id="header">
+                <div><h2>Checkout Process</h2></div>
+                <!-- <div id="cart">
+                    <img src="img/shopping-cart-removebg-preview.png" alt="">
+                    <span id="cart_num">0</span>
                 </div> -->
             </div>
-            <hr>
-            <h3 class="order-total">Order Total : Rs 00.00</h3>
+        
+            <div id="hole">
+                <div class="container">
+                    <div id="process-bar"><progress value="1" max="10"></progress></div>
+                    <form name="form" onsubmit="return handleFormSubmit()">
+                        <div class="sub-container">
+                            <fieldset class="field">
+                            <legend>Paymet Details</legend>
+
+                            <label for="card_number" class="my_lable">*Card Number : </label><br>
+                            <input type="number" name="card_number" id="card_number" onblur="updateProgressBar(this.value)" placeholder="0000-0000-0000-0000"><br>
+                            <p id="valid_card_no" class="errors"></p>
+
+                            <label for="holder_name" class="my_lable">*Card Holder Name : </label><br>
+                            <input type="text" name="holder_name" id="holder_name" onblur="updateProgressBar(this.value)"><br>
+                            <p id="valid_holder_name" class="errors"></p>
+
+                            <label for="Expiry_date" class="my_lable">*Expiry Date : </label><br>
+                            <input type="date" name="date" id="Expiry_date" onblur="updateProgressBar(this.value)"><br>
+                            <p id="valid_date" class="errors"></p>
+
+                            <label for="ccv" class="my_lable">*CCV : </label><br>
+                            <input type="number" name="ccv" id="ccv" onblur="updateProgressBar(this.value)" placeholder="000"><br>
+                            <p id="valid_ccv" class="errors"></p>
+                            </fieldset> 
+                        </div>
+                        <div class="sub-container">
+                            <fieldset class="field">
+                                <legend>Customer Information</legend>
+
+                                <label for="email" class="my_lable">Email : </label><br>
+                                <input type="email" id="email" name="email" placeholder="myname@host.com" onblur="updateProgressBar(this.value)"><br>
+                                <p id="valid_email" class="errors"></p>
+
+                                <label for="phone_no" class="my_lable">Phone Number : </label><br>
+                                <input type="tel" id="phone_no" name="phone_no" placeholder="0759028394" onblur="updateProgressBar(this.value)"><br>
+                                <p id="valid_tel" class="errors"></p>
+
+                                <label for="fname" class="my_lable">Full Name : </label><br>
+                                <input type="text" id="fname" name="fname" placeholder="First Name" class="input-name" onblur="updateProgressBar(this.value)">
+                                <input type="text" id="lname" name="lname" placeholder="Last Name" class="input-name" onblur="updateProgressBar(this.value)"><br>
+                                <p id="valid_name" class="errors"></p>
+
+                                <label for="address" class="my_lable">*Address : </label><br>
+                                <input type="text" id="address" name="address" onblur="updateProgressBar(this.value)"><br>
+                                <p id="valid_address" class="errors"></p>
+
+                                <input type="button" value="RESET" onclick="clearFormData(this.form)" id="reset-btn">
+                            </fieldset> 
+                            </div>
+                        <div>
+                            <fieldset class="field">
+                                <legend>Paymet method</legend>
+
+                                <label for="cod" class="my_lable">*Cach On Delivery : </label>
+                                <input type="radio" id="cod" name="pay_method" value="onDelivery" onblur="updateProgressBar(this.value)">
+                                <label for="credit" class="my_lable">Credit Card : </label>
+                                <input type="radio" id="credit" name="pay_method" value="card" onblur="updateProgressBar(this.value)">
+
+                                <p id="valid_choise" class="errors"></p>
+                                <br>
+                            <input type="button" id="order-btn" onclick="validateFormData(form)" value="PLACE ORDER NOW"/>
+                            </fieldset> 
+                            </div>
+                    </form>
+                </div>
+                    
+                <!-- </div> -->
+        
+                <div class="order-summery">
+                    <h3 class="References_no">References No : 0000000</h3>
+                    <br>
+                    <hr>
+                    <br>
+                    <div class="item-container2">
+                        <h3 id="container2-title">Order Summery</h3>
+                        <!-- <div class="order-summery-item">
+                            <img src="img/bag.jfif" alt="">
+                            <span>name : item name</span><br>
+                            <span>price : 2222</span><br>
+                            <span>quantity : 1</span>
+                        </div>
+                        <div class="order-summery-item">
+                            <img src="img/bag.jfif" alt="">
+                            <span>name : item name</span><br>
+                            <span>price : 2222</span><br>
+                            <span>quantity : 1</span>
+                        </div>
+                        <div class="order-summery-item">
+                            <img src="img/bag.jfif" alt="">
+                            <span>name : item name</span><br>
+                            <span>price : 2222</span><br>
+                            <span>quantity : 1</span>
+                        </div> -->
+                    </div>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3 class="order-total">Order Total : Rs 00.00</h3>
+                </div>
+            </div>
+
         </div>
-    </div>
+            
+    </section>
 
-    <script src="js/checkout.js"></script>
 
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        
+        </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </footer>
+
+        <script src="js/checkout.js"></script>
 </body>
 </html>

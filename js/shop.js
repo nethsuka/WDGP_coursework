@@ -65,7 +65,6 @@ const product_list = [
         document.querySelector('.container').innerHTML += itemHTML;
     });
     displayCart();
-    getTotal();
 
     if(sessionStorage.getItem("cart")){
         cart = JSON.parse(sessionStorage.getItem("cart")); // get 'cart' string array from local storage
@@ -137,9 +136,9 @@ const product_list = [
                     <span> ${name}</span><br>
                     <span> Rs. ${price}</span><br>
                     <div class="q-box">
-                        <button class="plus" onclick="incrementQuantity(${index})">+</button>
-                        <span class="quantity_num">${quantity}</span>
                         <button class="min" onclick="decrementQuantity(${index})">-</button>
+                        <span class="quantity_num">${quantity}</span>
+                        <button class="plus" onclick="incrementQuantity(${index})">+</button>
                     </div>
                     <button  class='delete_btn' onclick='deleteItem(${index})'><img src="img/dele-ico.png" alt="delete-ico" style="height:17px;"></button>
                 </div>`
@@ -171,7 +170,7 @@ const product_list = [
         for(let item of cart){
             tot += item.price;
         }
-        document.getElementById('total_count').innerHTML = tot;
+        document.getElementById('display-total').innerHTML = `Total  :  Rs ${tot}.00`;
     }
 
     // Function to increment quantity
@@ -206,7 +205,7 @@ const product_list = [
             // document.getElementById('Checkout-btn').disabled = true;
             alert("you cannot checkout with having empty cart");
         }else{
-            window.location.href = 'checkout02.html';
+            window.location.href = 'checkout.html';
         }
     }
 
