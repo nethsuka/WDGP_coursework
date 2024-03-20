@@ -4,6 +4,11 @@ body {
     padding: 0;
 } */
 
+form{
+    padding: 10px;
+
+}
+
 
 .content {
     text-align: center;
@@ -18,7 +23,7 @@ body {
     width: 80%; /* Making responsive*/
     max-width: 600px; /* Making responsive*/
     margin:30px auto;
-    padding: 0; /* Add some padding to the form */
+    padding: 30px; /* Add some padding to the form */
     background-color: white;
     box-sizing: border-box; /* Ensure that padding is included in the width */
 }
@@ -72,4 +77,24 @@ body {
 
 #submit:hover {
     background-color: #02b508;
+}
+
+/* 
+#req{
+    display: inline;
+} */
+
+
+@media (max-width: 750px) {
+    .form-content {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 570px) {
+    .form-content {
+        width: 95%; /* Adjust width for even smaller screens */
+        padding: 15px; /* Adjust padding for even smaller screens */
+    }
 }
