@@ -206,7 +206,6 @@ const product_list = [
             // document.getElementById('Checkout-btn').disabled = true;
             alert("you cannot checkout with having empty cart");
         }else{
-            alert("proccessed to checkout");
             window.location.href = 'checkout02.html';
         }
     }

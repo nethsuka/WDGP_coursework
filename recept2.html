@@ -12,6 +12,7 @@
     <script>
         let receptItems = sessionStorage.getItem('recept_items');
         if(receptItems === null || JSON.parse(receptItems).length === 0){
+            alert("Without ordering anything, you cannot get a receipt.")
             window.location.href = "shop.html";
         }
     </script>
@@ -38,7 +39,7 @@
 
         <div class="main">
             <div id="header">
-                <h2>Reciept</h2>
+                <h2>Receipt</h2>
             </div>
         
             <div class="content">
