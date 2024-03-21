@@ -297,3 +297,122 @@ label {
 /* 
 h1ell
 o */
+
+#check:checked~header .logo {
+    top: 0;
+    bottom: 0;
+    position: relative;
+    left: 75px;
+    transform: translateX(-50%);
+    z-index: 3; 
+}
+
+
+
+#check:checked~ header .navbar{
+    z-index: 2;
+    position: fixed;
+    background: rgba(8, 104, 160, 0.81);
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+#check:checked~ header .navbar a{
+
+    font-weight: 700;
+    margin-right: 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #000;
+    margin-bottom: 20px; /* Add margin between navbar items */
+    padding: 8px 20px; /* Adjust padding as needed */
+
+}
+
+#check:checked~ header label .menu-btn{
+    display: none;
+    top:3px;
+
+}
+
+#check:checked~ header label .close-btn{
+    z-index: 2;
+    display: block;
+    position: fixed;
+}
+
+label .menu-btn{
+    position: absolute;
+
+}
+
+header .logo{
+    position:absolute;
+    bottom:-6px;
+}
+
+.content .info h1{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.footer{
+    position: relative;
+}
+
+
+@media(max-width:500px){
+.content .info h1{
+    font-size: 25px;
+    line-height: 25px;
+}
+}
+
+.team-container {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+grid-gap: 20px;
+padding: 20px;
+}
+.team-member {
+position: relative;
+overflow: hidden;
+cursor: pointer;
+}
+.team-member img {
+width: 100%;
+height: auto;
+transition: 0.3s;
+}
+.team-member:hover img {
+transform: scale(1.1);
+}
+.team-member .details {
+position: absolute;
+bottom: 0;
+left: 0;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.8);
+color: white;
+padding: 10px;
+display: none;
+}
+.team-member:hover .details {
+display: block;
+}
+
+.header-container {
+text-align: center;
+margin-top: 60px;
+font-size: 2em;
+}
