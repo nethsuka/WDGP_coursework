@@ -1,0 +1,144 @@
+<!DOCTYPE html <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General page</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <script>
+        const categories = ['Personal Details', 'Tasks', 'Qualifications', 'Other'];
+let currentCategoryIndex = 0;
+let inputs = {};
+
+function buildPrompt(category) {
+    return `Please provide your ${category}:`;
+}
+
+function displayCurrentPrompt() {
+    const currentCategory = categories[currentCategoryIndex];
+    const prompt = buildPrompt(currentCategory);
+    document.getElementById('prompt').innerText = prompt;
+}
+
+function updateProgress() {
+    const progress = ((currentCategoryIndex + 1) / categories.length) * 100;
+    document.getElementById('progress').style.width = progress + '%';
+    document.getElementById('progress').innerText = Math.round(progress) + '% Complete';
+}
+
+function submitInput() {
+    const currentCategory = categories[currentCategoryIndex];
+    const inputValue = document.getElementById('input').value;
+    inputs[currentCategory] = inputValue;
+    nextPrompt();
+}
+
+function nextPrompt() {
+    currentCategoryIndex++;
+    if (currentCategoryIndex >= categories.length) {
+        displayOutput();
+    } else {
+        displayCurrentPrompt();
+        updateProgress();
+    }
+}
+
+function skipPrompt() {
+    nextPrompt();
+}
+
+function displayOutput() {
+    let outputHTML = '<h2>User Profile:</h2>';
+    for (const category in inputs) {
+        outputHTML += `<p><strong>${category}:</strong> ${inputs[category]}</p>`;
+    }
+    document.getElementById('output').innerHTML = outputHTML;
+    document.getElementById('form').style.display = 'none';
+}
+
+// Build the first prompt when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    displayCurrentPrompt();
+    updateProgress();
+});
+
+
+           
+    </script>
+
+</head>
+
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="#" class="active">Shop</a>
+                <a href="Profile.html" class="active">Profile</a>
+                <a href="team.html" class="active">About Us</a>
+            </div>
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+
+        <div class="header-container">
+            <h1>Profile</h1>
+        </div>
+
+
+
+        <div class="container">
+            <h1>Progressive User Profile Builder</h1>
+            <div id="form">
+                <div id="prompt"></div>
+                <input type="text" id="input" placeholder="Enter your response">
+                <button onclick="submitInput()">Next</button>
+                <button onclick="skipPrompt()">Skip</button>
+                <div class="progress-bar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div id="output"></div>
+        </div>
+    
+
+
+
+    </section>
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+
+        </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </footer>
+
+
+</body>
+
+</html>
