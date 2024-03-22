@@ -87,7 +87,7 @@ header .navbar a.active {
     margin-left: 15px;
 }
 
-header .navbar a.active {
+header .navbar .active-page {
     color:#fff;
     background-color: rgb(255, 127, 21); /* Change background color for active page */
 
