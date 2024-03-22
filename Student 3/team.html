@@ -13,13 +13,16 @@
         <input type="checkbox" id="check">
         <header>
             <h2><a href="#" class="logo">Logo</a></h2>
+
             <div class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="#" class="active">Gallery</a>
-                <a href="#" class="active">Shop</a>
-                <a href="Profile.html" class="active">Profile</a>
-                <a href="team.html" class="active">About Us</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Home</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Gallery</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Shop</a>
+                <a href="Profile.html" class="active" onclick="toggleActive(this)">Profile</a>
+                <a href="team.html" class="active" onclick="toggleActive(this)">About Us</a>
             </div>
+
+            
             <label for="check">
             <i class="fas fa-bars menu-btn"></i>
             <i class="fas fa-times close-btn"></i>
@@ -98,6 +101,7 @@
                 <li><a href="#">About Us</a></li>
             </ul>
         </footer>
+
 
 
 </body>
