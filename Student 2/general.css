@@ -1,11 +1,11 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    font-family: "Poppins" , sans-serif;
 }
 
-section {
+section{
     position: relative;
     padding-top: 50px;
     width: 100%;
@@ -19,27 +19,28 @@ section {
     padding-bottom: 100px;
 }
 
-header {
-    background-color: rgb(12, 12, 84);
-    top: 0;
+
+header{
+    background-color:rgb(12, 12, 84);
+    top:0;
     position: fixed;
     width: 100%;
     height: 50px;
     opacity: 100%;
-    padding: 30px 100px;
+    padding:30px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
 }
 
-header .logo {
-    position: absolute;
+header .logo{
+    position:absolute;
     top: 10px;
-    left: 25px;
+    left:25px;
     bottom: 10px;
     color: #000;
-    background: white;
+    background:white;
     font-size: 30px;
     text-decoration: none;
     text-transform: uppercase;
@@ -47,36 +48,50 @@ header .logo {
     letter-spacing: 1px;
 }
 
-header .navbar a {
+
+
+
+
+header .navbar a.active {
+    color:white; /* Change color for active page */
+}
+
+
+ 
+    header .navbar a::before{
+        content : ' ';
+        position: absolute;
+        top:100%;
+        left:0;
+        width:0;
+        height:2px;
+        background: #fff;
+        transition: .4s;
+    
+    }
+    
+    header .navbar a:hover::before{
+        width: 100%;
+    
+    }
+
+
+ header .navbar a {
     color: white;
     position: relative;
     text-decoration: none;
     font-weight: 450;
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 3px 10px;
-    margin-left: 20px;
-}
-
-header .navbar a::before {
-    content: ' ';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: .4s;
-}
-
-header .navbar a:hover::before {
-    width: 100%;
+    padding: 12px 18px; /* Increase padding for better clickability */
+    margin-left: 15px;
 }
 
 header .navbar a.active {
-    color: #ffffff; /* Change color for active page */
-}
+    color:#fff;
+    background-color: rgb(255, 127, 21); /* Change background color for active page */
 
+}
 footer {
     padding: 20px 50px;
     position: relative;

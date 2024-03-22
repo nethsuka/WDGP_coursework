@@ -24,7 +24,7 @@ form{
     max-width: 600px; /* Making responsive*/
     margin:30px auto;
     padding: 30px; /* Add some padding to the form */
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.859);
     box-sizing: border-box; /* Ensure that padding is included in the width */
 }
 .form-content h1 {

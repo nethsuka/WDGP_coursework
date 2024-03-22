@@ -15,45 +15,111 @@
         <input type="checkbox" id="check">
         <header>
             <h2><a href="#" class="logo">Logo</a></h2>
+
             <div class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="#" class="active">Gallery</a>
-                <a href="#" class="active">Shop</a>
-                <a href="#" class="active">Profile</a>
-                <a href="#" class="active">About Us</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Home</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Gallery</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Shop</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Profile</a>
+                <a href="#" class="active" onclick="toggleActive(this)">About Us</a>
             </div>
+            
+
             <label for="check">
             <i class="fas fa-bars menu-btn"></i>
             <i class="fas fa-times close-btn"></i>
         </label>
         </header>
-        <div class="content">
-            <div class="info">
-                <h1>Conserve and sustainably use the oceans, seas <br> and marine resources for <br> sustainable development </h1>
-                <img src="Images/home1.png" alt="" class="img1"><br><br>
-                <!-- <img src="Images/home3.avif" alt=""><br><br> -->
-                <a href="#" class="info-btn">Discover More</a>
+        <div class="topic"><h1>Conserve and sustainably use the<br>oceans, seas
+             and marine resources for <br>sustainable development 
+            </h1>
+        </div>
 
-                <div class="additional-info">
-                    <p>"Sustainable Development Goal 14, titled 'Life Below Water,' focuses on conserving and sustainably utilizing the oceans, seas, and marine resources for sustainable development. Below are some key points and objectives of SDG 14:<br>
-<br>
-                        1. Conservation of Marine Ecosystems: Protecting and restoring marine and coastal ecosystems, including coral reefs, mangroves, and seagrass beds, to support biodiversity and ecosystem services.<br>
-                    <br>
-                        2. Sustainable Fisheries Management: Implementing science-based management plans to ensure the sustainable exploitation of fish stocks, reduce overfishing, and eliminate illegal, unreported, and unregulated (IUU) fishing practices.<br>
-                    <br>
-                        3. Marine Pollution Reduction: Preventing and significantly reducing marine pollution from land-based sources, including plastic debris, nutrient runoff, and hazardous chemicals, to improve marine health and ecosystem resilience.<br>
-                    <br>
-                    
-                       </p>
+            <div class="content-card">
+                <div class="card">
+                    <div class="imgs">
+                        <img src="Images/home3.avif" alt="">
+                    </div>
+                    <div class="imgcont">
+                        <h1>Content Page 1</h1>
+                        <p><h3>Sanuja Nethsuka</h3>
+                        Student 1 <br>
+                        Undergraduate at University of Westminster</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="imgs">
+                        <img src="Images/home2.jpg" alt="">
+                    </div>
+                    <div class="imgcont">
+                        <h1>Content Page 2</h1>
+                        <p><h3>Jehan Fernando</h3>
+                        Student 2 <br>
+                        Undergraduate at University of Westminster</p>
+                    </div>
                 </div>
 
 
-                <a href="#" class="mission-btn">Website Mission</a>
+
+                <div class="card">
+                    <div class="imgs">
+                        <img src="Images/home7.jpg" alt="">
+                    </div>
+                    <div class="imgcont">
+                        <h1>Content Page 3</h1>
+                        <p><h3>Akansha Fernando</h3>
+                        Student 3 <br>
+                        Undergraduate at University of Westminster</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="imgs">
+                        <img src="Images/home4.jpg" alt="">
+                    </div>
+                    <div class="imgcont">
+                        <h1>Content Page 4</h1>
+                        <p><h3>Janindu Weerakkody</h3>
+                        Student 4 <br>
+                        Undergraduate at University of Westminster</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="content">
+            <div class="info">
+                <!-- <img src="Images/home1.png" alt="" class="img1"><br><br>
+           
+                <a href="#" class="info-btn">Discover More</a> -->
+
+                <!-- <div class="additional-info">
+                    <p>"Sustainable Development Goal 14, titled 'Life Below Water,' focuses on conserving and sustainably utilizing the oceans, seas, and marine resources for sustainable development. Below are some key points and objectives of SDG 14:<br>
+<br>
+                        
+                        
+                    
+                       </p>
+                </div> -->
+
+
+                <!-- <a href="#" class="mission-btn">Website Mission</a> -->
                 
                 <div class="mission">
-                        <p>This is the mission of our website...</p>
+                    <div class="topic-mission">
+                        <h1>Website Mission</h1>
+                    
+                        <p>
+                            <br>
+                            "Our website's mission on SDG 14, Life Below Water, aims to raise awareness and promote action for the conservation and sustainable use of <br>
+                             oceans, seas, and marine resources. Through informative content and advocacy, <br>
+                             we strive to protect marine ecosystems and ensure a healthy future for all aquatic life."
+                        </p>
                         
-
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,30 +150,17 @@
         </footer>
     </div>
 
-
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const discoverBtn = document.querySelector('.info-btn');
-    const additionalInfo = document.querySelector('.additional-info');
-    const missionBtn = document.querySelector('.mission-btn');
-    const missionInfo = document.querySelector('.mission');
-
-    discoverBtn.addEventListener('click', function() {
-        additionalInfo.style.display = 'block';
-        // Scroll to the additional info section
-        additionalInfo.scrollIntoView({ behavior: 'smooth' });
+<script>
+    function toggleActive(element) {
+    // Remove 'active' class from all navbar items
+    document.querySelectorAll('.navbar a').forEach(function(navItem) {
+        navItem.classList.remove('active');
     });
-
-    missionBtn.addEventListener('click', function() {
-        missionInfo.style.display = 'block';
-        // Scroll to the mission section
-        missionInfo.scrollIntoView({ behavior: 'smooth' });
-    });
-});
-
-
-    </script>
-
+    
+    // Add 'active' class to the clicked navbar item
+    element.classList.add('active');
+}
+</script>
 
 </body>
 </html>

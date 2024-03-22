@@ -65,4 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // For demonstration purposes, we'll just log the form data to the console
         console.log('Form data:', formData);
     }
+
+
+
+
 });
