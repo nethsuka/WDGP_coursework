@@ -1,13 +1,110 @@
-<!DOCTYPE html
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>General page</title>
-    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="profile.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        //Making navbar buttons active
+        function toggleActive(element) {
+            // Remove 'active' class from all navbar items
+            document.querySelectorAll('.navbar a').forEach(function (navItem) {
+                navItem.classList.remove('active');
+            });
+
+            // Add 'active' class to the clicked navbar item
+            element.classList.add('active');
+        }
+
+        let userProfile = {};
+        let currentStep = 1; // Initialize current step
+
+        function startProfile() {
+            promptUserInformation(); // Start with the first step
+        }
+
+        function promptUserInformation() {
+            const name = prompt("Enter your name:");
+            if (name !== null && name !== "") {
+                userProfile.name = name;
+                const age = prompt("Enter your age:");
+                if (age !== null && age !== "") {
+                    userProfile.age = age;
+                    updateOutput();
+                    updateProgress();
+                    return; // Exit function, don't proceed automatically
+                } else {
+                    // If age is skipped, proceed to the next step
+                    currentStep++;
+                    promptEducation();
+                }
+            }
+        }
+
+        function promptEducation() {
+            const education = prompt("Enter your educational background:");
+            if (education !== null && education !== "") {
+                userProfile.education = education;
+                const degree = prompt("Enter your degree:");
+                if (degree !== null && degree !== "") {
+                    userProfile.degree = degree;
+                    updateOutput();
+                    updateProgress();
+                    return; // Exit function, don't proceed automatically
+                } else {
+                    // If degree is skipped, proceed to the next step
+                    currentStep++;
+                    promptInterests();
+                }
+            }
+        }
+
+        function promptInterests() {
+            const interests = prompt("Enter your interests:");
+            if (interests !== null && interests !== "") {
+                userProfile.interests = interests;
+                updateOutput();
+                updateProgress();
+                alert("Profile completed!");
+            }
+        }
+
+        function updateOutput() {
+            const outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+            <h2>User Profile</h2>
+            <p>Name: ${userProfile.name || "Not provided"}</p>
+            <p>Age: ${userProfile.age || "Not provided"}</p>
+            <p>Educational Background: ${userProfile.education || "Not provided"}</p>
+            <p>Degree: ${userProfile.degree || "Not provided"}</p>
+            <p>Interests: ${userProfile.interests || "Not provided"}</p>
+          `;
+        }
+
+        function updateProgress() {
+            const progressBar = document.getElementById("progressBar");
+            const totalSteps = 3; // Total number of steps
+            const progress = (currentStep / totalSteps) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function nextStep() {
+            if (currentStep === 1) {
+                promptUserInformation();
+            } else if (currentStep === 2) {
+                promptEducation();
+            } else if (currentStep === 3) {
+                promptInterests();
+            }
+            currentStep++;
+        }
+    </script>
 </head>
+
 <body>
     <section>
         <input type="checkbox" id="check">
@@ -22,27 +119,27 @@
                 <a href="team.html" class="active" onclick="toggleActive(this)">About Us</a>
             </div>
 
-            
             <label for="check">
-            <i class="fas fa-bars menu-btn"></i>
-            <i class="fas fa-times close-btn"></i>
-        </label>
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
         </header>
 
         <div class="header-container">
             <h1>profile</h1>
         </div>
-    
-        
-        <!-- <div class="container">
-            <h1>Progressive User Profile Builder</h1>
-            <div id="profile-form"></div>
-            <div id="progress-bar">
-                <div id="progress"></div>
+
+        <div class="containerProfile">
+            <div id="output">
+                <!-- Output will be displayed here -->
             </div>
-            <button onclick="submitForm()">Submit</button>
-        </div> -->
-    
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <button onclick="nextStep()">Next</button>
+            <button onclick="startProfile()">Start Profile</button>
+        </div>
+
     </section>
 
     <footer>
@@ -51,24 +148,21 @@
             <div class="wave" id="wave2"></div>
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
-        
         </div>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
 
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </footer>
-
-
-
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,17 @@
+<input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+
+            <div class="navbar">
+                <a href="#" class="active" onclick="toggleActive(this)">Home</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Gallery</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Shop</a>
+                <a href="#" class="active" onclick="toggleActive(this)">Profile</a>
+                <a href="#" class="active" onclick="toggleActive(this)">About Us</a>
+            </div>
+
+            <label for="check">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
