@@ -8,6 +8,7 @@ h1{
 .gallery{
     /* border: 2px solid black; */
     padding-top: 12.5%;
+    background-color: rgba(0, 112, 203, 0.655);
 }
 
 .images{
