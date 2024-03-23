@@ -65,3 +65,13 @@
     left: 15px;
     font-size: 14px;
 }
+
+
+@media (max-width: 660px){
+    #content{
+        display: grid;
+    }
+    #img-box{
+        width: 200px;
+    }
+}

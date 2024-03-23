@@ -55,3 +55,25 @@
 p{
     text-align: justify;
 }
+
+
+@media(max-width: 642px){
+    .main img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+@media(max-width: 573px){
+    .main img{
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media(max-width: 430px){
+    .main img{
+        width: 200px;
+        height: auto;
+    }
+}

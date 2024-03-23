@@ -22,15 +22,9 @@
                 <a href="#" class="active">About Us</a>
             </div>
             <label for="check" id="head-label">
-            <i class="fas fa-bars menu-btn"></i>
-            <i class="fas fa-times close-btn"></i>
-
-            <!-- <div id="cart" style="float: right;">
-                <img src="img/shopping-cart-removebg-preview.png" alt="">
-                <span id="cart_num">0</span>
-            </div> -->
-
-        </label>
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
         </header>
 
 
@@ -40,11 +34,10 @@
                 <div class="search-bar-and-item-containor">
                     <div id="search-bar">
                         <input type="text" id="searchName" placeholder="Search..." oninput="searchProducts(this.value)">
-                        <!-- <button onclick="searchProducts()">Search</button> -->
                     </div>
         
                     <div class="container">
-                       <!--Cart items --> 
+                       <!--Showcase items --> 
                     </div>
                     
                 </div>
@@ -59,19 +52,13 @@
                     </div>
                     <div class="container2">
                         <div class="basket-item">
-                            <!-- <img src="" alt="">
-                            <span>name : item name</span><br>
-                            <span>price : 2222</span><br>
-                            <span class="plus">+</span><span class="quantity_num">01</span><span class="min">+</span>
-                            <button>delete</button> -->
-                            <!-- <span>Your cart is empty !</span>-->
+                            <!-- Cart Items -->
                         </div>
                     </div>
                     <br>
                     <hr>
-                    <button id="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+                    <button id="cart-clear-btn" onclick="clearCart()">Clear Basket</button>
                     <p style="margin-top: 10px;">
-                        <!-- <button id="cart-clear-btn" onclick="clearCart()">Clear Cart</button> -->
                         <b style="color: white;" id="display-total">Total  :  Rs 00.00</b><br>
                         <button id="checkout-btn" onclick="checkout()">Checkout</button>
                     </p>
