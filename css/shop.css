@@ -237,3 +237,21 @@ h3{
     background-color: rgb(255, 127, 138);
     transform: translateY(4px);
 }
+
+
+
+@media (max-width: 757px){
+    #search-bar input{
+        width: 200px;
+    }
+
+    #hole{
+        display:grid;
+    }
+}
+
+@media (max-width: 300px){
+    .item-box{
+        margin-left: 100px;
+    }
+}

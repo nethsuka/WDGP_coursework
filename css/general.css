@@ -212,7 +212,7 @@ footer .wave#wave4 {
     }
 }
 
-label {
+#head-label {
     display: none;
 }
 
@@ -227,7 +227,7 @@ label {
         display: none;
     }
 
-    label {
+    #head-label {
         display: block;
         font-size: 20px;
         cursor: pointer;
@@ -239,20 +239,20 @@ label {
         right: 25px; /* Adjust right position */
     }
 
-    label:hover {
+    #head-label:hover {
         color: #fff;
     }
 
-    label .close-btn,
+    #head-label .close-btn,
     .menu-btn {
         display: none;
     }
 
-    label .menu-btn {
+    #head-label .menu-btn {
         display: block;
     }
 
-    label .close-btn {
+    #head-label .close-btn {
         display: none;
     }
 
@@ -297,12 +297,12 @@ label {
         padding: 8px 20px; /* Adjust padding as needed */
     }
 
-    #check:checked~header label .menu-btn {
+    #check:checked~header #head-label .menu-btn {
         display: none;
         top: 3px;
     }
 
-    #check:checked~header label .close-btn {
+    #check:checked~header #head-label .close-btn {
         z-index: 2;
         display: block;
         position: fixed;
