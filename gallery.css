@@ -20,7 +20,7 @@ h1{
     transition: 0.1s ease-in-out;
     opacity: 1;
     overflow-x: scroll;
-    overflow: hidden;
+    overflow: none;
 }
 
 .images img{
