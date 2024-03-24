@@ -29,11 +29,10 @@
             <i class="fas fa-times close-btn"></i>
         </label>
     </header>
-    <br>
     <h1>Gallery</h1>
     <div class="gallery">
         <div class="images">
-            <img src="Images/diversity.jpeg" alt="Ocean diversity">
+            <img id= "OD" src="Images/diversity.jpeg" alt="Ocean diversity">
             <img src="Images/fishery.png" alt="Fishery">
             <img src="Images/whale_watching.jpeg" alt="Tourism">
             <img src="Images/pollution.jpeg" alt="Pollution">
@@ -81,10 +80,11 @@
                 element.classList.add('active');
             }
             
-            
-            
-            
-            
+            document.getElementById('OD').addEventListener('mouseover', function(){
+                document.getElementById('OD').style.display = "block";
+            }
+            )
+
                 </script>
 
     

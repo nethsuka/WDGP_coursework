@@ -4,11 +4,14 @@ h1{
     position: relative;
     /* left: 50%;
     right: 50%; */
+    margin-bottom: 10%;
+    margin-top: 1%;
 }
 .gallery{
     /* border: 2px solid black; */
-    padding-top: 12.5%;
-    background-color: rgba(0, 112, 203, 0.655);
+    padding-top: 0;
+    background-color: rgba(0, 62, 112, 0.887);
+    padding-bottom: 0;
 }
 
 .images{
@@ -20,13 +23,13 @@ h1{
     padding: 40px 0 40px 0;
     transition: 0.1s ease-in-out;
     opacity: 1;
-    overflow-x: scroll;
-    overflow: none;
+    overflow: hidden;
+    overflow-y: hidden;
 }
 
 .images img{
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 3%;
+    padding-left: 3%;
     width: calc(100%/3);
 }
 
@@ -39,20 +42,11 @@ button:hover{
     background-color: rgb(162, 162, 180);
     color: antiquewhite;
 }
-span{
-    /* border: 2px solid blue; */
-    margin-top: 100px ;
-    padding-top: 150px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: tomato;
-    z-index: 1;
-}
 
 .gallery .buttons{
     position: absolute;
-    top: 57%;
-    transform: translateY(-57%);
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 20px;
     background-color: black;
     color: white;
@@ -63,8 +57,10 @@ span{
 
 #previous{
     left: 0px;
+    margin-left: 5px;
 }
 
 #next{
     right: 0px;
+    margin-right: 5px;
 }
