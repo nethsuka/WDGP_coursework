@@ -13,7 +13,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url(Images/home6.jpg);
+    background-image: url(/img/home6.jpg);
     background-size: cover;
     background-position: center;
     padding-bottom: 100px;
@@ -97,7 +97,9 @@ header .navbar .active-page {
 
 .content{
     max-width: 650px;
+    justify-content: space-between;
     margin:60px 100px;   
+    padding: 20px;
 }
 
 .topic h1{
@@ -184,20 +186,47 @@ header .navbar .active-page {
 }
 
 
-
-.content .info .additional-info{
+.content .info .additional-info {
     display: flex;
-    width:100%;
+    justify-content: center;
+    max-width: 800px; 
+    width: 100%; 
     padding: 15px 20px;
-    margin: auto;
-    background: #ffffffa9;
-    color: #0c0957;
+    margin: -50px auto 0; 
+    background: #f8f9fac1;
+    color: #000000;
     flex-wrap: wrap;
 }
 
-.additional-info .sitemap-btn,.feedback-btn{
+.main-btns {
     display: inline-block;
-    padding: 10px 24px;
+    width: 40%;
+    padding: 0px 10px;
+    background: #09f3ff4b;
+    color: #0c0957;
+    margin: auto; 
+    margin-top: -40px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .main-btns {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+}
+.main-btns h2{
+    margin:5px auto;
+    color: rgba(19, 19, 23, 0.737);
+    font-size: 25px;
+    text-align: center;
+}
+
+
+
+.main-btns .sitemap-btn,.feedback-btn{
+    display: flex;
+    padding: 8px 18px;
+    text-align: center;
     margin: 10px;
     border: none;
     border-radius: 20px;
@@ -209,7 +238,7 @@ header .navbar .active-page {
     transition: background-color 0.3s;
 }
 
-.additional-info .sitemap-btn:hover, .feedback-btn:hover {
+.main-btns .sitemap-btn:hover, .feedback-btn:hover {
     background-color: #ff8d01;
 }
 
@@ -220,12 +249,15 @@ header .navbar .active-page {
       width: 100%;
     }
   }
+
   
   
 .content .info .mission{
     display: flex;
-    background: #f8f9faec;
+    background: #f8f9fac1;
     margin: auto;
+    margin-top: -40px;
+    max-width: 800px;
     width: 100%;
     color:black;
     flex-wrap: wrap;
@@ -238,7 +270,7 @@ header .navbar .active-page {
     color:#000;
     font-weight: 800;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 35px;
+    padding: 15px 20px;
     margin-left: 50px;
     border-radius: 15px;
     margin-top: 50px;
@@ -338,7 +370,7 @@ footer .wave{
     left:0;
     width: 100%;
     height:80px;
-    background: url(Images/wave.png);
+    background: url(/img/wave.png) ;
     background-size: 1000px 100px;
 }
 
