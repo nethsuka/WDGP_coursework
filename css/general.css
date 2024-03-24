@@ -92,6 +92,24 @@ header .navbar .active-page {
     background-color: rgb(255, 127, 21); /* Change background color for active page */
 
 }
+footer .editor-btn{
+    display: inline-block;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff8d01;
+    transition: background-color 0.3s;
+}
+
+footer .editor-btn:hover{
+    background-color: chartreuse;
+    color: #000;
+}
 footer {
     padding: 20px 50px;
     position: relative;
@@ -190,6 +208,10 @@ footer .wave#wave4 {
     opacity: 0.7;
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
+}
+
+.editor-btn a{
+    text-decoration: none;
 }
 
 @keyframes animateWave {
@@ -309,6 +331,3 @@ footer .wave#wave4 {
     }
 }
 
-/* 
-h1ell
-o */
