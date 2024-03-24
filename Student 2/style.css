@@ -189,15 +189,43 @@ header .navbar a.active {
 .content .info .additional-info{
     display: flex;
     width:100%;
+    padding: 15px 20px;
     margin: auto;
-    background: #fff;
-    color: #000;
+    background: #ffffffa9;
+    color: #0c0957;
     flex-wrap: wrap;
 }
 
+.additional-info .sitemap-btn,.feedback-btn{
+    display: inline-block;
+    padding: 10px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #0d1cb8;
+    transition: background-color 0.3s;
+}
+
+.additional-info .sitemap-btn:hover, .feedback-btn:hover {
+    background-color: #ff8d01;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 600px) {
+    .sitemap-btn, .feedback-btn {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  
 .content .info .mission{
     display: flex;
-    background: #1a96ddec;
+    background: #f8f9faec;
     margin: auto;
     width: 100%;
     color:black;
@@ -220,11 +248,30 @@ header .navbar a.active {
     display: none; 
 }
 
+footer .editor-btn{
+    display: inline-block;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff8d01;
+    transition: background-color 0.3s;
+}
+
+footer .editor-btn:hover{
+    background-color: chartreuse;
+}
 
 footer{
     padding: 20px 50px; 
     position: relative;
     width: 100%;
+    color:white;
+    text-decoration: none;
     background:#3586ff;
     min-height: 100px;
     display: flex;
