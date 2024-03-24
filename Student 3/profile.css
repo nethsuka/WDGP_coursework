@@ -87,10 +87,28 @@ header .navbar a.active {
     margin-left: 15px;
 }
 
-header .navbar a.active {
+header .navbar .active-page {
     color:#fff;
     background-color: rgb(255, 127, 21); /* Change background color for active page */
 
+}
+footer .editor-btn{
+    display: inline-block;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff8d01;
+    transition: background-color 0.3s;
+}
+
+footer .editor-btn:hover{
+    background-color: chartreuse;
+    color: #000;
 }
 footer {
     padding: 20px 50px;
@@ -192,6 +210,10 @@ footer .wave#wave4 {
     animation: animateWave_02 4s linear infinite;
 }
 
+.editor-btn a{
+    text-decoration: none;
+}
+
 @keyframes animateWave {
     0% {
         background-position-x: 1000px;
@@ -212,7 +234,7 @@ footer .wave#wave4 {
     }
 }
 
-label {
+#head-label {
     display: none;
 }
 
@@ -227,7 +249,7 @@ label {
         display: none;
     }
 
-    label {
+    #head-label {
         display: block;
         font-size: 20px;
         cursor: pointer;
@@ -239,20 +261,20 @@ label {
         right: 25px; /* Adjust right position */
     }
 
-    label:hover {
+    #head-label:hover {
         color: #fff;
     }
 
-    label .close-btn,
+    #head-label .close-btn,
     .menu-btn {
         display: none;
     }
 
-    label .menu-btn {
+    #head-label .menu-btn {
         display: block;
     }
 
-    label .close-btn {
+    #head-label .close-btn {
         display: none;
     }
 
@@ -297,12 +319,12 @@ label {
         padding: 8px 20px; /* Adjust padding as needed */
     }
 
-    #check:checked~header label .menu-btn {
+    #check:checked~header #head-label .menu-btn {
         display: none;
         top: 3px;
     }
 
-    #check:checked~header label .close-btn {
+    #check:checked~header #head-label .close-btn {
         z-index: 2;
         display: block;
         position: fixed;
