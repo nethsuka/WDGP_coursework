@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/receipt.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        let receptItems = sessionStorage.getItem('recept_items');
+        if(receptItems === null || JSON.parse(receptItems).length === 0){
+            alert("Without ordering anything, you cannot get a receipt.")
+            window.location.href = "shop.html";
+        }
+    </script>
+
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="#" class="logo">Logo</a></h2>
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="#" class="active">Profile</a>
+                <a href="#" class="active">About Us</a>
+            </div>
+            <label for="check" id="head-label">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+        </header>
+
+
+        <div class="main">
+            <div id="header">
+                <h2>Receipt</h2>
+            </div>
+        
+            <div class="content">
+                <h2>Order Received</h2><br>
+                <p><img src="img/tick-ico.png" alt="tick_icon" style="height: 18px;position: relative;top: 3px;">  Thank you. Your order has been received.</p>
+                <br>
+                <table border="5px" id="first-table">
+                    <tr>
+                        <td id="order-num">Order number :<br>393944</td>
+                        <td id="date">Date :<br> 34th March</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" id="total-1">Total :<br> Rs 00.00</td>
+                    </tr>
+                </table>
+                <br>
+                <table border="5px" id="table-content">
+                    <caption><h3>Order Details</h3></caption>
+                    <!-- Ordered items -->
+                </table>
+            </div>
+        </div>
+            
+    </section>
+
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        
+            <a href="student1.html"><button class="editor-btn">Page Editor</button></a>
+
+        </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </footer>
+
+        <script src="js/recept.js"></script>
+</body>
+</html>
