@@ -87,12 +87,11 @@ header .navbar a.active {
     margin-left: 15px;
 }
 
-header .navbar a.active {
+header .navbar .active-page {
     color:#fff;
     background-color: rgb(255, 127, 21); /* Change background color for active page */
 
 }
-
 
 
 
@@ -264,6 +263,7 @@ footer .editor-btn{
 
 footer .editor-btn:hover{
     background-color: chartreuse;
+    color: #000;
 }
 
 footer{
@@ -372,6 +372,10 @@ footer .wave#wave4{
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
 
+}
+
+.editor-btn a{
+    text-decoration: none;
 }
 
 

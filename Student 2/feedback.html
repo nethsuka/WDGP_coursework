@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Feedback form</title>
+    <link rel="stylesheet" href="general.css">
     <link rel="stylesheet" href="feedback_style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="general.css">
+    
  
     
 </head>
@@ -17,13 +18,13 @@
         <header>
             <h2><a href="#" class="logo">Logo</a></h2>
             <div class="navbar">
-                <a href="#" class="active" onclick="toggleActive(this)">Home</a>
-                <a href="#" class="active" onclick="toggleActive(this)">Gallery</a>
-                <a href="#" class="active" onclick="toggleActive(this)">Shop</a>
-                <a href="#" class="active" onclick="toggleActive(this)">Profile</a>
-                <a href="#" class="active" onclick="toggleActive(this)">About Us</a>
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="#" class="active">Shop</a>
+                <a href="#" class="active">Profile</a>
+                <a href="#" class="active">About Us</a>
             </div>
-            <label for="check" id="#btns">
+            <label for="check" id="head-label">
             <i class="fas fa-bars menu-btn"></i>
             <i class="fas fa-times close-btn"></i>
         </label>
@@ -36,7 +37,7 @@
     <div class="form-content">
     <h1>Feedback form</h1>
     <h3>Required fields * </h3>
-     <span id="basicInfo"><span id="req">*</span>Enter your name: </span>
+    <span id="basicInfo"><span id="req">*</span>Enter your name: </span>
     <input type="text" id="name" placeholder="Enter names here"><br><br>
     <span id="basicInfo"><span id="req">*</span>Enter your email:  </span>
      
@@ -144,6 +145,8 @@
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
         
+            <a href="pageeditor.html"><button class="editor-btn">Page Editor</button></a>
+
         </div>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -161,20 +164,5 @@
         </footer>
     </div>
 
-    <script>
-
-        //Making navbar buttons active
-            
-        function toggleActive(element) {
-                // Remove 'active' class from all navbar items
-                document.querySelectorAll('.navbar a').forEach(function(navItem) {
-                    navItem.classList.remove('active');
-                });
-                
-                // Add 'active' class to the clicked navbar item
-                element.classList.add('active');
-            }
-
-    </script>
 </body>
 </html>

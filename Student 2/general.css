@@ -108,6 +108,7 @@ footer .editor-btn{
 
 footer .editor-btn:hover{
     background-color: chartreuse;
+    color: #000;
 }
 footer {
     padding: 20px 50px;
@@ -207,6 +208,10 @@ footer .wave#wave4 {
     opacity: 0.7;
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
+}
+
+.editor-btn a{
+    text-decoration: none;
 }
 
 @keyframes animateWave {
