@@ -203,12 +203,15 @@ header .navbar .active-page {
     width: 40%;
     padding: 0px 10px;
     background: #09f3ff4b;
+    border-radius: 15px;
     color: #0c0957;
     margin: auto; 
     margin-top: -40px;
     margin-bottom: 20px;
 }
-
+.main-btns a{
+    justify-content: center;
+}
 @media screen and (max-width: 600px) {
     .main-btns {
         width: 80%; /* Adjust width for smaller screens */
