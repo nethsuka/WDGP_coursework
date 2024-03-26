@@ -1,16 +1,14 @@
-/* body{
-    margin-left: 15%;
-    margin-right: 15%;
-    font-family: sans-serif;
-} */
+
 .main{
     margin-left: 15%;
     margin-right: 15%;
 }
-#header{
+#hole,#header{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+}
+#header{
     background-color: rgb(198, 236, 162);
     padding: 3px;
     border-radius: 10px;
@@ -20,16 +18,10 @@
 #header h2{
     margin-left: 10px;
 }
-#hole{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
+
 .order-summery{
     border: 2px solid rgb(109, 132, 224);
-    /* background-color: rgb(220, 223, 250); */
     background-color: #252686;
-    /* width: 300px; */
     width: 45%;
     padding: 15px;
     margin-top: 20px;
@@ -44,15 +36,13 @@
     border-radius: 10px;
     padding: 15px;
     line-height: 2;
-    /* background-color: rgb(204, 221, 221); */
-    /* background-color: rgb(12, 12, 84); */
     background-color: rgb(218, 250, 248);
     border: 2px solid rgb(109, 132, 224);
     padding-left: 6%;
     margin-bottom: 10px;
 }
 .sub-container input{
-    border: none;
+    border-color: rgb(170, 219, 247);
     width: 58%;
     height: 20px;
     border-radius: 4px;
@@ -61,7 +51,6 @@
 }
 legend{
     background-color: rgb(209, 176, 240);
-    /* background-color: rgb(170, 219, 247); */
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 0px;
@@ -75,7 +64,6 @@ legend{
     margin-right: 5px;
 }
 #order-btn{
-    /* border: 2px solid rgb(82, 149, 82); */
     border: none;
     background-color: #a0da8b;
     padding: 10px;
@@ -109,13 +97,11 @@ progress{
     float: left;
 }
 .References_no,.order-total{
-    /* background-color: #6baaee; */
     background-color: rgb(130, 201, 209);
     padding: 5px;
     border-radius: 5px;
 }
 #container2-title{
-    /* background-color: #6baaee; */
     background-color: rgb(130, 201, 209);
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
