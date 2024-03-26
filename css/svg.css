@@ -11,3 +11,29 @@ a:hover text {
     fill: rgb(4, 31, 59); /* Change the fill color of the text on hover */
     cursor: pointer; /* Change cursor to pointer when hovering over text */
 }
+
+/* Define the keyframes for the drop animation */
+@keyframes drop {
+    0% {
+        transform: translateY(-50px); /* Initial position above */
+        opacity: 0; /* Initial opacity */
+    }
+    100% {
+        transform: translateY(0); /* Final position at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply the drop animation to the h1 element with id 'topic' */
+#topic {
+    font-size: 20px;
+    animation: drop 0.5s ease-out forwards; /* Apply the animation */
+}
+
+/* Ensure the animation repeats every 5 seconds */
+@keyframes repeatDrop {
+    0%, 100% {
+        animation-name: drop;
+    }
+    50% {
+        animation-name: none
