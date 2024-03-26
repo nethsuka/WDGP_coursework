@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitemap</title>
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/svg.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <section>
+        
         <input type="checkbox" id="check">
         <header>
             <h2><a href="#" class="logo">Logo</a></h2>
-
+            
             <div class="navbar">
                 <a href="#" class="active-page">Home</a>
                 <a href="#" class="active">Gallery</a>
@@ -21,60 +23,168 @@
                 <a href="#" class="active">Profile</a>
                 <a href="#" class="active">About Us</a>
             </div>
-
+            
             
             <label for="check" id="head-label">
-            <i class="fas fa-bars menu-btn"></i>
-            <i class="fas fa-times close-btn"></i>
-        </label>
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
         </header>
         <!-- SVG starts from here! -->
         <br>
-        <h1 id="topic" style="text-align: center;">Sitemap</h1>
-        <div style="width: 100%; height: 100%;">
+        <h1 id="topic" style="text-align: center; font-size: 18">Sitemap</h1>
+        <div id = "svg" style="width: 100%; height: 100%;">
+            
+            <label for="colorPicker" style="margin: 20px; padding-top: 100px">Select color:</label>
+            <input type="color" id="colorPicker" name="colorPicker" value="#ff0000">
+            
             <svg viewBox="0 0 100 50" width="100%" height="100%">
-                <a href="https://www.google.com">
-                <rect x="40" y="5" width="20" height="5" fill="lightblue"></rect>
-                <text x="41" y="8" font-family="Arial" font-size="2.6" fill="black">Splash Screen</text>
-                </a>
-                <line x1="50" y1="10" x2="50" y2="17" stroke="black" stroke-width="0.2" />
-                <a href="https://www.wikipedia.org">
-                <rect x="40" y="17" width="20" height="5" fill="lightblue"></rect>
-                <text x="46" y="20" font-family="Arial" font-size="2.7" fill="black">Home</text>
-                </a>
-                <line x1="50" y1="22" x2="50" y2="25" stroke="black" stroke-width="0.2" /> 
-                <line x1="14" y1="25" x2="86" y2="25" stroke="black" stroke-width="0.2" />
-
-                <line x1="14.1" y1="25" x2="14" y2="29" stroke="black" stroke-width="0.2" />
-                <line x1="38.5" y1="25" x2="38.5" y2="29" stroke="black" stroke-width="0.2" />
-                <line x1="61.5" y1="25" x2="61.5" y2="29" stroke="black" stroke-width="0.2" />
-                <line x1="85.9" y1="25" x2="85.9" y2="29" stroke="black" stroke-width="0.2" />
-
-                <line x1="38.5" y1="34" x2="38.5" y2="41" stroke="black" stroke-width="0.2" />
-
-                <a href="https://chat.openai.com">
-                <rect x="8" y="29" width="15" height="5" fill="lightblue"></rect>
-                <text x="10" y="32" font-family="Arial" font-size="3" fill="black">Gallery</text>
+                
+                <a href="">
+                <rect x="29.5" y="10" width="15" height="5" fill="lightblue"></rect>
+                <text x="30.8" y="13" font-size="1.8">Splash Screen</text>
                 </a>
 
-                <a href="https://www.youtube.com">
-                <rect x="31" y="29" width="15" height="5" fill="lightblue"></rect>
-                <text x="34.8" y="32" width="20" font-family="Arial" font-size="3" fill="black">Shop</text>
+                <!-- Splash Screen and Home -->
+                <line x1="37" y1="15" x2="37" y2="19" style="stroke:black; stroke-width:0.2px"></line>
+                
+                <a href="">
+                <rect x="29.5" y="19" width="15" height="5" fill="lightblue"></rect>
+                <text x="34.3" y="22" font-size="1.8">Home</text>
                 </a>
 
-                <a href="https://open.spotify.com">
-                <rect x="54" y="29" width="15" height="5" fill="lightblue"></rect>
-                <text x="55.5" y="32" width="20" font-family="Arial" font-size="3" fill="black">Portfolio</text>
-                </a> 
+                <!-- Home - Shop and Team -->
+                <line x1="44.5" y1="21" x2="47.4" y2="21" style="stroke:black; stroke-width:0.2px"></line>
+                <line x1="47.4" y1="21" x2="47.4" y2="15" style="stroke:black; stroke-width:0.2px"></line>
+                <line x1="47.4" y1="21" x2="47.4" y2="24.5" style="stroke:black; stroke-width:0.2px"></line>
 
-                <a href="https://www.apple.com">
-                <rect x="77" y="29" width="15" height="5" fill="lightblue"></rect>
-                <text x="78" y="32" font-family="Arial" font-size="3" fill="black">About us</text>
+                <!-- Home and Gallery and Profile -->
+                <line x1="29.5" y1="21" x2="26.5" y2="21" style="stroke:black; stroke-width:0.2px"></line>
+                <line x1="26.5" y1="15" x2="26.5" y2="24.5" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Home and Gallery -->
+                <line x1="26.5" y1="15" x2="22.5" y2="15" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Home and Profile -->
+                <line x1="26.5" y1="24.5" x2="22.5" y2="24.5" style="stroke:black; stroke-width:0.2px"></line>
+
+                <!-- Home and shop -->
+                <line x1="47.4" y1="15" x2="51.5" y2="15" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Home and Team -->
+                <line x1="47.4" y1="24.5" x2="51.5" y2="24.5" style="stroke:black; stroke-width:0.2px"></line>
+                
+                <!-- Home and Content -->
+                <line x1="37" y1="24" x2="37" y2="28" style="stroke:black; stroke-width:0.2px"></line>
+
+                <a href="">
+                <rect x="29.5" y="28" width="15" height="5" fill="lightblue"></rect>
+                <text x="33.3" y="31" font-size="1.8">Content</text>
                 </a>
 
-                <a href="https://www.samsung.com/in/">
-                <rect x="31" y="41" width="15" height="5" fill="lightblue"></rect>
-                <text x="35" y="44" font-family="Arial" font-size="3" fill="black">Cart</text>
+                <!-- Content and S's -->
+                <line x1="37" y1="33" x2="37" y2="37" style="stroke:rgb(0, 0, 0); stroke-width:0.2px"></line>
+                <line x1="27.5" y1="37" x2="54" y2="37" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Content and S1 -->
+                <line x1="27.5" y1="37" x2="27.5" y2="43" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Content and S2 -->
+                <line x1="36.5" y1="37" x2="36.5" y2="43" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Content and S3 -->
+                <line x1="45.5" y1="37" x2="45.5" y2="43" style="stroke:black; stroke-width:0.2px"></line>
+                <!-- Content and S4 -->
+                <line x1="53.9" y1="37" x2="53.9" y2="43" style="stroke:black; stroke-width:0.2px"></line>
+
+                <a href="">
+                <rect x="25" y="40" width="5" height="5" fill="lightblue"></rect>
+                <text x="26.7" y="43" font-size="1.8">S1</text>
+                </a>
+
+                
+                <a href="">
+                <rect x="34" y="40" width="5" height="5" fill="lightblue"></rect>
+                <text x="35.6" y="43" font-size="1.8">S2</text>
+                </a>
+
+
+                <a href="">
+                <rect x="43" y="40" width="5" height="5" fill="lightblue"></rect>
+                <text x="44.5" y="43" font-size="1.8">S3</text>
+                </a>
+
+                <a href="">
+                <rect x="52" y="40" width="5" height="5" fill="lightblue"></rect>
+                <text x="53.4" y="43" font-size="1.8">S4</text>
+                </a>
+
+                <a href="">
+                <rect x="7.5" y="12.5" width="15" height="5" fill="lightblue"></rect>
+                <text x="11.6" y="15.5" font-size="1.8">Gallery</text>
+                </a>
+
+                <a href="">
+                <rect x="7.5" y="21.5" width="15" height="5" fill="lightblue"></rect>
+                <text x="11.9" y="24.5" font-size="1.8">Profile</text>
+                </a>
+
+                <a href="">
+                <rect x="51.5" y="12.5" width="15" height="5" fill="lightblue"></rect>
+                <text x="56.5" y="15.5" font-size="1.8">Shop</text>
+                </a>
+                
+                <a href="">
+                <rect x="51.5" y="21.5" width="15" height="5" fill="lightblue"></rect>
+                <text x="56.5" y="24.5" font-size="1.8">Team</text>
+                </a>
+
+                <!-- Team and Editor pages -->
+                <line x1="66.5" y1="24" x2="69.5" y2="24" style="stroke:black; stroke-width:0.2px"></line>
+                <line x1="69.5" y1="41.5" x2="69.5" y2="20.5" style="stroke:black; stroke-width:0.2px"></line>
+
+                <!-- Team and Sanuja's page -->
+                <line x1="69.5" y1="20.5" x2="75.5" y2="20.5" style="stroke:black; stroke-width:0.2px"></line>
+
+                <!-- Team and Jehan's Page -->
+                <line x1="69.5" y1="27.5" x2="75.5" y2="27.5" style="stroke:black; stroke-width:0.2px"></line>
+
+                <!-- Team and Janindu's page -->
+                <line x1="69.5" y1="34.5" x2="75.5" y2="34.5" style="stroke:black; stroke-width:0.2px"></line>
+                
+                <!-- Team and Akansha's page -->
+                <line x1="69.5" y1="41.5" x2="75.5" y2="41.5" style="stroke:black; stroke-width:0.2px"></line>
+
+                <!-- Shop and Checkout -->
+                <line x1="59" y1="12.5" x2="59" y2="7" style="stroke:black; stroke-width:0.2px"></line>
+                <line x1="59" y1="7" x2="69.5" y2="7" style="stroke:black; stroke-width:0.2px"></line>
+
+                <a href="">
+                <rect x="69.5" y="5.5" width="10" height="3" fill="lightblue"></rect>
+                <text x="70.5" y="7.5" font-size="1.7">Checkout</text>
+                </a>
+
+                <!-- Checkout and Reciept -->
+                <line x1="74.5" y1="5.5" x2="74.5" y2="2" style="stroke:black; stroke-width:0.2px"></line>
+                <line x1="74.5" y1="2" x2="84.5" y2="2" style="stroke:black; stroke-width:0.2px"></line>
+
+                <a href="">
+                <rect x="84.5" y="0.5" width="10" height="3" fill="lightblue"></rect>
+                <text x="86.25" y="2.5" font-size="1.7">Reciept</text>
+                </a>
+
+                <a href="">
+                <rect x="75.5" y="18.5" width="18" height="4" fill="lightblue"></rect>
+                <text x="76.5" y="21" font-size="1.6">Sanuja's Editor Page</text>
+                </a>
+
+                <a href="">
+                <rect x="75.5" y="25.5" width="18" height="4" fill="lightblue"></rect>
+                <text x="76.75" y="28" font-size="1.6">Jehan's Editor Page</text>
+                </a>
+                
+                <a href="">
+                <rect x="75.5" y="32.5" width="18" height="4" fill="lightblue"></rect>
+                <text x="76.21" y="35" font-size="1.6">Janindu's Editor Page</text>
+                </a>
+                
+                <a href="">
+                <rect x="75.5" y="39.5" width="18" height="4" fill="lightblue"></rect>
+                <text x="75.9" y="42" font-size="1.6">Akansha's Editor Page</text>
                 </a>
 
             </svg>
@@ -108,5 +218,36 @@
             </ul>
         </footer>
 
+        <script>
+            // Get the color picker element
+            const colorPicker = document.getElementById('colorPicker');
+        
+            // Get all the rectangles
+            const rectangles = document.querySelectorAll('rect');
+        
+            // Add event listener for color change
+            colorPicker.addEventListener('input', function() {
+                // Get the selected color
+                const selectedColor = colorPicker.value;
+        
+                // Loop through each rectangle and update its fill color
+                rectangles.forEach(function(rectangle) {
+                    rectangle.setAttribute('fill', selectedColor);
+                });
+            });
+        
+            // Prevent color picker change when rectangles or text are clicked
+            const elementsToIgnore = document.querySelectorAll('rect, text');
+        
+            // Loop through each element to ignore and prevent click event propagation
+            elementsToIgnore.forEach(function(element) {
+                element.addEventListener('click', function(event) {
+                    event.stopPropagation(); // Prevent the click event from reaching the color picker
+                });
+            });
+        </script>
+        
+        
+        
 </body>
 </html>

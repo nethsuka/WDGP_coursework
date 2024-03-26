@@ -1,0 +1,12 @@
+#svg{
+    background-color: rgba(30, 23, 134, 0.144);
+}
+
+rect:hover{
+    fill: dodgerblue;
+    cursor: pointer;
+}
+
+text:hover{
+    cursor: pointer;
+}
