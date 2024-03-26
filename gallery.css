@@ -64,3 +64,12 @@ button:hover{
     right: 0px;
     margin-right: 5px;
 }
+.images {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+.images img {
+    flex: 0 0 auto;
+    margin-right: 10px; /* Adjust as needed */
+}

@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+}
+
+section{
+    position: relative;
+    padding-top: 50px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url(Images/home6.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 100px;
+}
+
+
+header{
+    background-color:rgb(12, 12, 84);
+    top:0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    opacity: 100%;
+    padding:30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+header .logo{
+    position:absolute;
+    top: 10px;
+    left:25px;
+    bottom: 10px;
+    color: #000;
+    background:white;
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 800;
+    letter-spacing: 1px;
+}
+
+header .navbar a{
+    color:white;
+    position: relative;
+    text-decoration: none;
+    font-weight: 450;
+    font-size: 15px;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    margin-left: 20px;
+
+
+}
+
+
+header .navbar a::before{
+    content : ' ';
+    position: absolute;
+    top:100%;
+    left:0;
+    width:0;
+    height:2px;
+    background: #fff;
+    transition: .4s;
+
+}
+
+header .navbar a:hover::before{
+    width: 100%;
+}
+
+header .navbar a.active {
+    color: #ffffff; /* Change color for active page */
+}
+
+
+
+
+
+
+
+
+footer{
+    padding: 20px 50px; 
+    position: relative;
+    width: 100%;
+    background:#3586ff;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+footer .social{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: 0.3s;
+    transition-property: transform;
+}
+
+footer .social a{
+    position: relative;
+    color:#111;
+    font-size: 40px;
+    transition: 0.4s;
+}
+
+footer .social a:not(:last-child){
+    margin-right: 60px;
+}
+footer .social a:hover{
+    transform: translateY(-10px);
+}
+
+footer .menu{
+    position: relative;
+    display:flex;
+    justify-self: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .menu li{
+    list-style: none;
+}
+
+footer .menu li a{
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+}
+
+footer .menu li a:hover{
+    opacity: 1;
+}
+
+
+footer .wave{
+    position:absolute;
+    top:-80px;
+    left:0;
+    width: 100%;
+    height:80px;
+    background: url(Images/wave.png);
+    background-size: 1000px 100px;
+}
+
+footer .wave#wave1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+
+}
+
+footer .wave#wave2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 15px;
+    animation: animateWave_02 3s linear infinite;
+
+}
+
+footer .wave#wave3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 20px;
+    animation: animateWave 3s linear infinite;
+
+}
+
+footer .wave#wave4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+
+}
+
+
+
+
+@keyframes animateWave
+
+{
+    0%{
+        background-position-x: 1000px;
+    }
+
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave_02
+
+{
+    0%{
+        background-position-x: 0px;
+    }
+
+    100%{
+        background-position-x: 1000px;
+    }
+}
+
+
+
+
+
+
+label #btns{
+    display:none;
+} 
+
+#check{
+    z-index: 3;
+    display:none;
+}
+
+
+
+
+
+@media(max-width:750px){
+    header .navbar{
+        display: none;
+
+        /* height: 15px; */
+    
+    }
+    label{
+        display: block;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        transition-property:color;
+        color:#fff;
+    }
+
+    label:hover{
+        color: #fff;
+
+    }
+
+    label .close-btn, .menu-btn{
+        display:none;
+        top:20px;
+
+    }
+
+    header .logo{
+        position: relative;
+        color: #fff;
+        background: none;
+    }
+
+
+
+    #check:checked~header .logo {
+        top: 0;
+        bottom: 0;
+        position: relative;
+        left: 75px;
+        transform: translateX(-50%);
+        z-index: 3; 
+    }
+
+
+
+    #check:checked~ header .navbar{
+        z-index: 2;
+        position: fixed;
+        background: rgba(8, 104, 160, 0.81);
+        top:0;
+        bottom: 0;
+        left:0;
+        right:0;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+    #check:checked~ header .navbar a{
+
+        font-weight: 700;
+        margin-right: 0;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        border-radius: 20px;
+        background-color: #000;
+        margin-bottom: 20px; /* Add margin between navbar items */
+        padding: 8px 20px; /* Adjust padding as needed */
+
+    }
+
+    #check:checked~ header label .menu-btn{
+        display: none;
+        top:3px;
+
+    }
+
+    #check:checked~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+
+    label .menu-btn{
+        position: absolute;
+
+    }
+
+    header .logo{
+        position:absolute;
+        bottom:-6px;
+    }
+
+    .content .info h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .footer{
+        position: relative;
+    }
+}
+
+@media(max-width:500px){
+    .content .info h1{
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
