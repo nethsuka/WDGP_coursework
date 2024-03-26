@@ -2,11 +2,12 @@
     background-color: rgba(30, 23, 134, 0.387);
 }
 
-rect:hover{
-    fill: dodgerblue;
-    cursor: pointer;
+/* CSS for rectangle and text hover effect */
+a:hover rect {
+    fill: rgb(231, 231, 156); /* Change the fill color of the rectangle on hover */
 }
 
-text:hover{
-    cursor: pointer;
+a:hover text {
+    fill: rgb(4, 31, 59); /* Change the fill color of the text on hover */
+    cursor: pointer; /* Change cursor to pointer when hovering over text */
 }
