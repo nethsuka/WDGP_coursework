@@ -225,16 +225,48 @@
             // Get all the rectangles
             const rectangles = document.querySelectorAll('rect');
         
+            // Function to set the selected color in local storage
+            function setSelectedColor(color) {
+                localStorage.setItem('selectedColor', color);
+            }
+        
+            // Function to get the selected color from local storage
+            function getSelectedColor() {
+                return localStorage.getItem('selectedColor');
+            }
+        
+            // Function to update the fill color of rectangles with the selected color
+            function updateRectanglesColor(color) {
+                rectangles.forEach(function(rectangle) {
+                    rectangle.setAttribute('fill', color);
+                });
+            }
+        
             // Add event listener for color change
             colorPicker.addEventListener('input', function() {
                 // Get the selected color
                 const selectedColor = colorPicker.value;
         
-                // Loop through each rectangle and update its fill color
-                rectangles.forEach(function(rectangle) {
-                    rectangle.setAttribute('fill', selectedColor);
-                });
+                // Set the selected color in local storage
+                setSelectedColor(selectedColor);
+        
+                // Update the fill color of rectangles
+                updateRectanglesColor(selectedColor);
             });
+        
+            // Function to initialize the color picker and rectangles with the selected color from local storage
+            function initializeColorPickerAndRectangles() {
+                const selectedColor = getSelectedColor();
+        
+                // If selected color exists in local storage, update color picker and rectangles
+                if (selectedColor) {
+                    colorPicker.value = selectedColor;
+                    updateRectanglesColor(selectedColor);
+                }
+            }
+        
+            // Initialize color picker and rectangles on page load
+            initializeColorPickerAndRectangles();
         
             // Prevent color picker change when rectangles or text are clicked
             const elementsToIgnore = document.querySelectorAll('rect, text');
@@ -246,6 +278,7 @@
                 });
             });
         </script>
+        
         
         
         
