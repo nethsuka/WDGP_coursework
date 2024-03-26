@@ -13,7 +13,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url(Images/home6.jpg);
+    background-image: url(../img/home6.jpg);
     background-size: cover;
     background-position: center;
     padding-bottom: 100px;
@@ -48,63 +48,82 @@ header .logo{
     letter-spacing: 1px;
 }
 
-header .navbar a{
-    color:white;
+
+
+
+
+header .navbar a.active {
+    color:white; /* Change color for active page */
+}
+
+
+ 
+    header .navbar a::before{
+        content : ' ';
+        position: absolute;
+        top:100%;
+        left:0;
+        width:0;
+        height:2px;
+        background: #fff;
+        transition: .4s;
+    
+    }
+    
+    header .navbar a:hover::before{
+        width: 100%;
+    
+    }
+
+
+ header .navbar a {
+    color: white;
     position: relative;
     text-decoration: none;
     font-weight: 450;
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 3px 10px;
-    margin-left: 20px;
-
-
+    padding: 12px 18px; /* Increase padding for better clickability */
+    margin-left: 15px;
 }
 
-
-header .navbar a::before{
-    content : ' ';
-    position: absolute;
-    top:100%;
-    left:0;
-    width:0;
-    height:2px;
-    background: #fff;
-    transition: .4s;
+header .navbar .active-page {
+    color:#fff;
+    background-color: rgb(255, 127, 21); /* Change background color for active page */
 
 }
-
-header .navbar a:hover::before{
-    width: 100%;
+footer .editor-btn{
+    display: inline-block;
+    padding: 10px 24px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff8d01;
+    transition: background-color 0.3s;
 }
 
-header .navbar a.active {
-    color: #ffffff; /* Change color for active page */
+footer .editor-btn:hover{
+    background-color: chartreuse;
+    color: #000;
 }
-
-
-
-
-
-
-
-
-footer{
-    padding: 20px 50px; 
+footer {
+    padding: 20px 50px;
     position: relative;
     width: 100%;
-    background:#3586ff;
+    background: #3586ff;
     min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
-
-footer .social{
-    display:flex;
+footer .social {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -112,33 +131,34 @@ footer .social{
     transition-property: transform;
 }
 
-footer .social a{
+footer .social a {
     position: relative;
-    color:#111;
+    color: #111;
     font-size: 40px;
     transition: 0.4s;
 }
 
-footer .social a:not(:last-child){
+footer .social a:not(:last-child) {
     margin-right: 60px;
 }
-footer .social a:hover{
+
+footer .social a:hover {
     transform: translateY(-10px);
 }
 
-footer .menu{
+footer .menu {
     position: relative;
-    display:flex;
+    display: flex;
     justify-self: center;
     margin: 10px 0;
     flex-wrap: wrap;
 }
 
-footer .menu li{
+footer .menu li {
     list-style: none;
 }
 
-footer .menu li a{
+footer .menu li a {
     font-size: 1.2em;
     color: #fff;
     margin: 0 10px;
@@ -148,132 +168,121 @@ footer .menu li a{
     opacity: 0.75;
 }
 
-footer .menu li a:hover{
+footer .menu li a:hover {
     opacity: 1;
 }
 
-
-footer .wave{
-    position:absolute;
-    top:-80px;
-    left:0;
+footer .wave {
+    position: absolute;
+    top: -80px;
+    left: 0;
     width: 100%;
-    height:80px;
-    background: url(Images/wave.png);
+    height: 80px;
+    background: url(../img/wave.png);
     background-size: 1000px 100px;
 }
 
-footer .wave#wave1{
+footer .wave#wave1 {
     z-index: 1000;
     opacity: 1;
     bottom: 0;
     animation: animateWave 4s linear infinite;
-
 }
 
-footer .wave#wave2{
+footer .wave#wave2 {
     z-index: 999;
     opacity: 0.5;
     bottom: 15px;
     animation: animateWave_02 3s linear infinite;
-
 }
 
-footer .wave#wave3{
+footer .wave#wave3 {
     z-index: 1000;
     opacity: 0.2;
     bottom: 20px;
     animation: animateWave 3s linear infinite;
-
 }
 
-footer .wave#wave4{
+footer .wave#wave4 {
     z-index: 999;
     opacity: 0.7;
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
-
 }
 
+.editor-btn a{
+    text-decoration: none;
+}
 
-
-
-@keyframes animateWave
-
-{
-    0%{
+@keyframes animateWave {
+    0% {
         background-position-x: 1000px;
     }
 
-    100%{
+    100% {
         background-position-x: 0px;
     }
 }
 
-@keyframes animateWave_02
-
-{
-    0%{
+@keyframes animateWave_02 {
+    0% {
         background-position-x: 0px;
     }
 
-    100%{
+    100% {
         background-position-x: 1000px;
     }
 }
 
+#head-label {
+    display: none;
+}
 
-
-
-
-
-label #btns{
-    display:none;
-} 
-
-#check{
+#check {
     z-index: 3;
-    display:none;
+    display: none;
 }
 
-
-
-
-
-@media(max-width:750px){
-    header .navbar{
+/* Responsiveness */
+@media (max-width: 750px) {
+    header .navbar {
         display: none;
-
-        /* height: 15px; */
-    
     }
-    label{
+
+    #head-label {
         display: block;
         font-size: 20px;
         cursor: pointer;
         transition: 0.3s;
-        transition-property:color;
-        color:#fff;
-    }
-
-    label:hover{
+        transition-property: color;
         color: #fff;
-
+        position: absolute;
+        top: 25px; /* Adjust top position */
+        right: 25px; /* Adjust right position */
     }
 
-    label .close-btn, .menu-btn{
-        display:none;
-        top:20px;
-
+    #head-label:hover {
+        color: #fff;
     }
 
-    header .logo{
+    #head-label .close-btn,
+    .menu-btn {
+        display: none;
+    }
+
+    #head-label .menu-btn {
+        display: block;
+    }
+
+    #head-label .close-btn {
+        display: none;
+    }
+
+    header .logo {
         position: relative;
         color: #fff;
         background: none;
     }
-
-
 
     #check:checked~header .logo {
         top: 0;
@@ -281,29 +290,24 @@ label #btns{
         position: relative;
         left: 75px;
         transform: translateX(-50%);
-        z-index: 3; 
+        z-index: 3;
     }
 
-
-
-    #check:checked~ header .navbar{
+    #check:checked~header .navbar {
         z-index: 2;
         position: fixed;
         background: rgba(8, 104, 160, 0.81);
-        top:0;
+        top: 0;
         bottom: 0;
-        left:0;
-        right:0;
-        display:flex;
+        left: 0;
+        right: 0;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-
     }
 
-    #check:checked~ header .navbar a{
-
+    #check:checked~header .navbar a {
         font-weight: 700;
         margin-right: 0;
         font-size: 20px;
@@ -313,45 +317,16 @@ label #btns{
         background-color: #000;
         margin-bottom: 20px; /* Add margin between navbar items */
         padding: 8px 20px; /* Adjust padding as needed */
-
     }
 
-    #check:checked~ header label .menu-btn{
+    #check:checked~header #head-label .menu-btn {
         display: none;
-        top:3px;
-
+        top: 3px;
     }
 
-    #check:checked~ header label .close-btn{
+    #check:checked~header #head-label .close-btn {
         z-index: 2;
         display: block;
         position: fixed;
     }
-
-    label .menu-btn{
-        position: absolute;
-
-    }
-
-    header .logo{
-        position:absolute;
-        bottom:-6px;
-    }
-
-    .content .info h1{
-        font-size: 30px;
-        line-height: 40px;
-    }
-
-    .footer{
-        position: relative;
-    }
 }
-
-@media(max-width:500px){
-    .content .info h1{
-        font-size: 25px;
-        line-height: 25px;
-    }
-}
-
