@@ -59,7 +59,6 @@ h3{
     padding: 10px;
 }
 #cart{
-    /* background-color: beige; */
     background-color: rgb(199, 185, 255);
     border: 2px solid rgb(187, 114, 255);
     padding: 3px 10px 3px 10px;
@@ -90,7 +89,6 @@ h3{
     justify-content: space-between;
 }
 .basket-item,.empty_msg{
-    /* background-color: rgb(231, 231, 90); */
     background-color: rgb(5, 185, 205);
     border-radius: 5px;
     padding: 10px;
@@ -129,27 +127,23 @@ h3{
 .quantity_num{
    margin: 0px 2px 0px 2px;
 }
-.plus{
+.min,.plus{
     background-color: rgb(203, 190, 254);
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
     cursor: pointer;
     border: none;
     padding: 0px 3px 0px 3px;
     font-size: 15px;
 }
+.plus{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
 .min{
-    background-color: rgb(203, 190, 254);
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    cursor: pointer;
-    border: none;
-    padding: 0px 3px 0px 3px;
-    font-size: 15px;
 }
 #search-bar{
     text-align: right;
-    /* background-color: #532915; */ 
     background-color: rgba(45, 68, 108, 0.745);
     padding: 10px;
     margin-top: 20px;
@@ -176,30 +170,29 @@ h3{
     margin-top: 20px;
     color: rgb(81, 80, 80);
 }
+
+#checkout-btn,#cart-clear-btn{
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+}
 #checkout-btn{
     padding: 10px;
     font-size: 15px;
-    font-weight: bold;
-    border: none;
     background-color: rgb(109, 225, 124);
-    border-radius: 10px;
     cursor: pointer;
     position: relative;
     top: 22px;
     right: 10px;
-    box-shadow: 0 4px #999;
 }
 #cart-clear-btn{
     float: left;
     margin-top: 10px;
     padding: 6px;
     font-size: 13px;
-    font-weight: bold;
-    border: none;
     background-color: rgb(255, 191, 127);
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 4px #999;
 }
 #checkout-btn:active{
     background-color: rgb(255, 127, 138);
