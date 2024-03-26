@@ -26,7 +26,6 @@ a:hover text {
 
 /* Apply the drop animation to the h1 element with id 'topic' */
 #topic {
-    font-size: 20px;
     animation: drop 0.5s ease-out forwards; /* Apply the animation */
 }
 
@@ -37,3 +36,5 @@ a:hover text {
     }
     50% {
         animation-name: none
+    }
+}
