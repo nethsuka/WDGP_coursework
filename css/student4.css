@@ -1,0 +1,45 @@
+*{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+}
+h1{
+    font-size: 30px;
+}
+h5{
+    font-size: 23px;
+}
+p{
+    font-size: 21px;
+    margin: 0 40px 0 40px;
+}
+
+.sitemap, .content{
+    background-color: rgba(116, 142, 212, 0.958);
+    margin-left: 0;
+    margin-right: 30%;
+    border-radius: 0 100px 100px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h2{
+    padding-bottom: 15px;
+}
+
+.gallery, .editor{
+    background-color: rgba(64, 106, 222, 0.926);
+    margin-left: 30%;
+    margin-right: 0;
+    border-radius: 100px 0 0 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a:visited{
+    color: rgb(14, 5, 96);
+}
+
+a:hover{
+    color: rgb(212, 255, 0);
+    
+}
