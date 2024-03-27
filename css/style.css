@@ -93,16 +93,15 @@ header .navbar .active-page {
 
 }
 
-
-
 .content{
-    max-width: 650px;
+    max-width: 100%;
     justify-content: space-between;
     margin:60px 100px;   
     padding: 20px;
 }
 
 .topic h1{
+    text-align: center;
     margin-top: 30px;
     color:rgb(0, 0, 0);
     font-size: 35px;
@@ -185,13 +184,14 @@ header .navbar .active-page {
     }
 }
 
-
 .content .info .additional-info {
+    text-align: center;
+    font-size: 25px;
     display: flex;
     justify-content: center;
-    max-width: 800px; 
+    max-width: 100%; 
     width: 100%; 
-    padding: 15px 20px;
+    padding: 15px 20px 0px 20px;
     margin: -50px auto 0; 
     background: #f8f9fac1;
     color: #000000;
