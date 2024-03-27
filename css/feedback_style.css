@@ -6,17 +6,12 @@ body {
 
 form{
     padding: 10px;
-
 }
-
 
 .content {
     text-align: center;
-
-
-
-
 }
+
 .form-content{
     border: 2px solid #000; /* Add a border to the form */
     border-radius: 25px;
@@ -42,15 +37,11 @@ form{
 .form-content #req{
     color: red;
     font-size: 25px;
-
 }
-
-
 .radio-container {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 10px; /* Adjust as needed */
-
 }
 
 .radio-container label {
@@ -61,7 +52,6 @@ form{
 .radio-container input[type="radio"] {
     display: block;
     margin: 10px; 
-    
 }
 
 #submit {
@@ -72,7 +62,6 @@ form{
     font-weight: bold;
     border: none;
     border-radius: 8px;
-
 }
 
 #submit:hover {
@@ -83,7 +72,6 @@ form{
 #req{
     display: inline;
 } */
-
 
 @media (max-width: 750px) {
     .form-content {

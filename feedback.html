@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>Feedback form</title>
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/feedback_style.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
- 
+    <script src="/JS/anim.js"></script>
     
 </head>
 <body>
-
     <section>
         <input type="checkbox" id="check">
         <header>
@@ -30,18 +29,25 @@
         </label>
         </header>
 
-
     <div class="content">
 
-    <form id="feedback" action="" method="post"></form>
+    <form id="feedback" action="" method="post">
     <div class="form-content">
     <h1>Feedback form</h1>
     <h3>Required fields * </h3>
+
+    <div class="import-control">
     <span id="basicInfo"><span id="req">*</span>Enter your name: </span>
     <input type="text" id="name" placeholder="Enter names here"><br><br>
+    <div class="error"></div>
+</div>
+
+    <div class="import-control">
     <span id="basicInfo"><span id="req">*</span>Enter your email:  </span>
-     
     <input type="email" id="mail" placeholder="Enter email here"><br><br>
+    <div class="error"></div>
+</div>
+
     <p>Was this your first time visiting?</p>
     <input type="radio" name="select1" id="Yes">
     <span>Yes</span>
@@ -113,7 +119,9 @@
         <label for="satisfy">10</label>
         <input type="radio" id="satisfy10" name="1-10" value="10">
     </div>
+
 <p>Would you recommend our services?</p>
+
 <input type="radio" name="select3" id="Yes">
 <span>Yes</span>
 <input type="radio" name="select3" id="No">
@@ -122,7 +130,7 @@
 
 <select name="updates" id="">
     <option value="Yes">Yes - via Email</option>
-    <option value="No">No</option>
+    <option value="No">Not now</option>
 </select>
 
 <p>Do you have any additional questions or requests?</p>
@@ -132,10 +140,9 @@
 </div>
 
 </div>
+</form>
 
 </section>
-
-
 
 <div class="footer_cont">
     <footer>
@@ -163,6 +170,5 @@
             </ul>
         </footer>
     </div>
-
 </body>
 </html>
