@@ -1,6 +1,7 @@
 *{
     font-family:'Times New Roman', Times, serif;
     text-align: center;
+    color: rgb(16, 6, 105);
 }
 h1{
     font-size: 30px;
@@ -8,13 +9,16 @@ h1{
 h5{
     font-size: 23px;
 }
+h2{
+    padding-bottom: 15px;
+}
 p{
     font-size: 21px;
     margin: 0 40px 0 40px;
 }
 
 .sitemap, .content{
-    background-color: rgba(116, 142, 212, 0.958);
+    background-color: rgba(6, 17, 57, 0.975);
     margin-left: 0;
     margin-right: 30%;
     border-radius: 0 100px 100px 0;
@@ -22,12 +26,12 @@ p{
     padding-bottom: 20px;
 }
 
-h2{
-    padding-bottom: 15px;
+.sitemap h2, .sitemap p, .sitemap p em, .content h2, .content p, .content p em{
+    color: rgba(225, 225, 28, 0.738);
 }
 
 .gallery, .editor{
-    background-color: rgba(64, 106, 222, 0.926);
+    background-color: rgba(0, 191, 255, 0.91);
     margin-left: 30%;
     margin-right: 0;
     border-radius: 100px 0 0 100px;
@@ -35,11 +39,10 @@ h2{
     padding-bottom: 20px;
 }
 
-a:visited{
-    color: rgb(14, 5, 96);
+a{
+    text-decoration: none;
 }
 
-a:hover{
-    color: rgb(212, 255, 0);
-    
+.sitemap:hover ,.gallery:hover ,.content:hover, .editor:hover{
+    background-color: rgb(127, 189, 192);
 }
