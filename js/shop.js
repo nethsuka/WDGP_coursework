@@ -3,7 +3,7 @@ const product_list = [
         id : 0,
         name : 'Swimming Goggles',
         quantity : 1,
-        price : 600,
+        price : 300,
         image : 'img/goggle.jfif'
 
     },
@@ -11,28 +11,28 @@ const product_list = [
         id : 1,
         name : 'Diving Masks',
         quantity : 1,
-        price : 800,
+        price : 500,
         image : 'img/diving mask.jpg'
     },
     {
         id : 2,
         name : 'Swimming Suit',
         quantity : 1,
-        price : 1500,
+        price : 900,
         image : 'img/suit.jfif'
     },
     {
         id : 3,
         name : 'Watch Band',
         quantity : 1,
-        price : 5000,
+        price : 2000,
         image : 'img/watch.jfif'
     },
     {
         id : 4,
         name : 'Swimming Bags',
         quantity : 1,
-        price : 2000,
+        price : 1500,
         image : 'img/bag.jfif'
     },
     {
@@ -46,8 +46,57 @@ const product_list = [
         id : 6,
         name : 'Life Jacket',
         quantity : 1,
-        price : 4300,
+        price : 1000,
         image : 'img/jacket.jfif'
+    },
+    {
+        id : 7,
+        name : 'Training Fins',
+        quantity : 1,
+        price : 760,
+        image : 'img/training-fins.jfif'
+    },
+    {
+        id : 8,
+        name : 'Swimming Kickboard',
+        quantity : 1,
+        price : 800,
+        image : 'img/Swimming-kickboard.jpg'
+    },
+    {
+        id : 9,
+        name : 'Nose Clip',
+        quantity : 1,
+        price : 200,
+        image : 'img/nose-clip.jpg'
+    },
+    {
+        id : 10,
+        name : 'Earplugs for Divers',
+        quantity : 1,
+        price : 250,
+        image : 'img/durable-earplugs.jpg'
+    },
+    {
+        id : 11,
+        name : 'Hand Paddles',
+        quantity : 1,
+        price : 320,
+        image : 'img/hand-paddles.jfif'
+    },
+    {
+        id : 12,
+        name : 'Pool Skimmer Net',
+        quantity : 1,
+        price : 150,
+        image : 'img/pool-skimmer-net.jfif'
+    },
+    {
+        id : 13,
+        name : 'Armbands',
+        quantity : 1,
+        price : 350,
+        image : 'img/armbands.jpg'
     },
 ];
 
