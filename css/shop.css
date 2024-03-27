@@ -1,0 +1,222 @@
+
+.main{
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+}
+.item-box{
+    width: 150px;
+    height: 250px;
+    border: 2px solid rgb(109, 132, 224);
+    margin: 20px;
+    float: left;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgb(12, 12, 84);
+    position: relative;
+}
+img{
+    height: 100px;
+    border-radius: 10px;
+}
+.add-cart{
+    background-color: rgb(199, 233, 106);
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    box-shadow: 0 4px #999;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+}
+.add-cart:hover{
+    background-color: rgb(255, 127, 138);
+    cursor: pointer;
+}
+.add-cart:active{
+    transform: translateY(4px);
+}
+.basket{
+    border: 2px solid rgb(109, 132, 224);
+    background-color: rgb(12, 12, 84);
+    width: 400px;
+    height: 500px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(198, 236, 162);
+    padding: 8px;
+    border-radius: 10px;
+}
+h3{
+    padding: 10px;
+}
+#cart{
+    background-color: rgb(199, 185, 255);
+    border: 2px solid rgb(187, 114, 255);
+    padding: 3px 10px 3px 10px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    float: right;
+    font-weight: bold;
+}
+.basket-title{
+    border-radius: 4px;
+    background-color: rgb(170, 219, 247);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+#cart img{
+    height: 30px;
+    margin-right: 10px;
+}
+#hole{
+    display: flex;
+    justify-content: space-between;
+}
+.basket-item,.empty_msg{
+    background-color: rgb(5, 185, 205);
+    border-radius: 5px;
+    padding: 10px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+.delete_btn{
+    float: right;
+    border: none;
+    padding: 5px;
+    background-color: rgb(241, 102, 78);
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    bottom: 8px;
+}
+.delete_btn:hover{
+    background-color: rgb(109, 121, 255);
+}
+.basket p{
+    text-align: right;
+}
+.container2{
+    width: 100%; 
+    height: 60%;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+.q-box{
+    background-color: white;
+    width: 40px;
+    display: inline;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.quantity_num{
+   margin: 0px 2px 0px 2px;
+}
+.min,.plus{
+    background-color: rgb(203, 190, 254);
+    cursor: pointer;
+    border: none;
+    padding: 0px 3px 0px 3px;
+    font-size: 15px;
+}
+.plus{
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.min{
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+#search-bar{
+    text-align: right;
+    background-color: rgba(45, 68, 108, 0.745);
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+#search-bar input{
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 20px;
+    width: 300px;
+    background-color: rgb(170, 219, 247);
+}
+.search-bar-and-item-containor{
+    width: 100%;
+}
+#empty-msg{
+    text-align: center;
+    background-color: rgb(226, 224, 224);
+    padding: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: rgb(81, 80, 80);
+}
+
+#checkout-btn,#cart-clear-btn{
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px #999;
+}
+#checkout-btn{
+    padding: 10px;
+    font-size: 15px;
+    background-color: rgb(109, 225, 124);
+    cursor: pointer;
+    position: relative;
+    top: 22px;
+    right: 10px;
+}
+#cart-clear-btn{
+    float: left;
+    margin-top: 10px;
+    padding: 6px;
+    font-size: 13px;
+    background-color: rgb(255, 191, 127);
+}
+#checkout-btn:active{
+    background-color: rgb(255, 127, 138);
+    transform: translateY(4px);
+}
+#cart-clear-btn:active{
+    background-color: rgb(255, 127, 138);
+    transform: translateY(4px);
+}
+
+
+
+@media (max-width: 757px){
+    #search-bar input{
+        width: 200px;
+    }
+
+    #hole{
+        display:grid;
+    }
+}
+
+@media (max-width: 300px){
+    .item-box{
+        margin-left: 100px;
+    }
+}
