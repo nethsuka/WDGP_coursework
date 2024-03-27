@@ -1,0 +1,47 @@
+*{
+    text-align: center;
+    color: rgb(16, 6, 105);
+}
+h1{
+    font-size: 30px;
+}
+h5{
+    font-size: 23px;
+}
+h2{
+    padding-bottom: 15px;
+}
+p{
+    font-size: 21px;
+    margin: 0 40px 0 40px;
+}
+
+.sitemap, .content{
+    background-color: rgba(6, 17, 57, 0.975);
+    margin-left: 0;
+    margin-right: 30%;
+    border-radius: 0 100px 100px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sitemap h2, .sitemap p, .sitemap p em, .content h2, .content p, .content p em{
+    color: rgba(225, 225, 28, 0.738);
+}
+
+.gallery, .editor{
+    background-color: rgba(0, 191, 255, 0.91);
+    margin-left: 30%;
+    margin-right: 0;
+    border-radius: 100px 0 0 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sitemap:hover ,.gallery:hover ,.content:hover, .editor:hover{
+    background-color: rgb(35, 54, 116);
+}
