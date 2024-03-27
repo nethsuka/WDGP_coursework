@@ -10,6 +10,10 @@ form{
 
 .content {
     text-align: center;
+<<<<<<< Updated upstream:css/feedback_style.css
+=======
+
+>>>>>>> Stashed changes:Student 2/feedback_style.css
 }
 
 .form-content{
@@ -37,7 +41,32 @@ form{
 .form-content #req{
     color: red;
     font-size: 25px;
+<<<<<<< Updated upstream:css/feedback_style.css
 }
+=======
+
+}.form-content.success input{
+    border-color: #09c372;
+}
+
+.form-content.error input{
+    border-color: #ff3860;
+}
+
+.form-content.error input{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+
+.form-content input:focus{
+    outline: 0;
+}
+
+
+
+
+>>>>>>> Stashed changes:Student 2/feedback_style.css
 .radio-container {
     display: inline-block;
     vertical-align: top;
