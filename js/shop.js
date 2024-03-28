@@ -58,7 +58,7 @@ const product_list = [
     },
     {
         id : 8,
-        name : 'Swimming Kickboard',
+        name : 'Kickboard',
         quantity : 1,
         price : 800,
         image : 'img/Swimming-kickboard.jpg'
