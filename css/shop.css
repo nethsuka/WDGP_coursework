@@ -213,6 +213,12 @@ h3{
     #hole{
         display:grid;
     }
+    .basket:last-child{
+        grid-row: 1;
+    }
+    .basket{
+        width: 350px;
+    }
 }
 
 @media (max-width: 300px){
