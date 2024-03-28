@@ -1,32 +1,22 @@
-/* 
-body {
-    margin: 0;
-    padding: 0;
-} */
-
 form{
     padding: 10px;
-
 }
-
 
 .content {
     text-align: center;
-
-
-
-
 }
+
 .form-content{
-    border: 2px solid #000; /* Add a border to the form */
+    /* border: 2px solid #000;  */
     border-radius: 25px;
-    width: 80%; /* Making responsive*/
-    max-width: 600px; /* Making responsive*/
+    width: 80%; 
+    max-width: 600px;
     margin:30px auto;
-    padding: 30px; /* Add some padding to the form */
+    padding: 30px; 
     background-color: rgba(255, 255, 255, 0.859);
-    box-sizing: border-box; /* Ensure that padding is included in the width */
+    box-sizing: border-box; 
 }
+
 .form-content h1 {
     margin-top: 30px;
     text-align: center;
@@ -45,12 +35,10 @@ form{
 
 }
 
-
 .radio-container {
     display: inline-block;
     vertical-align: top;
     margin-bottom: 10px; /* Adjust as needed */
-
 }
 
 .radio-container label {
@@ -61,7 +49,6 @@ form{
 .radio-container input[type="radio"] {
     display: block;
     margin: 10px; 
-    
 }
 
 #submit {
@@ -72,17 +59,37 @@ form{
     font-weight: bold;
     border: none;
     border-radius: 8px;
-
 }
 
 #submit:hover {
     background-color: #02b508;
 }
 
-/* 
-#req{
-    display: inline;
-} */
+
+.form-content .input-control input{
+    /* border: 2px solid #f0f0f0; */
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 4px;
+}
+
+.input-control input:focus{
+    outline:0; /* Removing browser default blue border */
+}
+
+.input-control.success input{
+    border-color: #04c16f;
+}
+
+.input-control.error input{
+    border-color: rgb(204, 9, 29);
+}
+
+.input-control.error {
+    color:rgb(204, 9, 29);
+    font-size: 4px;
+    height:10px;
+}
 
 
 @media (max-width: 750px) {

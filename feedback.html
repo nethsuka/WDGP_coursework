@@ -8,7 +8,6 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
- 
     
 </head>
 <body>
@@ -33,15 +32,23 @@
 
     <div class="content">
 
-    <form id="feedback" action="" method="post"></form>
+    <form id="feedback" action="/" method="post">
     <div class="form-content">
     <h1>Feedback form</h1>
     <h3>Required fields * </h3>
-    <span id="basicInfo"><span id="req">*</span>Enter your name: </span>
+
+    <div class="input-control">
+    <label for="name"><span id="req">*</span>Enter your name:</label>
     <input type="text" id="name" placeholder="Enter names here"><br><br>
-    <span id="basicInfo"><span id="req">*</span>Enter your email:  </span>
-     
-    <input type="email" id="mail" placeholder="Enter email here"><br><br>
+    <div class="error"></div>
+</div>
+
+<div class="input-control">
+    <label for="email"><span id="req">*</span>Enter your email:</label>
+    <input type="text" id="email" placeholder="Enter email here"><br><br>
+    <div class="error"></div>
+</div>
+
     <p>Was this your first time visiting?</p>
     <input type="radio" name="select1" id="Yes">
     <span>Yes</span>
@@ -128,8 +135,17 @@
 <p>Do you have any additional questions or requests?</p>
 <textarea name="question" id="que" cols="25" rows="4" placeholder="Add your message here..."></textarea><br>
 
+<!-- Add preview button -->
+<!-- <button type="button" onclick="previewFeedback()">Preview</button> -->
+
 <input type="submit" value="Submit" id="submit">
+<!-- <div id="previewModal" class="modal">
+<div class="modal-content">
+    <span class="close" onclick="closePreviewModal()">&times;</span> -->
+    <!-- Display preview feedback content here -->
+    <!-- <div id="previewFeedbackContent"></div> -->
 </div>
+</form>
 
 </div>
 
@@ -163,6 +179,9 @@
             </ul>
         </footer>
     </div>
+
+
+    <script src="./JS/anim.js"></script>
 
 </body>
 </html>
