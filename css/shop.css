@@ -84,7 +84,7 @@ h3{
     height: 30px;
     margin-right: 10px;
 }
-#hole{
+#whole{
     display: flex;
     justify-content: space-between;
 }
@@ -210,7 +210,7 @@ h3{
         width: 200px;
     }
 
-    #hole{
+    #whole{
         display:grid;
     }
     .basket:last-child{
