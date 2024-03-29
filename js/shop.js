@@ -116,7 +116,7 @@ const product_list = [
     displayCart();
 
     if(sessionStorage.getItem("cart")){
-        cart = JSON.parse(sessionStorage.getItem("cart")); // get 'cart' string array from local storage
+        cart = JSON.parse(sessionStorage.getItem("cart")); // get 'cart' string array from Session storage
         displayCart();                                   // and converting it into it's original format
         getTotal();
     }
@@ -151,14 +151,14 @@ const product_list = [
                 obj.quantity++;
                 let index = cart.findIndex(element => element.id == p.id)
                 ElementPriceIncrease(index);
-                saveToLocalStorage();
+                saveToSessionStorage();
                 displayCart();
                 getTotal();
                 return;
             }
         }
         cart.push({...p});  // {...p} this methode is used to copy an object from the original array
-        saveToLocalStorage();
+        saveToSessionStorage();
         displayCart();
         getTotal();
     }
@@ -192,7 +192,7 @@ const product_list = [
     //Fuction that delete selected items from the basket
     function deleteItem(index){
         cart.splice(index, 1);
-        saveToLocalStorage();
+        saveToSessionStorage();
         displayCart();
         getTotal()
     }
@@ -219,7 +219,7 @@ const product_list = [
     function incrementQuantity(index) {
         cart[index].quantity++;
         ElementPriceIncrease(index);
-        saveToLocalStorage();
+        saveToSessionStorage();
         displayCart();
         getTotal();
     }
@@ -230,7 +230,7 @@ const product_list = [
             cart[index].quantity--;
         }
         ElementPriceIncrease(index);
-        saveToLocalStorage();
+        saveToSessionStorage();
         displayCart();
         getTotal();
     }
@@ -254,7 +254,7 @@ const product_list = [
     function clearCart(){
         if(cart.length != 0){
             cart.length = 0;
-            saveToLocalStorage();
+            saveToSessionStorage();
             document.querySelector('.container2').innerHTML = "<p class='empty_msg' style='text-align:left'>Your cart is empty !</p>";
             displayCart();
             getTotal();
@@ -263,8 +263,8 @@ const product_list = [
         }
     }
 
-    // Function that save the cart array to local storage in browser
-    function saveToLocalStorage(){
+    // Function that save the cart array to Session storage in browser
+    function saveToSessionStorage(){
         let local_cart = JSON.stringify(cart);
         sessionStorage.setItem("cart", local_cart);
     }
