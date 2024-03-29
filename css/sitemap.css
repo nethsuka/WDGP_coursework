@@ -2,6 +2,11 @@
     background-color: rgba(30, 23, 134, 0.387);
 }
 
+#topic{
+    text-align: center;
+    font-size: 20;
+}
+
 /* CSS for rectangle and text hover effect */
 a:hover rect {
     fill: rgb(231, 231, 156); /* Change the fill color of the rectangle on hover */
