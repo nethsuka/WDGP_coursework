@@ -40,7 +40,6 @@ header .logo{
     left:25px;
     bottom: 10px;
     color: #000;
-    background:white;
     font-size: 30px;
     text-decoration: none;
     text-transform: uppercase;
@@ -280,7 +279,6 @@ footer .wave#wave4 {
 
     header .logo {
         position: relative;
-        color: #fff;
         background: none;
     }
 

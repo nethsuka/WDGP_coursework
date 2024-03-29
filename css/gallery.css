@@ -165,6 +165,19 @@
 } */
 
 
+/* Define the keyframes for the drop animation */
+@keyframes drop {
+    0% {
+        transform: translateY(-50px); /* Initial position above */
+        opacity: 0; /* Initial opacity */
+    }
+    100% {
+        transform: translateY(0); /* Final position at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+
+/* Apply the drop animation to the h1 element with id 'topic' */
 #topic {
     animation: drop 0.5s ease-out forwards; /* Apply the animation */
 }
@@ -175,6 +188,6 @@
         animation-name: drop;
     }
     50% {
-        animation-name: none;
+        animation-name: none
     }
 }
