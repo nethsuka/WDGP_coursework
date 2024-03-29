@@ -32,123 +32,159 @@
 
     <div class="content">
 
-    <form id="feedback" action="/" method="post">
+        <form id="form" action="https://formsubmit.co/02jehanfernando@gmail.com" method="post">
     <div class="form-content">
     <h1>Feedback form</h1>
     <h3>Required fields * </h3>
 
     <div class="input-control">
-    <label for="name"><span id="req">*</span>Enter your name:</label>
-    <input type="text" id="name" placeholder="Enter names here"><br><br>
+    <label for="username"><span id="req">*</span>Enter your name:</label>
+    <input type="text" id="username" name="username" placeholder="Enter names here"><br><br>
     <div class="error"></div>
 </div>
 
 <div class="input-control">
     <label for="email"><span id="req">*</span>Enter your email:</label>
-    <input type="text" id="email" placeholder="Enter email here"><br><br>
+    <input type="text" id="email" name="email" placeholder="Enter email here"><br><br>
     <div class="error"></div>
 </div>
 
     <p>Was this your first time visiting?</p>
     <input type="radio" name="select1" id="Yes">
-    <span>Yes</span>
+    <span id="opt1">Yes</span>
     <input type="radio" name="select1" id="No">
-    <span>No</span>
+    <span id="opt1">No</span><br><br>
     <p>Was this website informative and easy to navigate through?</p>
     <input type="radio" name="select2" id="Yes">
-    <span>Yes</span>
+    <span id="opt2">Yes</span>
     <input type="radio" name="select2" id="No">
-    <span>No</span>
-    <p><span id="req">*</span> If "No", suggest any improvements for the future:</p>
-    <textarea name="suggestion" id="Suggest" cols="25" rows="4" placeholder="Add your message here"></textarea><br>
-    <p>How satisfied are you with Our services? Choose from 0 to 10,
+    <span id="opt2">No</span>
+
+    <div class="input-control">
+        <label for="username"><span id="req">*</span>If "No", suggest any improvements for the future:</label>
+    <textarea name="text1" id="text1" cols="25" rows="4" placeholder="Add your message here"></textarea><br>
+    <div class="error"></div>
+    </div>
+
+    <p>How satisfied are you with Our services? <br>Choose from 0 to 10,
         with 1 being <br> "Not satisfied at all!" and 10 being "Extremely satisfied!" </p>
 
     <div class="radio-container">
         <label for="satisfy">1</label>
-        <input type="radio" id="satisfy1" name="1-10" value="1">
+        <input type="radio" id="satisfy1" name="1-10" value="1" id="level">
     </div>
     
 
     <div class="radio-container">
         <label for="satisfy">2</label>
-        <input type="radio" id="satisfy2" name="1-10" value="2">
+        <input type="radio" id="satisfy2" name="1-10" value="2" id="level">
     </div>
 
     <div class="radio-container">
         <label for="satisfy">3</label>
-        <input type="radio" id="satisfy3" name="1-10" value="3">
+        <input type="radio" id="satisfy3" name="1-10" value="3" id="level">
     </div>
     
 
     <div class="radio-container">
         <label for="satisfy">4</label>
-        <input type="radio" id="satisfy4" name="1-10" value="4">
+        <input type="radio" id="satisfy4" name="1-10" value="4" id="level">
     </div>
 
     <div class="radio-container">
         <label for="satisfy">5</label>
-        <input type="radio" id="satisfy5" name="1-10" value="5">
+        <input type="radio" id="satisfy5" name="1-10" value="5" id="level">
     </div>
     
 
     <div class="radio-container">
         <label for="satisfy">6</label>
-        <input type="radio" id="satisfy6" name="1-10" value="6">
+        <input type="radio" id="satisfy6" name="1-10" value="6" id="level">
     </div>
 
 
     <div class="radio-container">
         <label for="satisfy">7</label>
-        <input type="radio" id="satisfy7" name="1-10" value="7">
+        <input type="radio" id="satisfy7" name="1-10" value="7" id="level">
     </div>
     
 
     <div class="radio-container">
         <label for="satisfy">8</label>
-        <input type="radio" id="satisfy8" name="1-10" value="8">
+        <input type="radio" id="satisfy8" name="1-10" value="8" id="level"> 
     </div>
 
 
     <div class="radio-container">
         <label for="satisfy">9</label>
-        <input type="radio" id="satisfy9" name="1-10" value="9">
+        <input type="radio" id="satisfy9" name="1-10" value="9" id="level">
     </div>
 
 
     <div class="radio-container">
         <label for="satisfy">10</label>
-        <input type="radio" id="satisfy10" name="1-10" value="10">
+        <input type="radio" id="satisfy10" name="1-10" value="10" id="level">
     </div>
+
+
 <p>Would you recommend our services?</p>
 <input type="radio" name="select3" id="Yes">
-<span>Yes</span>
+<span id="opt3">Yes</span>
 <input type="radio" name="select3" id="No">
-<span>No</span>
-<p><span id="req">*</span> Would you like to receive updates about the websites and any offers?</p>
+<span id="opt3">No</span>
 
-<select name="updates" id="">
+<div>
+    <label for="updates"><span id="req">*</span>Would you like to receive updates about the websites and any offers?</label>
+<br>
+<select name="updates" id="updates">
     <option value="Yes">Yes - via Email</option>
     <option value="No">No</option>
 </select>
-
+</div>
+<br>
 <p>Do you have any additional questions or requests?</p>
 <textarea name="question" id="que" cols="25" rows="4" placeholder="Add your message here..."></textarea><br>
 
-<!-- Add preview button -->
-<!-- <button type="button" onclick="previewFeedback()">Preview</button> -->
 
-<input type="submit" value="Submit" id="submit">
-<!-- <div id="previewModal" class="modal">
-<div class="modal-content">
-    <span class="close" onclick="closePreviewModal()">&times;</span> -->
-    <!-- Display preview feedback content here -->
-    <!-- <div id="previewFeedbackContent"></div> -->
+<input type="submit" value="Submit" id="btn-style">
+<input type="reset" value="Reset" id="btn-style">
+
+
+
+
 </div>
+
+</div>
+
+<input type="button" value="Preview Feedback" id="preview-btn" onclick="previewFeedback()">
+
+
+
 </form>
 
+
+
+
+<div id="previewModal" class="modal">
+    <div class="modal-content">
+        <div id="previewFeedbackContent">
+
+            <input type="button" id="editFormBtn" value="Edit Form">
+
+            
+        </div>
+        <span id="closeModal" class="close"></span>
+    </div>
 </div>
 
+
+
+
+<div id="confirmationMessage">
+    Thank you for your feedback!<br>
+    Your submission has been sent <span style='font-size:20px;'>&#9989;</span>    <!-- Reference: W3schools -->
+</div>
+</div>
 </section>
 
 
