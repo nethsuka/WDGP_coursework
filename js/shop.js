@@ -109,7 +109,7 @@ const product_list = [
                         <img src="${item.image}" alt="${item.name}"><br>
                         <p>${item.name}</p>
                         <p>Rs. ${item.price}.00</p>
-                        <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
+                        <button class='add-cart' onclick='addToBasket(${item.id})'>Add to Cart</button>
                     </div>`;
         document.querySelector('.container').innerHTML += itemHTML;
     });
@@ -136,7 +136,7 @@ const product_list = [
                                 <img src="${item.image}" alt="${item.name}"><br>
                                 <p>${item.name}</p>
                                 <p>Rs. ${item.price}.00</p>
-                                <button class='add-cart' onclick='addToBasket(${item.id})'>Add to cart</button>
+                                <button class='add-cart' onclick='addToBasket(${item.id})'>Add to Cart</button>
                             </div>`;
             document.querySelector('.container').innerHTML += itemHTML; })
         }
@@ -150,7 +150,7 @@ const product_list = [
             if(obj.id == p.id){
                 obj.quantity++;
                 let index = cart.findIndex(element => element.id == p.id)
-                EelementPriceIncrease(index);
+                ElementPriceIncrease(index);
                 saveToLocalStorage();
                 displayCart();
                 getTotal();
@@ -218,7 +218,7 @@ const product_list = [
     // Function to increment quantity
     function incrementQuantity(index) {
         cart[index].quantity++;
-        EelementPriceIncrease(index);
+        ElementPriceIncrease(index);
         saveToLocalStorage();
         displayCart();
         getTotal();
@@ -229,14 +229,14 @@ const product_list = [
         if (cart[index].quantity > 1) {
             cart[index].quantity--;
         }
-        EelementPriceIncrease(index);
+        ElementPriceIncrease(index);
         saveToLocalStorage();
         displayCart();
         getTotal();
     }
 
     // Function that increase the price of an item in the cart
-    function EelementPriceIncrease(index){
+    function ElementPriceIncrease(index){
         let element = product_list.find(item => item.id == cart[index].id);
         cart[index].price = element.price * cart[index].quantity;
     }

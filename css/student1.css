@@ -52,12 +52,13 @@
     color: white;
 }
 .page-block{
-    background-color: #a28646ba;
+    background-color: #a28646c5;
     border-radius: 8px;
     padding: 20px;
 }
 #box-container{
     padding: 15px;
+    width: 100%;
 }
 .dd{
     position: absolute;

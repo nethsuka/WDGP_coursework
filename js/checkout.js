@@ -115,7 +115,7 @@ function validateFormData(form){
     }
 
     if(form.pay_method.value == ""){
-        document.getElementById('valid_choise').innerHTML = "Enter the payment method";
+        document.getElementById('valid_choise').innerHTML = "Please enter the purchase method";
     }else{
         var pay_method = true;
     }

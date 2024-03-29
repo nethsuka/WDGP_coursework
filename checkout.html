@@ -100,11 +100,14 @@
                             </div>
                         <div>
                             <fieldset class="field">
-                                <legend>Paymet method</legend>
+                                <legend>Order Placement</legend>
 
-                                <label for="cod" class="my_lable">*Cash On Delivery : </label>
+                                <span>*Purchase For : </span>
+                                &nbsp;
+                                <label for="cod" class="my_lable">Buy for Myself </label>
                                 <input type="radio" id="cod" name="pay_method" value="onDelivery" onblur="updateProgressBar(this.value)">
-                                <label for="credit" class="my_lable">Credit Card : </label>
+                                &nbsp;&nbsp;
+                                <label for="credit" class="my_lable">Send as a Gift </label>
                                 <input type="radio" id="credit" name="pay_method" value="card" onblur="updateProgressBar(this.value)">
 
                                 <p id="valid_choise" class="errors"></p>
