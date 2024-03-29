@@ -1,83 +1,170 @@
-h1{
+/* General styles */
+#topic {
+    padding-top: 5px;
     text-align: center;
     font-size: 40px;
     position: relative;
-    /* left: 50%;
-    right: 50%; */
-    margin-bottom: 10%;
-    margin-top: 1%;
+    margin-bottom: 0%;
+    margin-top: 0;
 }
-.gallery{
-    /* border: 2px solid black; */
-    padding-top: 0;
-    background-color: rgba(0, 62, 112, 0.887);
-    padding-bottom: 0;
-}
-
-.images{
-    /* border: 2px solid red; */
+.gallery {
     display: flex;
-    height: 400px;
-    width: 100%;
-    overflow-x: auto;
-    padding: 40px 0 40px 0;
-    transition: 0.1s ease-in-out;
-    opacity: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    position: relative;
+    margin: 20px;
     overflow: hidden;
-    overflow-y: hidden;
+    width: 600px; /* Set a fixed width for all images */
 }
 
-.images img{
-    padding-right: 3%;
-    padding-left: 3%;
-    width: calc(100%/3);
+.image img {
+    width: 100%; /* Make the image fill its container */
+    height: 350px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
 }
 
-img:hover{
-    transform: scale(1.3);
+.related-images {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; /* Align items horizontally to the center */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.related-images img {
+    flex: 0 0 auto;
+    width: 350px;
+    height: 200px; /* Adjust as per your requirement */
+    margin-right: 10px; /* Adjust spacing between images */
+    scroll-snap-align: start;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay:hover {
     opacity: 1;
 }
 
-button:hover{
-    background-color: rgb(162, 162, 180);
-    color: antiquewhite;
+.hoverImage {
+    transition: transform 0.5s; /* Add a smooth transition effect */
 }
 
-.gallery .buttons{
+/* Additional CSS styles for the hover effect */
+.hoverImage:hover {
+    transform: scale(1.2); /* Zoom in to 120% of original size */
+}
+
+.text {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* CSS for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* Close button for the modal */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #b93030;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Caption text */
+#caption {
+    color: #bbb;
+    font-size: 18px;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+}
+
+/* Add animation */
+.modal-content,
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+/* Position the back and next buttons */
+.scroll-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 20px;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     cursor: pointer;
-    padding: 10px 10px;
+    padding: 10px;
+    font-size: 16px;
+    z-index: 1; /* Ensure buttons are above the modal image */
+}
+/* 
+.scroll-left {
+    left: 0;
 }
 
-#previous{
-    left: 0px;
-    margin-left: 5px;
+.scroll-right {
+    right: 0;
 }
 
-#next{
-    right: 0px;
-    margin-right: 5px;
-}
 
-/* Define the keyframes for the drop animation */
-@keyframes drop {
-    0% {
-        transform: translateY(-50px); /* Initial position above */
-        opacity: 0; /* Initial opacity */
+@keyframes zoom {
+    from {
+        transform: scale(0)
     }
-    100% {
-        transform: translateY(0); /* Final position at original position */
-        opacity: 1; /* Fully visible */
+    to {
+        transform: scale(1)
     }
-}
+} */
 
-/* Apply the drop animation to the h1 element with id 'topic' */
+
 #topic {
     animation: drop 0.5s ease-out forwards; /* Apply the animation */
 }
@@ -88,6 +175,6 @@ button:hover{
         animation-name: drop;
     }
     50% {
-        animation-name: none
+        animation-name: none;
     }
 }

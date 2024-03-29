@@ -11,37 +11,30 @@
 </head>
 <body>
     <section>
-        <input type="checkbox" id="check">
-        <header>
-            <h2><a href="#" class="logo">Logo</a></h2>
-
-            <div class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="#" class="active-page">Gallery</a>
-                <a href="#" class="active">Shop</a>
-                <a href="#" class="active">Profile</a>
-                <a href="#" class="active">About Us</a>
-            </div>
-
-            
-            <label for="check" id="head-label">
-            <i class="fas fa-bars menu-btn"></i>
-            <i class="fas fa-times close-btn"></i>
-        </label>
-        </header>
         <h1 id="topic">Gallery</h1>
-    <div class="gallery">
-        <div class="images">
-            <img id="OD" src="img/diversity.jpeg" alt="Ocean diversity">
-            <img src="img/fishery.png" alt="Fishery">
-            <img src="img/whale_watching.jpeg" alt="Tourism">
-            <img src="img/pollution.jpeg" alt="Pollution">
+        <br/>
+        <div class="gallery">
+            <div class="image">
+                <img class="hoverImage" src="img/diversity.jpeg" alt="Image 1" onclick="openModal('img/diversity.jpeg', 'Text for Image 1')">
+            </div>
+            <div class="image">
+                <img class="hoverImage" src="img/pollution.jpeg" alt="Image 2" onclick="openModal('img/pollution.jpeg', 'Text for Image 2')">
+            </div>
+            <div class="image">
+                <img class="hoverImage" src="img/fishery.png" alt="Image 3" onclick="openModal('img/fishery.png', 'Ocean fishery is a vital industry sustaining coastal communities worldwide. It encompasses the harvesting of diverse aquatic species for consumption and trade. Fishery management practices aim to balance sustainable yield with environmental conservation, often employing quotas, regulations, and technology. However, challenges such as overfishing and habitat degradation necessitate vigilant conservation efforts for long-term viability.')">
+            </div>
+            <div class="image">
+                <img class="hoverImage" src="img/whale_watching.jpeg" alt="Image 4" onclick="openModal('img/whale_watching.jpeg', 'Text for Image 4')">
+            </div>
         </div>
-        <button class="buttons" id="previous" onclick="previousImage()"><</button>
-        <button class="buttons" id="next" onclick="nextImage()">></button>
-    </div>
     </section>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <div id="caption"></div>
+    </div>
 
     <footer>
         <div class="waves">
@@ -49,24 +42,23 @@
             <div class="wave" id="wave2"></div>
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
-
-            <a href="student4.html"><button class="editor-btn">Page Editor</button></a>
-        
+            <a href="student4.html" target="_blank"><button class="editor-btn">Page Editor</button></a>
         </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
-            <div class="social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
 
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </footer>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </footer>
+
+    <script src="js/gallery.js"></script>
 </body>
 </html>
