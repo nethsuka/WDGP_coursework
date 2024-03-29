@@ -111,7 +111,7 @@ const displayPreview = () => {
         <p><strong>Would you recommend our services? : </strong> ${question3}</p>
         <p><strong>Would you like to receive updates about the websites and any offers? : </strong> ${receiveUpdates}</p>
         <p><strong>Additional Questions/Requests: </strong> ${additionalQuestion}</p>
-        <button id="editFormBtn">Edit Form</button>
+        <button id="editFormBtn" onclick="goToForm()">Edit Form</button>
     `;
 
     previewModal.style.display = 'block';
@@ -132,6 +132,9 @@ const displayPreview = () => {
     
 };
 
+function goToForm(){
+    window.location.href = "feedback.html";
+}
 
 
 
@@ -152,5 +155,3 @@ window.addEventListener('click', (e) => {
         
     }
 });
-
-
