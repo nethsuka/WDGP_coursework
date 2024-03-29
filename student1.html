@@ -13,7 +13,7 @@
     <section>
         <input type="checkbox" id="check">
         <header>
-            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" height="35px"></a></h2>
+            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" height="35"></a></h2>
             <div class="navbar">
                 <a href="home.html" class="active">Home</a>
                 <a href="gallery.html" class="active">Gallery</a>
@@ -33,7 +33,7 @@
             <div id="header"><h2>Editor Sanuja</h2></div>
             <div id="content">
                 <div id="img-box">
-                    <div><img src="img/_MG_1092 (2).jpg" alt="profile_img" height="250px" id="profile-img"></div>
+                    <div><img src="img/profile-img.jpg" alt="profile_img" height="250" id="profile-img"></div>
                     <div id="under-img-txt">
                         <span class="dd">Name   : Sanuja Nethsuka</span><br>
                         <span class="dd">Role   : Student 1</span><br>
@@ -50,7 +50,7 @@
                             Added delete, increase, and decrease buttons and clear cart options to the cart.<br>
                             Validated the checkout process.<br>
                         </p>
-                        <a href="shop.html"><button class="goToPage-btn">Go To Page >></button></a>
+                        <button class="goToPage-btn" onclick="document.location='shop.html'">Go To Page >></button>
                     </div><br>
                     <div class="page-block">
                         <h2>Checkout Page</h2>
@@ -60,14 +60,14 @@
                             Included a progress bar to improve web accessibility.<br>
                             Implemented the functionality to generate a reference number using JavaScript.<br>
                         </p>
-                        <a href="checkout.html"><button class="goToPage-btn">Go To Page >></button></a>
+                        <button class="goToPage-btn" onclick="document.location='checkout.html'">Go To Page >></button>
                     </div><br>
                     <div class="page-block">
                         <h2>Receipt Page</h2>
                         <p>
                             Show ordered items, total, and receipt details to the customer<br>
                         </p>
-                        <a href="receipt.html"><button class="goToPage-btn">Go To Page >></button></a>
+                        <button class="goToPage-btn" onclick="document.location='receipt.html'">Go To Page >></button>
                     </div><br>
                     <div class="page-block">
                         <h2>Content page</h2>
@@ -75,7 +75,7 @@
                             Created the basic structure from HTML and added CSS styles for a better look.<br>
                             Added photos and information about the marine pollution.<br>
                         </p>
-                        <a href="content1.html"><button class="goToPage-btn">Go To Page >></button></a>
+                        <button class="goToPage-btn" onclick="document.location='content1.html'">Go To Page >></button>
                     </div><br>
                     <div class="page-block">
                         <h2>Splash Screen</h2>
@@ -83,7 +83,7 @@
                             Placed the loading animation to the center of the screen using CSS.<br>
                             Did the rederection using a meta element.<br>
                         </p>
-                        <a href="splash.html"><button class="goToPage-btn">Go To Page >></button></a>
+                        <button class="goToPage-btn" onclick="document.location='splash.html'">Go To Page >></button>
                     </div>
                 </div>
             </div>
@@ -99,8 +99,8 @@
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
 
-            <a href="student1.html" target="_blank"><button class="editor-btn">Page Editor</button></a>
-        
+            <button class="editor-btn" onclick="window.open('student1.html', '_blank')">Page Editor</button>
+
         </div>
             <div class="social">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
