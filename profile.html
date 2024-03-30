@@ -319,16 +319,16 @@
             "Age:",
             "Gender:",
             "Address:",
-            // Stage 2: Task
-            "Task 1:",
-            "Task 2:",
-            "Task 3:",
-            "Task 4:",
-            // Stage 3: Qualifications
-            "Qualification 1:",
-            "Qualification 2:",
-            "Qualification 3:",
-            "Qualification 4:"
+            // Stage 2: Qualifications
+            "School:",
+            "Highest degree:",
+            "University/Institution:",
+            "Completion year:",
+            // Stage 3: Availability and contact info
+            "Availability for volunteering:",
+            "Prefered field for volunteering:",
+            "Mobile:",
+            "Email:",
         ];
         document.getElementById('editButton').style.display = 'none'; // Show edit button
 
@@ -343,7 +343,7 @@
             currentQuestion++;
             if (currentQuestion < questions.length) {
                 // Update question text
-                document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Task' : 'Qualifications')}`;
+                document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
                 document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
                 document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
 
@@ -366,7 +366,7 @@
         function previousQuestion() {
             if (currentQuestion > 0) {
                 currentQuestion--;
-                document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Task' : 'Qualifications')}`;
+                document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
                 document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
                 document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
                 updateProgress();
