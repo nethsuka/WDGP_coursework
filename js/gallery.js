@@ -1,6 +1,6 @@
 
         // Define a data structure to store main images and their related images
-var imageRelations = {
+let imageRelations = {
     "img/diversity.jpeg": ["img/corals.jpeg", "img/seaweeds.jpeg", "img/largest-fish.jpeg"],
     "img/pollution.jpeg": ["img/trash.jpg", "img/turtle.jpeg", "img/plastics-waste.jpeg"],
     "img/fishery.png": ["img/fishload.avif", "img/fishing.jpeg", "img/fishing-net-river.jpeg"],
@@ -61,19 +61,3 @@ function closeModalView() {
         relatedImagesContainer.remove();
     }
 }
-
-let imageElement = document.getElementsByClassName('hoverImage');
-
-// Add event listener for mouseover event
-imageElement.addEventListener('mouseover', function() {
-    // Your code for what happens when the mouse hovers over the image
-    // For example, changing the border color
-    imageElement.style.border = '2px solid blue';
-});
-
-// Add event listener for mouseout event
-imageElement.addEventListener('mouseout', function() {
-    // Your code for what happens when the mouse moves out of the image
-    // For example, reverting the border color to its original state
-    imageElement.style.border = 'none';
-});

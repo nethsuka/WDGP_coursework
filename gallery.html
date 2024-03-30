@@ -36,35 +36,42 @@
             The hoverImage class is what is used to provide the relavant psuedoclass formating to the image src.
             onclick attribute is there to excute the JS function named openModalView which pops up another view where the related images are displayed
             The functioning of the modal page is defined in the JS code *
+            3 parameters are passed to the function of the modal page - Refer the JS*
          -->
         <div class="gallery">
             <div class="image">
-                <img class="hoverImage" src="img/diversity.jpeg" alt="Image 1" onclick="openModalView('img/diversity.jpeg', 'Vast oceanic ecosystems teem with a multitude of species, from microscopic plankton to majestic whales and beyond.', 'Ocean Diversity')">
+                <img class="hoverImage" src="img/diversity.jpeg" alt="Diversity of Marine Life" onclick="openModalView('img/diversity.jpeg', 'Vast oceanic ecosystems teem with a multitude of species, from microscopic plankton to majestic whales and beyond.', 'Ocean Diversity')">
             </div>
             <div class="image">
-                <img class="hoverImage" src="img/pollution.jpeg" alt="Image 2" onclick="openModalView('img/pollution.jpeg', 'Man-made waste pollutes ocean depths, endangering marine life and ecosystems, from plastic debris to chemical contaminants.','Marine Pollution')">
+                <img class="hoverImage" src="img/pollution.jpeg" alt="Pollution caused to the Marine World" onclick="openModalView('img/pollution.jpeg', 'Man-made waste pollutes ocean depths, endangering marine life and ecosystems, from plastic debris to chemical contaminants.','Marine Pollution')">
             </div>
             <div class="image">
-                <img class="hoverImage" src="img/fishery.png" alt="Image 3" onclick="openModalView('img/fishery.png', 'Global fisheries sustain communities, but overfishing threatens stocks, jeopardizing livelihoods and ecological balance, necessitating sustainable management.', 'Marine Fishery')">
+                <img class="hoverImage" src="img/fishery.png" alt="Fishing in the Sea" onclick="openModalView('img/fishery.png', 'Global fisheries sustain communities, but overfishing threatens stocks, jeopardizing livelihoods and ecological balance, necessitating sustainable management.', 'Marine Fishery')">
             </div>
             <div class="image">
-                <img class="hoverImage" src="img/whale_watching.jpeg" alt="Image 4" onclick="openModalView('img/whale_watching.jpeg', 'Ocean tourism thrives, drawing millions to sandy shores and vibrant coral reefs, supporting economies and fostering conservation efforts.', 'Tourism')">
+                <img class="hoverImage" src="img/whale_watching.jpeg" alt="Tourism" onclick="openModalView('img/whale_watching.jpeg', 'Ocean tourism thrives, drawing millions to sandy shores and vibrant coral reefs, supporting economies and fostering conservation efforts.', 'Tourism')">
             </div>
         </div>
+        
+        <!-- 
+            The Modal View opens up frome here!
+            The first div tag below  is what defines the structure of the modal view
+            The closeModalView is a function is executed when the cross icon is clicked
+         -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModalView()">&times;</span>
+            <div id="heading"></div>  <!-- Heading is here -->
+            <img class="modal-content" id="modalImg">
+            <br>
+            <div id="caption"></div> <!-- Caption is here -->
+        </div>
+
+            <!--
+                The gallery ends here
+            -->
     </section>
 
-    <!-- 
-        The Modal View opens up frome here!
-        The first div tag below  is what defines the structure of the modal view
-        The closeModalView
-     -->
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModalView()">&times;</span>
-        <div id="heading"></div> 
-        <img class="modal-content" id="modalImg">
-        <br>
-        <div id="caption"></div> <!-- This is where the caption will be inserted -->
-    </div>
+    <!-- The footer items begins here -->
 
     <footer>
         <div class="waves">
