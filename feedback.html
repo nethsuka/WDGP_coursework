@@ -31,8 +31,7 @@
 
 
     <div class="content">
-
-        <form id="form" action="https://formsubmit.co/02jehanfernando@gmail.com" method="POST">
+        <form id="form" action="https://formspree.io/f/xeqyrzwr" method="POST">
     <div class="form-content">
     <h1>Feedback form</h1>
     <h3>Required fields * </h3>
@@ -51,19 +50,22 @@
 
     <p>Was this your first time visiting?</p>
     <input type="radio" name="select1" id="Yes">
-    <span id="opt1">Yes</span>
+    <span id="opt1Yes">Yes</span>
     <input type="radio" name="select1" id="No">
-    <span id="opt1">No</span><br><br>
-    <p>Was this website informative and easy to navigate through?</p>
-    <input type="radio" name="select2" id="Yes">
-    <span id="opt2">Yes</span>
-    <input type="radio" name="select2" id="No">
-    <span id="opt2">No</span>
+    <span id="opt1No">No</span><br><br>
 
+
+    <div id="improvementBox" class="hidden">
+    <p>Was this website informative and easy to navigate through?</p>
+    <input type="radio" name="select2" id="opt2Yes" checked>
+    <span id="opt2Yes">Yes</span>
+    <input type="radio" name="select2" id="opt2No">
+    <span id="opt2No">No</span>
     <div class="input-control">
         <label for="username"><span id="req">*</span>If "No", suggest any improvements for the future:</label>
     <textarea name="text1" id="text1" cols="25" rows="4" placeholder="Add your message here"></textarea><br>
     <div class="error"></div>
+    </div>
     </div>
 
     <p>How satisfied are you with Our services? <br>Choose from 0 to 10,
@@ -129,9 +131,9 @@
 
 <p>Would you recommend our services?</p>
 <input type="radio" name="select3" id="Yes">
-<span id="opt3">Yes</span>
+<span id="opt3Yes">Yes</span>
 <input type="radio" name="select3" id="No">
-<span id="opt3">No</span>
+<span id="opt3No">No</span>
 
 <div>
     <label for="updates"><span id="req">*</span>Would you like to receive updates about the websites and any offers?</label>
@@ -182,7 +184,7 @@
 
 <div id="confirmationMessage">
     Thank you for your feedback!<br>
-    Your submission has been sent <span style='font-size:20px;'>&#9989;</span>    <!-- Reference: W3schools -->
+    Your submission has been sent to jasjsdg14@gmail.com <span style='font-size:20px;'>&#9989;</span>    <!-- Reference: W3schools -->
 </div>
 </div>
 </section>
@@ -217,7 +219,7 @@
     </div>
 
 
-    <script src="./JS/anim.js"></script>
+    <script src="JS/feedback.js"></script>
 
 </body>
 </html>
