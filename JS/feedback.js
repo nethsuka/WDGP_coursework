@@ -149,7 +149,7 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Function to handle email sending
+
 function sendEmail() {
     const formData = new FormData(document.getElementById('form'));
     const previewContent = generatePlainTextPreview();

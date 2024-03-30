@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,7 +13,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url(/img/home6.jpg);
+    background-image: url(img/home6.jpg);
     background-size: cover;
     background-position: center;
     padding-bottom: 100px;
@@ -53,7 +53,7 @@ header .logo{
 
 
 header .navbar a.active {
-    color:white; /* Change color for active page */
+    color:white; 
 }
 
 
@@ -83,15 +83,15 @@ header .navbar a.active {
     font-weight: 450;
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 12px 18px; /* Increase padding for better clickability */
+    padding: 12px 18px; 
     margin-left: 15px;
 }
 
 header .navbar .active-page {
     color:#fff;
-    background-color: rgb(255, 127, 21); /* Change background color for active page */
+    background-color: rgb(255, 127, 21); 
 
-}
+} */
 
 .content{
     max-width: 100%;
@@ -216,20 +216,6 @@ header .navbar .active-page {
 .main-btns a{
     justify-content: center;
 }
-@media screen and (max-width: 600px) {
-    .main-btns {
-        width: 80%; /* Adjust width for smaller screens */
-    }
-}
-.main-btns h2{
-    margin:5px auto;
-    color: rgba(19, 19, 23, 0.737);
-    font-size: 25px;
-    text-align: center;
-}
-
-
-
 .main-btns .sitemap-btn,.feedback-btn{
     display: flex;
     padding: 8px 18px;
@@ -244,12 +230,16 @@ header .navbar .active-page {
     background-color: #0d1cb8;
     transition: background-color 0.3s;
 }
-
 .main-btns .sitemap-btn:hover, .feedback-btn:hover {
     background-color: #ff8d01;
 }
+.main-btns h2{
+    margin:5px auto;
+    color: rgba(19, 19, 23, 0.737);
+    font-size: 25px;
+    text-align: center;
+}
 
-/* Media Query for Responsive Design */
 @media screen and (max-width: 600px) {
     .sitemap-btn, .feedback-btn {
       display: block;
@@ -257,6 +247,11 @@ header .navbar .active-page {
     }
   }
 
+  @media screen and (max-width: 600px) {
+    .main-btns {
+        width: 80%; 
+    }
+}
   
   
 .content .info .mission{
@@ -269,9 +264,13 @@ header .navbar .active-page {
     color:black;
     flex-wrap: wrap;
 }
+.content .info .mission:hover{
+    transform: scale(1.1);
+}
 
-
-
+.content .info .additional-info:hover{
+    transform: scale(1.1);
+}
 .additional-info, .mission {
     background-color:rgba(255, 255, 255, 0.838);
     color:#000;
@@ -380,37 +379,29 @@ footer .wave{
     background: url(/img/wave.png) ;
     background-size: 1000px 100px;
 }
-
 footer .wave#wave1{
     z-index: 1000;
     opacity: 1;
     bottom: 0;
     animation: animateWave 4s linear infinite;
-
 }
-
 footer .wave#wave2{
     z-index: 999;
     opacity: 0.5;
     bottom: 15px;
     animation: animateWave_02 3s linear infinite;
-
 }
-
 footer .wave#wave3{
     z-index: 1000;
     opacity: 0.2;
     bottom: 20px;
     animation: animateWave 3s linear infinite;
-
 }
-
 footer .wave#wave4{
     z-index: 999;
     opacity: 0.7;
     bottom: 10px;
     animation: animateWave_02 4s linear infinite;
-
 }
 
 .editor-btn a{
@@ -459,41 +450,12 @@ label{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsiveness */
 
 @media(max-width:750px){
-    header .navbar{
-        display: none;
 
-        /* height: 15px; */
-    
-    }
-
-    
+    header .navbar{ 
+        display: none; }
 
     label{
         display: block;
@@ -503,16 +465,11 @@ label{
         transition-property:color;
         color:#fff;
     }
-
-    label :hover{
-        color: #fff;
-
-    }
+    label :hover{ color: #fff; }
 
     label .close-btn, .menu-btn{
         display:none;
         top:20px;
-
     }
 
     header .logo{
@@ -520,8 +477,6 @@ label{
         color: #fff;
         background: none;
     }
-
-
 
     #check:checked~header .logo {
         top: 0;
@@ -531,7 +486,6 @@ label{
         transform: translateX(-50%);
         z-index: 3; 
     }
-
 
 
     #check:checked~ header .navbar{
@@ -546,7 +500,6 @@ label{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
 
     }
 
@@ -559,8 +512,8 @@ label{
         color: #fff;
         border-radius: 20px;
         background-color: #000;
-        margin-bottom: 20px; /* Add margin between navbar items */
-        padding: 8px 20px; /* Adjust padding as needed */
+        margin-bottom: 20px; 
+        padding: 8px 20px; 
 
     }
 
