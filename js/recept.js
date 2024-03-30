@@ -2,6 +2,7 @@ sessionStorage.removeItem('cart');
 
 let recept_items = JSON.parse(sessionStorage.getItem('recept_items'));
 
+// Display ordered items in table
 let content;
 let total = 0;
 recept_items.forEach(element => {
@@ -19,6 +20,7 @@ recept_items.forEach(element => {
 document.getElementById('total-1').innerHTML = `<b>Total :<br> Rs ${total}.00</b>`;
 
 
+// Getting date to display
 const date = new Date();
 document.getElementById('date').innerHTML = `Date :<br> ${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`;
 
