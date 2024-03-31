@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General page</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <section>
+        <!-- Header Section -->
+        <input type="checkbox" id="check">
+
+        <header>
+            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo"
+                        height="35"></a></h2>
+            <div class="navbar">
+                <a href="home.html" class="active">Home</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="profile.html" class="active-page">Profile</a>
+                <a href="team.html" class="active">About Us</a>
+            </div>
+            <label for="check" id="head-label">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+
+        <!-- Profile Header -->
+        <div class="header-container">
+            <h1>Profile</h1>
+        </div>
+
+        <!-- Quiz Card -->
+        <div class="quiz-card" id="quizCard">
+            <div class="question-container">
+                <h2 class="question" id="stepLabel">Step 1 - Personal Information:</h2>
+                <label id="questionLabel" for="inputField">First Name:</label>
+                <input type="text" id="inputField" oninput="updateLiveProfile()">
+            </div>
+            <div class="btn-container">
+                <button class="btn back" onclick="previousQuestion()">Back</button>
+                <div class="c-btn"><button class="btn next" onclick="nextQuestion()">Next</button></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+                <span class="progress-text" id="progressText">0% Complete</span>
+            </div>
+        </div>
+
+        <!-- Profile Details Section -->
+        <div id="profileDetails" style="display:none">
+            <h2>Your Profile Details:</h2>
+            <div id="profileInfo"></div>
+        </div>
+
+        <!-- Profile Output Card -->
+        <div class="profile-output" id="profileOutput" style="display:inline-block">
+            <h2>Your Profile:</h2>
+            <div id="liveProfile"></div>
+        </div>
+
+        <!-- Edit Button -->
+        <div id="editButton">
+            <button class="btn edit" onclick="editProfile()">Edit Information</button>
+        </div>
+
+        <!-- Profile Completion Progress Section -->
+        <div class="progress-container" id="progress-bar-new">
+            <h3>Profile Completion Progress</h3>
+            <div class="progress-bar">
+                <div class="progress" id="profileProgress"></div>
+                <span class="progress-text" id="profileProgressText">0% Complete</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+
+            <button class="editor-btn" onclick="window.open('student3.html', '_blank')">Page Editor</button>
+
+        </div>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <ul class="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="team.html">About Us</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let currentQuestion = 0;
+        let userResponses = []; // To store user's responses
+        const questions = [
+            // Stage 1: Personal Information
+            "First name:",
+            "Last name:",
+            "Age:",
+            "Gender:",
+            "Address:",
+            // Stage 2: Qualifications
+            "School:",
+            "Highest degree:",
+            "University/Institution:",
+            "Completion year:",
+            // Stage 3: Availability and contact info
+            "Availability for volunteering:",
+            "Prefered field for volunteering:",
+            "Mobile:",
+            "Email:",
+        ];
+        document.getElementById('editButton').style.display = 'none'; // Show edit button
+        document.getElementById('progress-bar-new').style.display = 'none'; // Show edit button
+
+
+        function nextQuestion() {
+            const inputValue = document.getElementById('inputField').value.trim(); // Get the input value
+
+            // Store user's response
+            userResponses[currentQuestion] = inputValue;
+
+            currentQuestion++;
+            if (currentQuestion <= questions.length) {
+            
+                // Update question text
+
+                if(currentQuestion == 13){
+                    document.querySelector('.question').style.display = 'none'
+                    document.getElementById('questionLabel').style.display = 'none';
+                    document.getElementById('inputField').style.display = 'none';
+                    document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()" style="background-color: rgba(77, 181, 106, 0.944)";                    ;">Confirm Submit</button>'
+                }
+
+                document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
+                document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
+                document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
+
+                updateProgress();
+                updateProfileProgress(); // Update profile completion progress
+            } 
+            else {
+
+                // Handle completion
+                
+                
+                document.getElementById('quizCard').style.display = 'none'; // Hide quiz card
+                document.getElementById('profileDetails').style.display = 'block'; // Show profile details section
+                document.getElementById('profileOutput').style.display = 'none'; // Show profile output card
+                document.getElementById('editButton').style.display = 'block'; // Show edit button
+                document.getElementById('progress-bar-new').style.display = 'block'; // Show edit button
+                
+                // Display user's responses in profile output
+                setTimeout(function () {
+                    
+                    alert('Thank you for submitting your information!');
+                    displayProfileOutput();
+                updateProgress();
+                }, 100); // Adjust the delay time as needed
+
+
+
+
+            }
+        }
+
+
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                document.querySelector('.question').style.display = 'block'
+                document.getElementById('questionLabel').style.display = 'block';
+                document.getElementById('inputField').style.display = 'block';
+                document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()">Next</button>';
+                document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
+                document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
+                document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
+                updateProgress();
+                updateProfileProgress(); // Update profile completion progress
+            }
+        }
+
+        function updateProgress() {
+            const filledFields = userResponses.filter(response => response !== '').length;
+            const percentage = Math.round((filledFields / questions.length) * 100);
+            document.getElementById('progress').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `${percentage}% Complete`;
+        }
+
+        function updateProfileProgress() {
+            const filledFields = userResponses.filter(response => response !== '').length;
+            const percentage = Math.round((filledFields / questions.length) * 100);
+            document.getElementById('profileProgress').style.width = percentage + '%';
+            document.getElementById('profileProgressText').textContent = `${percentage}% Complete`;
+        }
+
+        function updateLiveProfile() {
+            const inputValue = document.getElementById('inputField').value.trim(); // Get the input value
+            const liveProfile = document.getElementById('liveProfile');
+            liveProfile.innerHTML = ''; // Clear previous live output
+            for (let i = 0; i < currentQuestion; i++) {
+                liveProfile.innerHTML += `<p>${questions[i]} ${userResponses[i] || 'not entered'}</p>`;
+            }
+            if (inputValue !== '') {
+                liveProfile.innerHTML += `<p>${questions[currentQuestion]} ${inputValue}</p>`; // Display current question's input value
+            }
+        }
+
+        function displayProfileOutput() {
+            const profileInfo = document.getElementById('profileInfo');
+            profileInfo.innerHTML = ''; // Clear previous profile output
+            for (let i = 0; i < questions.length; i++) {
+                profileInfo.innerHTML += `<p>${questions[i]} ${userResponses[i] || 'not entered'}</p>`;
+                if (i === 4) {
+                    profileInfo.innerHTML += '<hr>'; // Add horizontal line after Address
+                }
+                if (i === 8) {
+                    profileInfo.innerHTML += '<hr>'; // Add horizontal line after Task 4
+                }
+            }
+
+            const liveProfile = document.getElementById('liveProfile');
+            liveProfile.innerHTML = ''; // Clear previous live output
+            for (let i = 0; i < questions.length; i++) {
+                liveProfile.innerHTML += `<p>${questions[i]} ${userResponses[i] || 'not entered'}</p>`;
+                if (i === 4) {
+                    liveProfile.innerHTML += '<hr>'; // Add horizontal line after Address
+                }
+                if (i === 8) {
+                    liveProfile.innerHTML += '<hr>'; // Add horizontal line after Task 4
+                }
+            }
+        }
+
+        function editProfile() {
+            const allQuestionsAnswered = userResponses.every(response => response !== ''); // Check if all questions are answered
+
+            document.getElementById('profileDetails').style.display = 'none'; // Hide profile details section
+            document.getElementById('quizCard').style.display = 'block'; // Show quiz card
+            document.getElementById('editButton').style.display = allQuestionsAnswered ? 'block' : 'none'; // Show or hide edit button based on whether all questions are answered
+            document.getElementById('profileOutput').style.display = 'block'; // Show profile output card
+            document.getElementById('progress-bar-new').style.display = 'none';
+            currentQuestion = 12; // Reset current question index
+            updateProgress(); // Update progress bar
+            updateProfileProgress(); // Update profile completion progress
+
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById('quizCard').style.display = 'block'; // Make the quiz card visible
+            updateProgress(); // Update progress bar initially
+            updateProfileProgress(); // Update profile completion progrexss initially
+        });
+    </script>
+</body>
+
+</html>
