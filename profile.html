@@ -87,7 +87,7 @@
         }
 
         .btn.back {
-            background: #ccc;
+            background: #ec866f;
             color: #333;
 
         }
@@ -315,7 +315,7 @@
                 <a href="home.html" class="active">Home</a>
                 <a href="gallery.html" class="active">Gallery</a>
                 <a href="shop.html" class="active">Shop</a>
-                <a href="profile.html" class="active">Profile</a>
+                <a href="profile.html" class="active-page">Profile</a>
                 <a href="team.html" class="active">About Us</a>
             </div>
             <label for="check" id="head-label">
@@ -431,6 +431,7 @@
             userResponses[currentQuestion] = inputValue;
 
             currentQuestion++;
+
             if (currentQuestion < questions.length) {
                 // Update question text
                 document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
@@ -441,16 +442,25 @@
                 updateProfileProgress(); // Update profile completion progress
             } else {
                 // Handle completion
+                
+                
                 document.getElementById('quizCard').style.display = 'none'; // Hide quiz card
                 document.getElementById('profileDetails').style.display = 'block'; // Show profile details section
                 document.getElementById('profileOutput').style.display = 'none'; // Show profile output card
                 document.getElementById('editButton').style.display = 'block'; // Show edit button
                 document.getElementById('progress-bar-new').style.display = 'block'; // Show edit button
-
+                
                 // Display user's responses in profile output
-                displayProfileOutput();
+                setTimeout(function () {
+                    
+                    alert('Thank you for submitting your information!');
+                    displayProfileOutput();
+                updateProgress();
+                }, 100); // Adjust the delay time as needed
 
-                alert('Thank you for submitting your information!');
+
+
+
             }
         }
 
@@ -535,7 +545,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('quizCard').style.display = 'block'; // Make the quiz card visible
             updateProgress(); // Update progress bar initially
-            updateProfileProgress(); // Update profile completion progress initially
+            updateProfileProgress(); // Update profile completion progrexss initially
         });
     </script>
 </body>
