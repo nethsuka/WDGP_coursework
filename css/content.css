@@ -40,13 +40,17 @@
     margin-bottom: 15px;
     border-radius: 5px;
 }
-#img-r1,#img-r3{
+#img-r1{
     float: left;
     margin-right: 20px;
 }
 #img-r2{
     float: right;
     margin-left: 20px;
+}
+#img-r3{
+    float: left;
+    margin-right: 20px;
 }
 p{
     text-align: justify;
