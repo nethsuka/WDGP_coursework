@@ -144,8 +144,7 @@ header .logo{
 }
 .team-member:hover .pageEditorText {
     display: block;
-
-    
+    background-color: rgba(2, 0, 94, 0.5);
 }
 
 .header-container {
