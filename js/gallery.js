@@ -68,20 +68,7 @@ function openModalView(ele) {
         openModalView(relatedImage)
     };
   });
-  //   let relatedImages = imageRelations[imgSrc];
-  //   if (relatedImages) {
-  //     relatedImages.forEach(function (relatedImgSrc) {
-  //       console.log(relatedImages);
-  //       let relatedImage = document.createElement("img");
-  //       relatedImage.src = relatedImgSrc;
-  //       relatedImage.alt = "Related Image";
-  //       relatedImagesContainer.appendChild(relatedImage);
-  //       relatedImage.onclick = () => {
-  //         openModalView(relatedImgSrc, relatedImages.caption, "ff");
-  //       };
-  //     });
-  //   }
-
+  
   modal.appendChild(relatedImagesContainer);
 }
 
