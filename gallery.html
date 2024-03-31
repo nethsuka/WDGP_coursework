@@ -29,8 +29,6 @@
         </header>
         <!-- The entire document related to the Gallery is written inside the section tag. -->
         <h1 id="topic">Gallery</h1>
-        <!-- A break is given to maintain a comfortable space between the topic of the page and gallery class -->
-        <br/> 
         <!-- 
             The image class is inside the gallery class. This made it easy to arrange gallery in a responsive format.
             The hoverImage class is what is used to provide the relavant psuedoclass formating to the image src.
@@ -40,16 +38,16 @@
          -->
         <div class="gallery">
             <div class="image">
-                <img class="hoverImage" src="img/diversity.jpeg" alt="Diversity of Marine Life" onclick="openModalView('img/diversity.jpeg', 'Vast oceanic ecosystems teem with a multitude of species, from microscopic plankton to majestic whales and beyond.', 'Ocean Diversity')">
+                <img class="hoverImage" src="img/diversity.jpeg" caption='Vast oceanic ecosystems teem with a multitude of species, from microscopic plankton to majestic whales and beyond.' alt="Diversity of Marine Life" onclick="openModalView(this)" heading='Ocean Diversity'>
             </div>
             <div class="image">
-                <img class="hoverImage" src="img/pollution.jpeg" alt="Pollution caused to the Marine World" onclick="openModalView('img/pollution.jpeg', 'Man-made waste pollutes ocean depths, endangering marine life and ecosystems, from plastic debris to chemical contaminants.','Marine Pollution')">
+                <img class="hoverImage" src="img/pollution.jpeg" alt="Pollution caused to the Marine World" caption='Man-made waste pollutes ocean depths, endangering marine life and ecosystems, from plastic debris to chemical contaminants.' heading='Marine Pollution' onclick="openModalView(this)">
             </div>
             <div class="image">
-                <img class="hoverImage" src="img/fishery.png" alt="Fishing in the Sea" onclick="openModalView('img/fishery.png', 'Global fisheries sustain communities, but overfishing threatens stocks, jeopardizing livelihoods and ecological balance, necessitating sustainable management.', 'Marine Fishery')">
+                <img class="hoverImage" src="img/fishery.png" alt="Fishing in the Sea" caption='Global fisheries sustain communities, but overfishing threatens stocks, jeopardizing livelihoods and ecological balance, necessitating sustainable management.' heading='Marine Fishery' onclick="openModalView(this)">
             </div>
             <div class="image">
-                <img class="hoverImage" src="img/whale_watching.jpeg" alt="Tourism" onclick="openModalView('img/whale_watching.jpeg', 'Ocean tourism thrives, drawing millions to sandy shores and vibrant coral reefs, supporting economies and fostering conservation efforts.', 'Tourism')">
+                <img class="hoverImage" src="img/whale_watching.jpeg" alt="Tourism" caption='Ocean tourism thrives, drawing millions to sandy shores and vibrant coral reefs, supporting economies and fostering conservation efforts.' onclick="openModalView(this)" heading='Tourism'>
             </div>
         </div>
         
@@ -82,17 +80,17 @@
             <a href="student4.html" target="_blank"><button class="editor-btn">Page Editor</button></a>
         </div>
         <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61558004545546"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aqualifesdg14/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/AquaLifesdg14"><i class="fab fa-twitter"></i></a>
         </div>
 
         <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About Us</a></li>
         </ul>
     </footer>
 
