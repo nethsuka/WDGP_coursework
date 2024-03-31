@@ -66,13 +66,15 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: 0.3s ease;
         }
 
         .btn.edit {
             position: relative;
             margin: 0 auto;
-            margin-left: 43%;
+            margin-left: 45%;
+            background-color: rgba(77, 181, 106, 0.944);
+            margin-top:  20px;
             /* Center the button horizontally */
         }
 
@@ -439,7 +441,7 @@
                     document.querySelector('.question').style.display = 'none'
                     document.getElementById('questionLabel').style.display = 'none';
                     document.getElementById('inputField').style.display = 'none';
-                    document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()" style="background-color:#8cc376;">Confirm Submit</button>'
+                    document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()" style="background-color: rgba(77, 181, 106, 0.944)";                    ;">Confirm Submit</button>'
                 }
 
                 document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
