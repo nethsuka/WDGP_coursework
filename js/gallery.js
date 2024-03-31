@@ -57,18 +57,16 @@ function openModalView(ele) {
   relatedImagesContainer.classList.add("related-images");
 
   // Get related images for the current main image
-  document.querySelectorAll(".gallery img").forEach((i) => {
+  let relatedImages = imageRelations[imgSrc];
+  relatedImages.forEach((i) => {
     let relatedImage = document.createElement("img");
-    relatedImage.src = i.src;
-    relatedImage.alt = i.alt;
-    relatedImage.setAttribute("caption",i.getAttribute("caption"))
-    relatedImage.setAttribute("heading",i.getAttribute("heading"))
+    relatedImage.src = i
     relatedImagesContainer.appendChild(relatedImage);
     relatedImage.onclick = () => {
         openModalView(relatedImage)
     };
   });
-  
+
   modal.appendChild(relatedImagesContainer);
 }
 
