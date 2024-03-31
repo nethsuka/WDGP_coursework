@@ -222,6 +222,44 @@
                 margin-right: auto;
             }
         }
+
+        /* CSS for the profile completion progress */
+        .progress-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .progress-container h3 {
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 20px;
+            background: #eee;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #007bff;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+            font-size: 14px;
+        }
     </style>
 </head>
 
@@ -284,6 +322,15 @@
         <div id="editButton">
             <button class="btn edit" onclick="editProfile()">Edit Information</button>
         </div>
+
+        <!-- Profile Completion Progress Section -->
+        <div class="progress-container">
+            <h3>Profile Completion Progress</h3>
+            <div class="progress-bar">
+                <div class="progress" id="profileProgress"></div>
+                <span class="progress-text" id="profileProgressText">0% Complete</span>
+            </div>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -331,8 +378,7 @@
             "Email:",
         ];
         document.getElementById('editButton').style.display = 'none'; // Show edit button
-
-
+        document.getElementsByClassName('')
 
         function nextQuestion() {
             const inputValue = document.getElementById('inputField').value.trim(); // Get the input value
@@ -348,6 +394,7 @@
                 document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
 
                 updateProgress();
+                updateProfileProgress(); // Update profile completion progress
             } else {
                 // Handle completion
                 document.getElementById('quizCard').style.display = 'none'; // Hide quiz card
@@ -370,6 +417,7 @@
                 document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
                 document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
                 updateProgress();
+                updateProfileProgress(); // Update profile completion progress
             }
         }
 
@@ -378,6 +426,13 @@
             const percentage = Math.round((filledFields / questions.length) * 100);
             document.getElementById('progress').style.width = percentage + '%';
             document.getElementById('progressText').textContent = `${percentage}% Complete`;
+        }
+
+        function updateProfileProgress() {
+            const filledFields = userResponses.filter(response => response !== '').length;
+            const percentage = Math.round((filledFields / questions.length) * 100);
+            document.getElementById('profileProgress').style.width = percentage + '%';
+            document.getElementById('profileProgressText').textContent = `${percentage}% Complete`;
         }
 
         function updateLiveProfile() {
@@ -427,12 +482,13 @@
             document.getElementById('profileOutput').style.display = 'block'; // Show profile output card
             currentQuestion = 12; // Reset current question index
             updateProgress(); // Update progress bar
+            updateProfileProgress(); // Update profile completion progress
         }
-
 
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('quizCard').style.display = 'block'; // Make the quiz card visible
             updateProgress(); // Update progress bar initially
+            updateProfileProgress(); // Update profile completion progress initially
         });
     </script>
 </body>
