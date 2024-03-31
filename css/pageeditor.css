@@ -19,16 +19,6 @@
     transform: scale(1.2);
     background-color: hsla(28, 48%, 95%, 0.9);
 }
-#header h2 {
-    font-size: 24px;
-    color: #333333;
-    margin: 20px;
-    text-align: center; /* Center the text */
-    background-color: #f9f9f9; /* Background color */
-    padding: 12px; /* Add padding for better appearance */
-    border-radius: 8px; /* Add border radius for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-}
 
 
 #content{
@@ -38,6 +28,16 @@
     padding: 15px;
 }
 
+#header h2 {
+    font-size: 24px;
+    color: #333333;
+    margin: 20px;
+    text-align: center; 
+    background-color: #f9f9f9; 
+    padding: 12px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
 
 #img-box::before {
     content: '';
