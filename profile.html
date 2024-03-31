@@ -58,7 +58,7 @@
         .btn-container {
             display: flex;
             justify-content: space-between;
-            
+
         }
 
         .btn {
@@ -89,7 +89,7 @@
         .btn.back {
             background: #ccc;
             color: #333;
-            
+
         }
 
         .btn.next {
@@ -168,7 +168,7 @@
             /* Transparent white background */
             border-radius: 10px;
             /* Add border radius for a rounded look */
-            
+
         }
 
         .profile-output h2 {
@@ -237,6 +237,7 @@
             position: relative;
             width: 100%;
             height: 20px;
+            margin-top: 20px;
             background: #eee;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -253,6 +254,45 @@
         }
 
         .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* CSS for the profile completion progress */
+        #progress-bar-new {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #progress-bar-new h3 {
+            margin-bottom: 10px;
+        }
+
+        #progress-bar-new .progress-bar {
+            position: relative;
+            width: 100%;
+            height: 20px;
+
+            background: #eee;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #progress-bar-new .progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #007bff;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        #progress-bar-new .progress-text {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -324,7 +364,7 @@
         </div>
 
         <!-- Profile Completion Progress Section -->
-        <div class="progress-container">
+        <div class="progress-container" id="progress-bar-new">
             <h3>Profile Completion Progress</h3>
             <div class="progress-bar">
                 <div class="progress" id="profileProgress"></div>
@@ -378,7 +418,8 @@
             "Email:",
         ];
         document.getElementById('editButton').style.display = 'none'; // Show edit button
-        document.getElementsByClassName('')
+        document.getElementById('progress-bar-new').style.display = 'none'; // Show edit button
+
 
         function nextQuestion() {
             const inputValue = document.getElementById('inputField').value.trim(); // Get the input value
@@ -401,6 +442,7 @@
                 document.getElementById('profileDetails').style.display = 'block'; // Show profile details section
                 document.getElementById('profileOutput').style.display = 'none'; // Show profile output card
                 document.getElementById('editButton').style.display = 'block'; // Show edit button
+                document.getElementById('progress-bar-new').style.display = 'block'; // Show edit button
 
                 // Display user's responses in profile output
                 displayProfileOutput();
@@ -480,9 +522,11 @@
             document.getElementById('quizCard').style.display = 'block'; // Show quiz card
             document.getElementById('editButton').style.display = allQuestionsAnswered ? 'block' : 'none'; // Show or hide edit button based on whether all questions are answered
             document.getElementById('profileOutput').style.display = 'block'; // Show profile output card
+            document.getElementById('progress-bar-new').style.display = 'none';
             currentQuestion = 12; // Reset current question index
             updateProgress(); // Update progress bar
             updateProfileProgress(); // Update profile completion progress
+
         }
 
         document.addEventListener("DOMContentLoaded", function () {

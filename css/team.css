@@ -99,11 +99,22 @@ header .logo{
     height: auto; /* Allow images to maintain aspect ratio */
     object-fit: cover; /* Scale images to cover the entire container */
     transition: 0.3s;
+    backface-visibility: hidden;
+
+    
 }
 
 .team-member:hover img {
+    
     transform: scale(1.1);
+   
+
+    
+    
+    
+    
 }
+
 
 .team-member .details {
     position: absolute;
@@ -115,9 +126,26 @@ header .logo{
     padding: 10px;
     display: none;
 }
+.team-member .pageEditorText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    text-align: center;
+    color: white;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
 
 .team-member:hover .details {
     display: block;
+    
+}
+.team-member:hover .pageEditorText {
+    display: block;
+
+    
 }
 
 .header-container {
