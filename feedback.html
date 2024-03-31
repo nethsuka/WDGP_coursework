@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Feedback form</title>
     <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/feedback_style.css">
+    <link rel="stylesheet" href="css/feedback.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -31,19 +31,19 @@
 
 
     <div class="content">
-        <form id="form" action="https://formspree.io/f/xeqyrzwr" method="POST">
+        <form id="form" action="https://formspree.io/f/xeqyrzwr" method="POST"> 
     <div class="form-content">
     <h1>Feedback form</h1>
     <h3>Required fields * </h3>
 
     <div class="input-control">
-    <label for="username"><span id="req">*</span>Enter your name:</label>
+    <label for="username"><span id="req1">*</span>Enter your name:</label>
     <input type="text" id="username" name="username" placeholder="Enter names here"><br><br>
     <div class="error"></div>
 </div>
 
 <div class="input-control">
-    <label for="email"><span id="req">*</span>Enter your email:</label>
+    <label for="email"><span id="req2">*</span>Enter your email:</label>
     <input type="text" id="email" name="email" placeholder="Enter email here"><br><br>
     <div class="error"></div>
 </div>
@@ -58,11 +58,11 @@
     <div id="improvementBox" class="hidden">
     <p>Was this website informative and easy to navigate through?</p>
     <input type="radio" name="select2" id="opt2Yes" checked>
-    <span id="opt2Yes">Yes</span>
+    <span class="opt2">Yes</span>
     <input type="radio" name="select2" id="opt2No">
-    <span id="opt2No">No</span>
+    <span class="opt2">No</span>
     <div class="input-control">
-        <label for="username"><span id="req">*</span>If "No", suggest any improvements for the future:</label>
+        <label for="username"><span id="req3">*</span>If "No", suggest any improvements for the future:</label>
     <textarea name="text1" id="text1" cols="25" rows="4" placeholder="Add your message here"></textarea><br>
     <div class="error"></div>
     </div>
@@ -71,69 +71,63 @@
     <p>How satisfied are you with Our services? <br>Choose from 0 to 10,
         with 1 being <br> "Not satisfied at all!" and 10 being "Extremely satisfied!" </p>
 
-    <div class="radio-container">
-        <label for="satisfy">1</label>
-        <input type="radio" id="satisfy1" name="1-10" value="1" id="level">
-    </div>
-    
+        <div class="radio-container">
+            <label for="satisfy1">1</label>
+            <input type="radio" id="satisfy1" name="1-10" value="1">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy2">2</label>
+            <input type="radio" id="satisfy2" name="1-10" value="2">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy3">3</label>
+            <input type="radio" id="satisfy3" name="1-10" value="3">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy4">4</label>
+            <input type="radio" id="satisfy4" name="1-10" value="4">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy5">5</label>
+            <input type="radio" id="satisfy5" name="1-10" value="5">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy6">6</label>
+            <input type="radio" id="satisfy6" name="1-10" value="6">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy7">7</label>
+            <input type="radio" id="satisfy7" name="1-10" value="7">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy8">8</label>
+            <input type="radio" id="satisfy8" name="1-10" value="8">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy9">9</label>
+            <input type="radio" id="satisfy9" name="1-10" value="9">
+        </div>
+        
+        <div class="radio-container">
+            <label for="satisfy10">10</label>
+            <input type="radio" id="satisfy10" name="1-10" value="10">
+        </div>
 
-    <div class="radio-container">
-        <label for="satisfy">2</label>
-        <input type="radio" id="satisfy2" name="1-10" value="2" id="level">
-    </div>
-
-    <div class="radio-container">
-        <label for="satisfy">3</label>
-        <input type="radio" id="satisfy3" name="1-10" value="3" id="level">
-    </div>
-    
-
-    <div class="radio-container">
-        <label for="satisfy">4</label>
-        <input type="radio" id="satisfy4" name="1-10" value="4" id="level">
-    </div>
-
-    <div class="radio-container">
-        <label for="satisfy">5</label>
-        <input type="radio" id="satisfy5" name="1-10" value="5" id="level">
-    </div>
-    
-
-    <div class="radio-container">
-        <label for="satisfy">6</label>
-        <input type="radio" id="satisfy6" name="1-10" value="6" id="level">
-    </div>
-
-
-    <div class="radio-container">
-        <label for="satisfy">7</label>
-        <input type="radio" id="satisfy7" name="1-10" value="7" id="level">
-    </div>
-    
-
-    <div class="radio-container">
-        <label for="satisfy">8</label>
-        <input type="radio" id="satisfy8" name="1-10" value="8" id="level"> 
-    </div>
-
-
-    <div class="radio-container">
-        <label for="satisfy">9</label>
-        <input type="radio" id="satisfy9" name="1-10" value="9" id="level">
-    </div>
-
-
-    <div class="radio-container">
-        <label for="satisfy">10</label>
-        <input type="radio" id="satisfy10" name="1-10" value="10" id="level">
-    </div>
 
 
 <p>Would you recommend our services?</p>
-<input type="radio" name="select3" id="Yes">
-<span id="opt3Yes">Yes</span>
-<input type="radio" name="select3" id="No">
-<span id="opt3No">No</span>
+<input type="radio" name="select3" id="opt3Yes">
+<span id="opt03Yes">Yes</span>
+<input type="radio" name="select3" id="opt3No">
+<span id="opt03No">No</span>
 
 <div>
     <label for="updates"><span id="req">*</span>Would you like to receive updates about the websites and any offers?</label>
@@ -147,25 +141,14 @@
 <p>Do you have any additional questions or requests?</p>
 <textarea name="question" id="que" cols="25" rows="4" placeholder="Add your message here..."></textarea><br>
 
-
-<input type="submit" value="Submit" id="btn-style">
-<input type="reset" value="Reset" id="btn-style">
-
-
-
+<input type="submit" value="Submit" class="btn-style">
+<input type="reset" value="Reset" class="btn-style">
 
 </div>
-
-</div>
-
-<input type="button" value="Preview Feedback" id="preview-btn" onclick="previewFeedback()">
-
-
-
 </form>
 
-
-
+<input type="button" value="Preview Feedback" id="preview-btn" onclick="previewFeedback()">
+</div>
 
 <div id="previewModal" class="modal">
     <div class="modal-content">
@@ -173,25 +156,17 @@
 
             <input type="button" id="editFormBtn" value="Edit Form">
             
-
-            
         </div>
         <span id="closeModal" class="close"></span>
     </div>
 </div>
-
-
-
 
 <div id="confirmationMessage">
     Thank you for your feedback!<br>
     Your submission has been sent to jasjsdg14@gmail.com <span style='font-size:20px;'>&#9989;</span>   
      <!-- Reference: W3schools -->
 </div>
-</div>
 </section>
-
-
 
 <div class="footer_cont">
     <footer>
@@ -201,7 +176,7 @@
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
         
-            <a href="pageeditor.html"><button class="editor-btn">Page Editor</button></a>
+            <button class="editor-btn" onclick="window.open('pageeditor.html', '_blank')">Page Editor</button>
 
         </div>
             <div class="social">
@@ -220,8 +195,7 @@
         </footer>
     </div>
 
-
-    <script src="JS/feedback.js"></script>
+    <script src="js/feedback.js"></script>
 
 </body>
 </html>

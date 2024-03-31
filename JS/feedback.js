@@ -120,7 +120,6 @@ const displayPreview = () => {
     editFormBtn.style.display = 'block';
     editButton.style.display = 'none';
     
-    // Adding an event listener to the edit button
     document.getElementById('editFormBtn').addEventListener('click', function() {
         previewModal.style.display = 'none';
         editButton.style.display = 'none';
@@ -167,10 +166,10 @@ function sendEmail() {
         return response.text();
     })
     .then(data => {
-        console.log(data); // Log success message
+        console.log(data); 
     })
     .catch(error => {
-        console.error('There was a problem with your fetch operation:', error); // Log error message
+        console.error('There was a problem with your fetch operation:', error);
     });
 }
 

@@ -1,6 +1,5 @@
 form{
     padding: 10px;
-
 }
 
 .content {
@@ -8,7 +7,6 @@ form{
 }
 
 .form-content{
-    /* border: 2px solid #000;  */
     border-radius: 25px;
     width: 80%; 
     max-width: 600px;
@@ -30,7 +28,7 @@ form{
     color: rgba(255, 0, 0, 0.886);
 }
 
-.form-content #req{
+.form-content #req1,#req2,#req3{
     color: rgba(255, 0, 0, 0.896);
     font-size: 25px;
 
@@ -39,10 +37,10 @@ form{
 .radio-container {
     display: inline-block;
     vertical-align: top;
-    margin-bottom: 10px; /* Adjust as needed */
+    margin-bottom: 10px; 
 }
 
-.radio-container label {
+.radio-container label{
     display: block;
     text-align: center;
 }
@@ -52,7 +50,7 @@ form{
     margin: 10px; 
 }
 
-#btn-style {
+.btn-style {
     margin: 15px;
     padding: 10px 20px;
     background-color: #19541b;
@@ -62,7 +60,7 @@ form{
     border-radius: 8px;
 }
 
-#btn-style:hover {
+.btn-style:hover {
     background-color: #02b508;
 }
 
@@ -197,24 +195,20 @@ textarea{
 .input-control .error {
     color: #ff3860;
     font-size: 13px;
-    /* height: 13px; */
     padding-top: 3px;
     padding-bottom: 15px;
 }
 
-
-
-
 @media (max-width: 750px) {
     .form-content{
-        width: 90%; /* Adjust width for smaller screens */
-        padding: 20px; /* Adjust padding for smaller screens */
+        width: 90%; 
+        padding: 20px; 
     }
 }
 
 @media (max-width: 570px) {
     .form-content {
-        width: 95%; /* Adjust width for even smaller screens */
-        padding: 15px; /* Adjust padding for even smaller screens */
+        width: 95%; 
+        padding: 15px; 
     }
 }
