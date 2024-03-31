@@ -83,7 +83,7 @@ header .navbar a.active {
     font-weight: 450;
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 12px 18px; /* Increase padding for better clickability */
+    padding: 12px 18px; 
     margin-left: 15px;
 }
 
@@ -257,9 +257,8 @@ footer .wave#wave4 {
         transition-property: color;
         color: #fff;
         position: absolute;
-        top: 25px; /* Adjust top position */
-        right: 25px; /* Adjust right position */
-    }
+        top: 25px;
+        right: 25px;
 
     #head-label:hover {
         color: #fff;
@@ -280,7 +279,6 @@ footer .wave#wave4 {
 
     header .logo {
         position: relative;
-        /* color: #fff; */
         background: none;
     }
 
