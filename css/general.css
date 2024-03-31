@@ -1,11 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-section{
+section {
     position: relative;
     padding-top: 50px;
     width: 100%;
@@ -20,24 +20,24 @@ section{
 }
 
 
-header{
-    background-color:rgb(12, 12, 84);
-    top:0;
+header {
+    background-color: rgb(12, 12, 84);
+    top: 0;
     position: fixed;
     width: 100%;
     height: 50px;
     opacity: 100%;
-    padding:30px 100px;
+    padding: 30px 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
 }
 
-header .logo{
-    position:absolute;
+header .logo {
+    position: absolute;
     top: 10px;
-    left:25px;
+    left: 25px;
     bottom: 10px;
     color: #000;
     /* background:white; */
@@ -53,46 +53,49 @@ header .logo{
 
 
 header .navbar a.active {
-    color:white; /* Change color for active page */
+    color: white;
+    /* Change color for active page */
 }
 
 
- 
-    header .navbar a::before{
-        content : ' ';
-        position: absolute;
-        top:100%;
-        left:0;
-        width:0;
-        height:2px;
-        background: #fff;
-        transition: .4s;
-    
-    }
-    
-    header .navbar a:hover::before{
-        width: 100%;
-    
-    }
+
+header .navbar a::before {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .4s;
+
+}
+
+header .navbar a:hover::before {
+    width: 100%;
+
+}
 
 
- header .navbar a {
+header .navbar a {
     color: white;
     position: relative;
     text-decoration: none;
     font-weight: 450;
     font-size: 15px;
     letter-spacing: 1px;
-    padding: 12px 18px; 
+    padding: 12px 18px;
     margin-left: 15px;
 }
 
 header .navbar .active-page {
-    color:#fff;
-    background-color: rgb(255, 127, 21); /* Change background color for active page */
+    color: #fff;
+    background-color: rgb(255, 127, 21);
+    /* Change background color for active page */
 
 }
-footer .editor-btn{
+
+footer .editor-btn {
     display: inline-block;
     padding: 10px 24px;
     margin-bottom: 10px;
@@ -106,10 +109,11 @@ footer .editor-btn{
     transition: background-color 0.3s;
 }
 
-footer .editor-btn:hover{
+footer .editor-btn:hover {
     background-color: chartreuse;
     color: #000;
 }
+
 footer {
     padding: 20px 50px;
     position: relative;
@@ -210,7 +214,7 @@ footer .wave#wave4 {
     animation: animateWave_02 4s linear infinite;
 }
 
-.editor-btn a{
+.editor-btn a {
     text-decoration: none;
 }
 
@@ -260,72 +264,75 @@ footer .wave#wave4 {
         top: 25px;
         right: 25px;
 
-    #head-label:hover {
-        color: #fff;
+        #head-label:hover {
+            color: #fff;
+        }
+
+        #head-label .close-btn,
+        .menu-btn {
+            display: none;
+        }
+
+        #head-label .menu-btn {
+            display: block;
+        }
+
+        #head-label .close-btn {
+            display: none;
+        }
+
+        header .logo {
+            position: relative;
+            background: none;
+        }
+
+        #check:checked~header .logo {
+            top: 0;
+            bottom: 0;
+            position: relative;
+            left: 75px;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        #check:checked~header .navbar {
+            z-index: 2;
+            position: fixed;
+            background: rgba(8, 104, 160, 0.81);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #check:checked~header .navbar a {
+            font-weight: 700;
+            margin-right: 0;
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #fff;
+            border-radius: 20px;
+            background-color: #000;
+            margin-bottom: 20px;
+            /* Add margin between navbar items */
+            padding: 8px 20px;
+            /* Adjust padding as needed */
+        }
+
+        #check:checked~header #head-label .menu-btn {
+            display: none;
+            top: 3px;
+        }
+
+        #check:checked~header #head-label .close-btn {
+            z-index: 2;
+            display: block;
+            position: fixed;
+        }
     }
 
-    #head-label .close-btn,
-    .menu-btn {
-        display: none;
-    }
-
-    #head-label .menu-btn {
-        display: block;
-    }
-
-    #head-label .close-btn {
-        display: none;
-    }
-
-    header .logo {
-        position: relative;
-        background: none;
-    }
-
-    #check:checked~header .logo {
-        top: 0;
-        bottom: 0;
-        position: relative;
-        left: 75px;
-        transform: translateX(-50%);
-        z-index: 3;
-    }
-
-    #check:checked~header .navbar {
-        z-index: 2;
-        position: fixed;
-        background: rgba(8, 104, 160, 0.81);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #check:checked~header .navbar a {
-        font-weight: 700;
-        margin-right: 0;
-        font-size: 20px;
-        letter-spacing: 2px;
-        color: #fff;
-        border-radius: 20px;
-        background-color: #000;
-        margin-bottom: 20px; /* Add margin between navbar items */
-        padding: 8px 20px; /* Adjust padding as needed */
-    }
-
-    #check:checked~header #head-label .menu-btn {
-        display: none;
-        top: 3px;
-    }
-
-    #check:checked~header #head-label .close-btn {
-        z-index: 2;
-        display: block;
-        position: fixed;
-    }
 }
-
