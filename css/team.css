@@ -34,8 +34,8 @@
     color: #fff;
     border-radius: 20px;
     background-color: #000;
-    margin-bottom: 20px; /* Add margin between navbar items */
-    padding: 8px 20px; /* Adjust padding as needed */
+    margin-bottom: 20px; 
+    padding: 8px 20px; 
 
 }
 
@@ -78,11 +78,10 @@ header .logo{
 }
 }
 
-/* team.css */
 
 .team-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax values as needed */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     grid-gap: 20px;
     padding: 20px;
 }
@@ -91,7 +90,7 @@ header .logo{
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    border-radius: 10px; /* Optional: Add some border radius to the cards */
+    border-radius: 10px; 
 }
 
 .team-member img {
@@ -106,13 +105,7 @@ header .logo{
 
 .team-member:hover img {
     
-    transform: scale(1.1);
-   
-
-    
-    
-    
-    
+    transform: scale(1.1); 
 }
 
 
@@ -134,18 +127,17 @@ header .logo{
     display: none;
     text-align: center;
     color: white;
-    font-size: 18px; /* Adjust font size as needed */
+    font-size: 18px;
 }
 
 
 .team-member:hover .details {
     display: block;
-    
+
 }
 .team-member:hover .pageEditorText {
     display: block;
-
-    
+    background-color: rgba(2, 0, 94, 0.5);
 }
 
 .header-container {
@@ -156,9 +148,9 @@ header .logo{
     margin-bottom: 20px;
 }
 
-/* Media query for smaller screen sizes */
+
 @media (max-width: 768px) {
     .team-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax values as needed */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     }
 }

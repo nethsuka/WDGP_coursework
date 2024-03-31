@@ -34,8 +34,8 @@
     color: #fff;
     border-radius: 20px;
     background-color: #000;
-    margin-bottom: 20px; /* Add margin between navbar items */
-    padding: 8px 20px; /* Adjust padding as needed */
+    margin-bottom: 20px; 
+    padding: 8px 20px; 
 
 }
 
@@ -120,15 +120,6 @@ font-size: 2em;
 font-weight: 700;
 margin-bottom: 20px;
 }
-
-/* Path: Student%203/profile.html */
-
-
-
-
-
-
-
 
 /* Styles for prompts and user inputs outputs */
 

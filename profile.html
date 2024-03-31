@@ -87,7 +87,7 @@
         }
 
         .btn.back {
-            background: #ccc;
+            background: #ec866f;
             color: #333;
 
         }
@@ -432,6 +432,7 @@
 
             currentQuestion++;
             if (currentQuestion <= questions.length) {
+            
                 // Update question text
 
                 if(currentQuestion == 13){
@@ -451,16 +452,25 @@
             else {
 
                 // Handle completion
+                
+                
                 document.getElementById('quizCard').style.display = 'none'; // Hide quiz card
                 document.getElementById('profileDetails').style.display = 'block'; // Show profile details section
                 document.getElementById('profileOutput').style.display = 'none'; // Show profile output card
                 document.getElementById('editButton').style.display = 'block'; // Show edit button
                 document.getElementById('progress-bar-new').style.display = 'block'; // Show edit button
-
+                
                 // Display user's responses in profile output
-                displayProfileOutput();
+                setTimeout(function () {
+                    
+                    alert('Thank you for submitting your information!');
+                    displayProfileOutput();
+                updateProgress();
+                }, 100); // Adjust the delay time as needed
 
-                alert('Thank you for submitting your information!');
+
+
+
             }
         }
 
@@ -549,7 +559,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById('quizCard').style.display = 'block'; // Make the quiz card visible
             updateProgress(); // Update progress bar initially
-            updateProfileProgress(); // Update profile completion progress initially
+            updateProfileProgress(); // Update profile completion progrexss initially
         });
     </script>
 </body>
