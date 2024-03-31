@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor | Sanuja</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/student1.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" height="35"></a></h2>
+            <div class="navbar">
+                <a href="home.html" class="active">Home</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="profile.html" class="active">Profile</a>
+                <a href="team.html" class="active">About Us</a>
+            </div>
+
+            
+            <label for="check" id="head-label">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+        </header>
+
+        <div class="main">
+            <div id="header"><h2>Editor Sanuja</h2></div>
+            <div id="content">
+
+                <!-- Student's profile image and details  -->
+                <div id="img-box">
+                    <div><img src="img/profile-img.jpg" alt="profile_img" height="250" id="profile-img"></div>
+                    <div id="under-img-txt">
+                        <span class="dd">Name   : Sanuja Nethsuka</span><br>
+                        <span class="dd">Role   : Student 1</span><br>
+                        <span class="dd">IIT ID : 20230791</span><br>
+                        <span class="dd">UoW ID : w2053733</span><br>
+                    </div>
+                </div>
+
+                <!-- Tasks assigned for each page -->
+                <div id="box-container">
+                    <div class="page-block">
+                        <h2>Shop</h2>
+                        <p>
+                            Created the basic shop structure using HTML and CSS.<br>
+                            Included the search functionality to find products.<br>
+                            Added delete, increase, and decrease buttons and clear cart options to the cart.<br>
+                            Validated the checkout process.<br>
+                        </p>
+                        <button class="goToPage-btn" onclick="document.location='shop.html'">Go To Page >></button>
+                    </div><br>
+                    <div class="page-block">
+                        <h2>Checkout Page</h2>
+                        <p>
+                            Validated the user inputs to the form.<br>
+                            Implemented the functionality to display selected items and totals in the order summary.<br>
+                            Included a progress bar to improve web accessibility.<br>
+                            Implemented the functionality to generate a reference number using JavaScript.<br>
+                        </p>
+                        <button class="goToPage-btn" onclick="document.location='checkout.html'">Go To Page >></button>
+                    </div><br>
+                    <div class="page-block">
+                        <h2>Receipt Page</h2>
+                        <p>
+                            Show ordered items, total, and receipt details to the customer<br>
+                        </p>
+                        <button class="goToPage-btn" onclick="document.location='receipt.html'">Go To Page >></button>
+                    </div><br>
+                    <div class="page-block">
+                        <h2>Content page</h2>
+                        <p>
+                            Created the basic structure from HTML and added CSS styles for a better look.<br>
+                            Added photos and information about the marine pollution.<br>
+                        </p>
+                        <button class="goToPage-btn" onclick="document.location='content1.html'">Go To Page >></button>
+                    </div><br>
+                    <div class="page-block">
+                        <h2>Splash Screen</h2>
+                        <p>
+                            Placed the loading animation to the center of the screen using CSS.<br>
+                            Did the rederection using a meta element.<br>
+                        </p>
+                        <button class="goToPage-btn" onclick="document.location='splash.html'">Go To Page >></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+
+            <button class="editor-btn" onclick="window.open('student1.html', '_blank')">Page Editor</button>
+
+        </div>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=61558004545546"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aqualifesdg14/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/AquaLifesdg14"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="team.html">About Us</a></li>
+            </ul>
+        </footer>
+
+</body>
+</html>

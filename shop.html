@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" style="height: 35px;"></a></h2>
+            <div class="navbar">
+                <a href="home.html" class="active">Home</a>
+                <a href="gallery.html" class="active">Gallery</a>
+                <a href="shop.html" class="active-page">Shop</a>
+                <a href="profile.html" class="active">Profile</a>
+                <a href="team.html" class="active">About Us</a>
+            </div>
+            <label for="check" id="head-label">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+
+
+        <div class="main">
+        
+            <div id="whole">
+                <div class="search-bar-and-item-containor">
+
+                    <!-- Search bar -->
+                    <div id="search-bar">
+                        <input type="text" id="searchName" placeholder="Search..." oninput="searchProducts(this.value)">
+                    </div>
+        
+                    <div class="container">
+                       <!-- Display Showcase items --> 
+                    </div>   
+                </div>
+        
+                <!-- Cart -->
+                <div class="basket">
+                    <div class="basket-title">
+                        <h3>Cart</h3>
+                        <div id="cart">
+                            <img src="img/shopping-cart-removebg-preview.png" alt="cart icon">
+                            <span id="cart_num">0</span>
+                        </div>
+                    </div>
+                    <div class="container2">
+                        <div class="basket-item">
+                            <!-- Display Cart Items -->
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                    <button id="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+                    <p style="margin-top: 10px;">
+                        <b style="color: white;" id="display-total">Total  :  Rs 00.00</b><br>
+                        <button id="checkout-btn" onclick="checkout()">Checkout</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+
+            <button class="editor-btn" onclick="window.open('student1.html', '_blank')">Page Editor</button>
+        
+        </div>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=61558004545546"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/aqualifesdg14/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/AquaLifesdg14"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="team.html">About Us</a></li>
+            </ul>
+        </footer>
+
+        <script src="js/shop.js"></script>
+</body>
+</html>

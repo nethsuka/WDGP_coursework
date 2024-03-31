@@ -335,4 +335,77 @@ footer .wave#wave4 {
         }
     }
 
+<<<<<<< HEAD
+    #head-label:hover {
+        color: #fff;
+    }
+
+    #head-label .close-btn,
+    .menu-btn {
+        display: none;
+    }
+
+    #head-label .menu-btn {
+        display: block;
+    }
+
+    #head-label .close-btn {
+        display: none;
+    }
+
+    header .logo {
+        position: relative;
+        /* color: #fff; */
+        background: none;
+    }
+
+    #check:checked~header .logo {
+        top: 0;
+        bottom: 0;
+        position: relative;
+        left: 75px;
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+
+    #check:checked~header .navbar {
+        z-index: 2;
+        position: fixed;
+        background: rgba(8, 104, 160, 0.81);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked~header .navbar a {
+        font-weight: 700;
+        margin-right: 0;
+        font-size: 20px;
+        letter-spacing: 2px;
+        color: #fff;
+        border-radius: 20px;
+        background-color: #000;
+        margin-bottom: 20px; /* Add margin between navbar items */
+        padding: 8px 20px; /* Adjust padding as needed */
+    }
+
+    #check:checked~header #head-label .menu-btn {
+        display: none;
+        top: 3px;
+    }
+
+    #check:checked~header #head-label .close-btn {
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
 }
+
+=======
+}
+>>>>>>> origin
