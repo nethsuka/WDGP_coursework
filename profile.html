@@ -315,7 +315,7 @@
                 <a href="home.html" class="active">Home</a>
                 <a href="gallery.html" class="active">Gallery</a>
                 <a href="shop.html" class="active">Shop</a>
-                <a href="profile.html" class="active">Profile</a>
+                <a href="profile.html" class="active-page">Profile</a>
                 <a href="team.html" class="active">About Us</a>
             </div>
             <label for="check" id="head-label">
@@ -338,7 +338,7 @@
             </div>
             <div class="btn-container">
                 <button class="btn back" onclick="previousQuestion()">Back</button>
-                <button class="btn next" onclick="nextQuestion()">Next</button>
+                <div class="c-btn"><button class="btn next" onclick="nextQuestion()">Next</button></div>
             </div>
             <div class="progress-bar">
                 <div class="progress" id="progress"></div>
@@ -431,15 +431,25 @@
             userResponses[currentQuestion] = inputValue;
 
             currentQuestion++;
-            if (currentQuestion < questions.length) {
+            if (currentQuestion <= questions.length) {
                 // Update question text
+
+                if(currentQuestion == 13){
+                    document.querySelector('.question').style.display = 'none'
+                    document.getElementById('questionLabel').style.display = 'none';
+                    document.getElementById('inputField').style.display = 'none';
+                    document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()" style="background-color:#8cc376;">Confirm Submit</button>'
+                }
+
                 document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
                 document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
                 document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
 
                 updateProgress();
                 updateProfileProgress(); // Update profile completion progress
-            } else {
+            } 
+            else {
+
                 // Handle completion
                 document.getElementById('quizCard').style.display = 'none'; // Hide quiz card
                 document.getElementById('profileDetails').style.display = 'block'; // Show profile details section
@@ -458,6 +468,10 @@
         function previousQuestion() {
             if (currentQuestion > 0) {
                 currentQuestion--;
+                document.querySelector('.question').style.display = 'block'
+                document.getElementById('questionLabel').style.display = 'block';
+                document.getElementById('inputField').style.display = 'block';
+                document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()">Next</button>';
                 document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
                 document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
                 document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
