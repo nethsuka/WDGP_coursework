@@ -16,7 +16,7 @@ p{
     margin: 0 40px 0 40px;
 }
 
-.sitemap, .content{
+#sitemap, #content{
     background-color: rgba(6, 17, 57, 0.975);
     margin-left: 0;
     margin-right: 30%;
@@ -25,11 +25,11 @@ p{
     padding-bottom: 20px;
 }
 
-.sitemap h2, .sitemap p, .sitemap p em, .content h2, .content p, .content p em{
-    color: rgb(225, 225, 174);
+#sitemap h2, #sitemap p, #content h2, #content p{
+    color: rgb(190, 217, 255);
 }
 
-.gallery, .editor{
+#gallery, #editor{
     background-color: rgba(0, 191, 255, 0.91);
     margin-left: 30%;
     margin-right: 0;
@@ -38,11 +38,23 @@ p{
     padding-bottom: 20px;
 }
 
+#sitemap:hover h2, #sitemap:hover p, #content:hover h2, #content:hover p{
+    color: rgb(255, 255, 255);
+}
+
+#gallery:hover h2, #gallery:hover p, #editor:hover h2, #editor:hover p{
+    color: white;
+}
+
 a{
     text-decoration: none;
 }
 
-.sitemap:hover ,.gallery:hover ,.content:hover, .editor:hover{
+#sitemap:hover, #content:hover{
+    background-color: rgb(0, 46, 115);
+}
+
+#gallery:hover, #editor:hover{
     background-color: rgb(35, 54, 116);
 }
 

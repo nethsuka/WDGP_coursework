@@ -21,7 +21,8 @@ var imageRelations = {
     "img/diving.jpeg",
   ],
 };
-// Open the Modal
+
+// Open the Modal view
 function openModalView(ele) {
   let captionText = ele.getAttribute("caption");
   let imgSrc = ele.getAttribute("src");
@@ -70,7 +71,7 @@ function openModalView(ele) {
   modal.appendChild(relatedImagesContainer);
 }
 
-// Close the Modal
+// Close the Modal view
 function closeModalView() {
   let modal = document.getElementById("myModal");
   modal.style.display = "none";

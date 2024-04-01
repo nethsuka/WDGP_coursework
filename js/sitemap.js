@@ -1,7 +1,7 @@
-// Get the color picker element
+// Get the color picker ele
 const colorPicker = document.getElementById('colorPicker');
         
-// Get all the rectangles
+// Get the rect
 const rectangles = document.querySelectorAll('rect');
 
 // Function to set the selected color in local storage
@@ -11,12 +11,12 @@ function setSelectedColor(color) {
 
 // Function to get the selected color from local storage
 function getSelectedColor() {
-    // Check if there's a selected color in local storage
-    // If not, return the default color
+// Check if there's a selected color in local storage
+// If not, return the default color
     return localStorage.getItem('selectedColor') || 'dodgerblue';
 }
 
-// Function to update the fill color of rectangles with the selected color
+// Function to update the fill color of rectangles
 function updateRectanglesColor(color) {
     rectangles.forEach(function(rectangle) {
         rectangle.setAttribute('fill', color);
@@ -39,12 +39,12 @@ colorPicker.addEventListener('input', function() {
 function initializeColorPickerAndRectangles() {
     const selectedColor = getSelectedColor();
 
-    // Set the color picker value to the selected color
+    // Set the color picker value
     colorPicker.value = selectedColor;
 
-    // Update the fill color of rectangles with the selected color
+    // Update the fill color of rectangles
     updateRectanglesColor(selectedColor);
 }
 
-// Initialize color picker and rectangles on page load
+// Initialize color picker and rectangles on loading
 initializeColorPickerAndRectangles();
