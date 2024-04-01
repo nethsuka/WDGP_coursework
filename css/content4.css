@@ -1,0 +1,92 @@
+#main {
+    width: fit-content;
+}
+
+#main #heading #topic{
+    color: rgba(11, 11, 76, 0.871);
+    margin-left: 10%;
+    font-size: 30px;
+}
+
+#topic1, #topic2, #topic3{
+    background-color: rgba(17, 53, 126, 0.76);
+    margin-left: 0%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right:5%;
+    font-size: 20px;
+    color: whitesmoke;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 5px;
+}
+
+.subtopics{
+    background-color: rgba(6, 29, 87, 0.596);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+}
+.subtopics p {
+    text-align: justify;
+    padding: 20px;
+    color: rgb(6, 107, 63);
+    background-color: rgb(149, 202, 241);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.subtopics p:hover {
+    color: rgb(22, 22, 114);
+}
+
+.subtopics h3 {
+    text-align: center;
+    color: azure;
+
+}
+
+#heading {
+    background-color: rgba(13, 133, 170, 0.798);
+}
+
+#heading h2 {
+    color: #fff;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px; /* Add margin if needed */
+}
+
+
+.images img {
+    width: 30%;
+    height: auto;
+    border-radius: 30px;
+    transition: transform 0.3s ease;
+}
+
+.images img:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width: 642px) {
+    .images img {
+        width: 300px;
+    }
+}
+
+@media(max-width: 573px) {
+    .images img {
+        width: 250px;
+    }
+}
+
+@media(max-width: 430px) {
+    .images img {
+        width: 200px;
+    }
+}
