@@ -155,7 +155,7 @@ function sendEmail() {
 
     formData.set('previewContent', previewContent);
 
-    fetch('https://formspree.io/f/xeqyrzwr', {
+    fetch('https://formspree.io/f/xpzvyojn', {
         method: 'POST',
         body: formData
     })
