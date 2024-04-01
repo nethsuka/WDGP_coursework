@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main {
+    margin: 0 15%;
+    display: grid;
+}
+
+#header h2 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #000000;
+    background-color: bisque;
+    background:20px;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+
+#content {
+    margin: 15 10%;
+    background-color: rgba(182, 183, 183, 0.626); 
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.topic-box {
+    background-color: #2d446c; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.797);
+    margin-bottom: 40px; 
+}
+
+.topic-box h2 {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-size: 32px; 
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.728);
+    letter-spacing: 2px; 
+    text-align: center; 
+}
+
+.content-box {
+    margin-bottom: 30px;
+    background-color: rgba(201, 201, 201, 0.803); 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.809);
+    transition: transform 0.3s ease;
+}
+
+.content-box:hover {
+    transform: translateY(-5px); 
+}
+
+#mid-box {
+    background-color: rgba(24, 228, 215, 0.767); 
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.main img {
+    max-width: 100%;
+    width:500px;
+    height:140px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+    
+}
+h3{
+    color: #0800a6;
+    text-decoration: underline;
+}
+
+
+
+#img1, #img3 {
+    float: left;
+    margin-right: 20px;
+    max-width: 200px;
+}
+
+#img2 {
+    float: right;
+    margin-left: 20px;
+    max-width: 200px;
+}
+
+#img1:hover, #img2:hover, #img3:hover {
+    transform: scale(1.05); 
+}
+
+p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .main {
+        margin: 0 5%;
+    }
+
+    #content {
+        margin: 0;
+    }
+
+    .content-box h3{
+        padding-top: 160px;
+    }
+
+}
