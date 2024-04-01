@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Editor</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/student2.css"> 
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <section>
+        <input type="checkbox" id="check">
+        <header>
+            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" height="35"></a></h2>
+
+            <div class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="#" class="active">Gallery</a>
+                <a href="shop.html" class="active">Shop</a>
+                <a href="#" class="active">Profile</a>
+                <a href="#" class="active">About Us</a>
+            </div>
+
+            
+            <label for="check" id="head-label">
+            <i class="fas fa-bars menu-btn"></i>
+            <i class="fas fa-times close-btn"></i>
+        </label>
+        </header>
+
+        <div class="main">
+            <div id="header"><h2>Page Editor : Jehan Fernando<br>Student 2</h2></div>
+            <div id="content">
+                <div id="img-box">
+                    <div><img src="img/jehan.jpg" alt="" height="250px" id="profile-img"></div>
+                    <div id="under-img-txt">
+                        <span class="description">Name   : Jehan Fernando</span><br>
+                        <span class="description">Role   : Student 2</span><br>
+                        <span class="description">IIT ID : 20230783</span><br>
+                        <span class="description">UoW ID : w2051768</span><br>
+                    </div>
+                </div>
+                <div id="box-container">
+                    <div class="page-block1">
+                        <h2>Home Page</h2>
+                        <p>
+                            Created the template, navigation bar, and home page.
+                            To ensure that every webpage has the same appearance, an external CSS style sheet
+                            was also created. Added the website's logo in the upper left corner.
+                            You can find the website mission by slightly scrolling through the homepage. 
+                            Four cards were made with links to each student's content page.
+                            Added two buttons: one for the sitemap and the other for the feedback form. 
+                            There is a page editor button in the footer.
+                            Once the user click on it from a particular page, it directs the user 
+                            to the respective Page editor of that student who 
+                            created that page.
+                        </p>
+
+                        <a href="home.html" class="goToPage-btn">
+                            <button>Go To Page >></button>
+                        </a>
+                        
+
+                    </div><br>
+                    <div class="page-block2">
+                        <h2>Feedback Form</h2>
+                        <p>
+                            The feedback form page was designed with an easy-to-use interface 
+                            that makes it simple for users to navigate and submit comments.<br>
+                            It consists of the following components:<br>
+                            1. Input fields<br>2. Validation<br>3. Error handling<br>4. Preview <br>5. Edit<br>6. Confirmation<br>
+                            Furthermore added required-fill input fields for users to provide their email address
+                            and name. Validated the email address using javascript. When users try to submit 
+                            the form with incomplete or inaccurate information, 
+                            they are met with clear error messages. Users can preview and edit 
+                            before submitting, if necessary. Upon successful submission, a confirmation message
+                             will appear.
+
+
+                        </p>
+
+                        <a href="feedback.html" class="goToPage-btn">
+                            <button>Go To Page >></button>
+                        </a>
+                    </div><br>
+                
+                    <div class="page-block3">
+                        <h2>Content page</h2>
+                        <p>
+                            Created the content page on the topic Importance of Oceans and Seas which comes under 
+                            Sustainable Development Goal 14.
+                            Included images to make the content page attractive. Discussed 3 subtopics
+                            and provided detailed description.
+
+                        </p>
+                        <a href="content2.html" class="goToPage-btn">
+                            <button>Go To Page >></button>
+                        </a>
+                    </div><br>
+                  
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        
+        </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </footer>
+
+</body>
+</html>
