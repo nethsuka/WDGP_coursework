@@ -72,21 +72,3 @@
 .images img:hover {
     transform: scale(1.1);
 }
-
-@media(max-width: 642px) {
-    .images img {
-        width: 300px;
-    }
-}
-
-@media(max-width: 573px) {
-    .images img {
-        width: 250px;
-    }
-}
-
-@media(max-width: 430px) {
-    .images img {
-        width: 200px;
-    }
-}
