@@ -165,12 +165,12 @@
     color:black;
     flex-wrap: wrap;
 }
-
 .content .info .mission:hover{
     transform: scale(1.1);
 }
 
 .content .info .additional-info:hover{
+    
     transform: scale(1.1);
 }
 .additional-info, .mission {
