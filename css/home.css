@@ -165,7 +165,6 @@
     color:black;
     flex-wrap: wrap;
 }
-
 .content .info .mission:hover{
     transform: scale(1.1);
 }
