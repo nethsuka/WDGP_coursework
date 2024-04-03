@@ -96,6 +96,7 @@ const displayPreview = () => {
     const question2 = opt2Yes.checked ? 'Yes' : 'No';
     const question3 = opt3Yes.checked ? 'Yes' : 'No';
     const message = improvement.value.trim();
+    const satisfaction = document.querySelector('[name="1-10"]:checked'); 
     const satis_level = satisfaction ? satisfaction.value.trim() : '';
     const receiveUpdates = updates.value.trim();
     const additionalQuestion = question.value.trim();
@@ -155,7 +156,7 @@ function sendEmail() {
 
     formData.set('previewContent', previewContent);
 
-    fetch('https://formspree.io/f/xeqyrzwr', {
+    fetch('https://formspree.io/f/xpzvyojn', {
         method: 'POST',
         body: formData
     })
