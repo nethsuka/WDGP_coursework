@@ -13,7 +13,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url(/img/home6.jpg);
+    background-image: url(../img/home6.jpg);
     background-size: cover;
     background-position: center;
     padding-bottom: 100px;
