@@ -170,6 +170,7 @@
 }
 
 .content .info .additional-info:hover{
+    
     transform: scale(1.1);
 }
 .additional-info, .mission {
