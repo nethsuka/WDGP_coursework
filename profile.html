@@ -109,7 +109,7 @@
 
     <script>
         let currentQuestion = 0;
-        let userResponses = []; // To store user's responses
+        let userResponses = [];
         const questions = [
             // Stage 1: Personal Information
             "First name:",
@@ -128,22 +128,29 @@
             "Mobile:",
             "Email:",
         ];
-        document.getElementById('editButton').style.display = 'none'; // Show edit button
-        document.getElementById('progress-bar-new').style.display = 'none'; // Show edit button
-
+        document.getElementById('editButton').style.display = 'none';
+        document.getElementById('progress-bar-new').style.display = 'none';
 
         function nextQuestion() {
-            const inputValue = document.getElementById('inputField').value.trim(); // Get the input value
+            const inputValue = document.getElementById('inputField').value.trim();
+
+            // Email validation regular expression
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
             // Store user's response
+            if (currentQuestion === 12 && inputValue !== '') { // If the current question is email and input is not empty
+                if (!emailRegex.test(inputValue)) {
+                    alert("Please enter a valid email address.");
+                    return; // Prevents further execution of the function if email is invalid
+                }
+            }
             userResponses[currentQuestion] = inputValue;
 
             currentQuestion++;
             if (currentQuestion <= questions.length) {
-            
-                // Update question text
 
-                if(currentQuestion == 13){
+                // Update question text
+                if (currentQuestion == 13) {
                     document.querySelector('.question').style.display = 'none'
                     document.getElementById('questionLabel').style.display = 'none';
                     document.getElementById('inputField').style.display = 'none';
@@ -151,36 +158,33 @@
                 }
 
                 document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
-                document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
-                document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
+                document.getElementById('questionLabel').textContent = questions[currentQuestion];
+                document.getElementById('inputField').value = userResponses[currentQuestion] || '';
 
                 updateProgress();
                 updateProfileProgress(); // Update profile completion progress
-            } 
+            }
             else {
 
                 // Handle completion
-                
-                
+
                 document.getElementById('quizCard').style.display = 'none'; // Hide quiz card
                 document.getElementById('profileDetails').style.display = 'block'; // Show profile details section
                 document.getElementById('profileOutput').style.display = 'none'; // Show profile output card
                 document.getElementById('editButton').style.display = 'block'; // Show edit button
                 document.getElementById('progress-bar-new').style.display = 'block'; // Show edit button
-                
+
                 // Display user's responses in profile output
                 setTimeout(function () {
-                    
+
                     alert('Thank you for submitting your information!');
                     displayProfileOutput();
-                updateProgress();
+                    updateProgress();
                 }, 100); // Adjust the delay time as needed
-
-
-
-
             }
         }
+
+
 
 
         function previousQuestion() {
@@ -191,10 +195,10 @@
                 document.getElementById('inputField').style.display = 'block';
                 document.querySelector('.c-btn').innerHTML = '<button class="btn next" onclick="nextQuestion()">Next</button>';
                 document.querySelector('.question').textContent = `Step ${Math.ceil((currentQuestion + 1) / 5)} - ${currentQuestion < 5 ? 'Personal Information' : (currentQuestion < 9 ? 'Qualifications' : 'Availability and contact info')}`;
-                document.getElementById('questionLabel').textContent = questions[currentQuestion]; // Update question label
-                document.getElementById('inputField').value = userResponses[currentQuestion] || ''; // Set input value to previous response if available
+                document.getElementById('questionLabel').textContent = questions[currentQuestion];
+                document.getElementById('inputField').value = userResponses[currentQuestion] || '';
                 updateProgress();
-                updateProfileProgress(); // Update profile completion progress
+                updateProfileProgress();
             }
         }
 
@@ -213,61 +217,61 @@
         }
 
         function updateLiveProfile() {
-            const inputValue = document.getElementById('inputField').value.trim(); // Get the input value
+            const inputValue = document.getElementById('inputField').value.trim();
             const liveProfile = document.getElementById('liveProfile');
-            liveProfile.innerHTML = ''; // Clear previous live output
+            liveProfile.innerHTML = '';
             for (let i = 0; i < currentQuestion; i++) {
                 liveProfile.innerHTML += `<p>${questions[i]} ${userResponses[i] || 'not entered'}</p>`;
             }
             if (inputValue !== '') {
-                liveProfile.innerHTML += `<p>${questions[currentQuestion]} ${inputValue}</p>`; // Display current question's input value
+                liveProfile.innerHTML += `<p>${questions[currentQuestion]} ${inputValue}</p>`;
             }
         }
 
         function displayProfileOutput() {
             const profileInfo = document.getElementById('profileInfo');
-            profileInfo.innerHTML = ''; // Clear previous profile output
+            profileInfo.innerHTML = '';
             for (let i = 0; i < questions.length; i++) {
                 profileInfo.innerHTML += `<p>${questions[i]} ${userResponses[i] || 'not entered'}</p>`;
                 if (i === 4) {
-                    profileInfo.innerHTML += '<hr>'; // Add horizontal line after Address
+                    profileInfo.innerHTML += '<hr>';
                 }
                 if (i === 8) {
-                    profileInfo.innerHTML += '<hr>'; // Add horizontal line after Task 4
+                    profileInfo.innerHTML += '<hr>';
                 }
             }
 
             const liveProfile = document.getElementById('liveProfile');
-            liveProfile.innerHTML = ''; // Clear previous live output
+            liveProfile.innerHTML = '';
             for (let i = 0; i < questions.length; i++) {
                 liveProfile.innerHTML += `<p>${questions[i]} ${userResponses[i] || 'not entered'}</p>`;
                 if (i === 4) {
-                    liveProfile.innerHTML += '<hr>'; // Add horizontal line after Address
+                    liveProfile.innerHTML += '<hr>';
                 }
                 if (i === 8) {
-                    liveProfile.innerHTML += '<hr>'; // Add horizontal line after Task 4
+                    liveProfile.innerHTML += '<hr>';
                 }
             }
         }
 
         function editProfile() {
-            const allQuestionsAnswered = userResponses.every(response => response !== ''); // Check if all questions are answered
+            const allQuestionsAnswered = userResponses.every(response => response !== '');
 
-            document.getElementById('profileDetails').style.display = 'none'; // Hide profile details section
-            document.getElementById('quizCard').style.display = 'block'; // Show quiz card
-            document.getElementById('editButton').style.display = allQuestionsAnswered ? 'block' : 'none'; // Show or hide edit button based on whether all questions are answered
-            document.getElementById('profileOutput').style.display = 'block'; // Show profile output card
+            document.getElementById('profileDetails').style.display = 'none';
+            document.getElementById('quizCard').style.display = 'block';
+            document.getElementById('editButton').style.display = allQuestionsAnswered ? 'block' : 'none';
+            document.getElementById('profileOutput').style.display = 'block';
             document.getElementById('progress-bar-new').style.display = 'none';
-            currentQuestion = 12; // Reset current question index
-            updateProgress(); // Update progress bar
-            updateProfileProgress(); // Update profile completion progress
+            currentQuestion = 12;
+            updateProgress();
+            updateProfileProgress();
 
         }
 
         document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById('quizCard').style.display = 'block'; // Make the quiz card visible
-            updateProgress(); // Update progress bar initially
-            updateProfileProgress(); // Update profile completion progrexss initially
+            document.getElementById('quizCard').style.display = 'block';
+            updateProgress();
+            updateProfileProgress();
         });
     </script>
 </body>

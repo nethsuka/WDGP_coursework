@@ -2,17 +2,21 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>General page</title>
+    <!-- Page title -->
+    <title>About Us page</title>
+    <!-- External CSS files -->
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/team.css">
+    <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- JavaScript for navbar functionality -->
     <script>
-
         //Making navbar buttons active
-
         function toggleActive(element) {
             // Remove 'active' class from all navbar items
             document.querySelectorAll('.navbar a').forEach(function (navItem) {
@@ -22,46 +26,48 @@
             // Add 'active' class to the clicked navbar item
             element.classList.add('active');
         }
-
     </script>
 </head>
 
 <body>
     <section>
+       
         <input type="checkbox" id="check">
+     
         <header>
+            <!-- Logo -->
             <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo"
                         height="35"></a></h2>
+            <!-- Navbar -->
             <div class="navbar">
+            
                 <a href="home.html" class="active">Home</a>
                 <a href="gallery.html" class="active">Gallery</a>
                 <a href="shop.html" class="active">Shop</a>
                 <a href="profile.html" class="active">Profile</a>
                 <a href="team.html" class="active-page">About Us</a>
             </div>
+          
             <label for="check" id="head-label">
                 <i class="fas fa-bars menu-btn"></i>
                 <i class="fas fa-times close-btn"></i>
             </label>
         </header>
 
+        <!-- Page title -->
         <div class="header-container">
             <h1>Our Team</h1>
         </div>
 
+     
         <div class="team-container">
 
+            <!-- Team member 1 -->
             <div class="team-member">
-                <a href="student3.html">
-
-
-
+                <a href="student1.html">
                     <img src="img/teamMembers/S1.jpg" alt="Member 1">
-
                     <div class="pageEditorText">
-
                         <h3>Open Page Editor</h3>
-
                     </div>
                     <div class="details">
                         <h3>Sanuja Nethsuka</h3>
@@ -70,13 +76,11 @@
                         <p>Tasks: Splash Screen, Shop</p>
                     </div>
                 </a>
-
             </div>
 
+            <!-- Team member 2 -->
             <div class="team-member">
-                <a href="student3.html">
-
-
+                <a href="student2.html">
                     <img src="img/teamMembers/S2.jpg" alt="Member 2">
                     <div class="pageEditorText">
                         <h3>Open Page Editor</h3>
@@ -88,9 +92,9 @@
                         <p>Tasks: Home Page + template + nav, Feedback</p>
                     </div>
                 </a>
-
-
             </div>
+
+            <!-- Team member 3 -->
             <div class="team-member">
                 <a href="student3.html">
                     <img src="img/teamMembers/S3.jpg" alt="Member 3">
@@ -105,8 +109,10 @@
                     </div>
                 </a>
             </div>
+
+            <!-- Team member 4 -->
             <div class="team-member">
-                <a href="student3.html">
+                <a href="student4.html">
                     <img src="img/teamMembers/S4.jpg" alt="Member 4">
                     <div class="pageEditorText">
                         <h3>Open Page Editor</h3>
@@ -120,27 +126,29 @@
                 </a>
             </div>
         </div>
-
-
-
     </section>
 
+    <!-- Footer section -->
     <footer>
+       
         <div class="waves">
             <div class="wave" id="wave1"></div>
             <div class="wave" id="wave2"></div>
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
 
+            <!-- Button to open page editor -->
             <button class="editor-btn" onclick="window.open('student3.html', '_blank')">Page Editor</button>
-
         </div>
+
+        <!-- Social media icons -->
         <div class="social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
 
+        <!-- Footer menu -->
         <ul class="menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
@@ -149,8 +157,6 @@
             <li><a href="team.html">About Us</a></li>
         </ul>
     </footer>
-
-
 
 </body>
 
