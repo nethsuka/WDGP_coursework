@@ -139,3 +139,18 @@
         transform: scale(1);
     }
 }
+
+@keyframes drop {
+    0% {
+        transform: translateY(-50px); /* Initial position top */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Final position at original position */
+        opacity: 1; 
+    }
+}
+
+#topic {
+    animation: drop 0.5s ease-out forwards;
+}
