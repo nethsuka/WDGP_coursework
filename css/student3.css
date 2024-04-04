@@ -476,10 +476,13 @@ footer .wave#wave4 {
 }
 
 .profile-details {
-    color: #333; /* Text color */
+    color: white; /* Text color */
     font-size: 16px; /* Font size */
     line-height: 1.5; /* Line height */
     margin-top: 10px; /* Top margin */
+    background-color: #ff00ea68;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
