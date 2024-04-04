@@ -2,62 +2,110 @@
 <html lang="en">
 
 <head>
+    <!-- Meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content page</title>
-    <link rel="stylesheet" href="css/general.css">
-    <link rel="stylesheet" href="css/student3.css">
+    <!-- Title -->
+    <title>Editor | Janindu</title>
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/student3.css"> <!-- New CSS for layout -->
+    <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
     <section>
+       
         <input type="checkbox" id="check">
         <header>
-            <h2><a href="#" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" height="35"></a>
-            </h2>
-
+            <!-- Logo -->
+            <h2><a href="home.html" class="logo"><img src="img/aqua-life-logo-white-transparent.png" alt="logo" height="35"></a></h2>
+            <!-- Navbar -->
             <div class="navbar">
+                <!-- Navigation links -->
                 <a href="home.html" class="active">Home</a>
                 <a href="gallery.html" class="active">Gallery</a>
                 <a href="shop.html" class="active">Shop</a>
                 <a href="profile.html" class="active">Profile</a>
                 <a href="team.html" class="active">About Us</a>
             </div>
-
-
             <label for="check" id="head-label">
                 <i class="fas fa-bars menu-btn"></i>
                 <i class="fas fa-times close-btn"></i>
             </label>
         </header>
 
+        <!-- Main content section -->
+        <div class="main-content">
+            <div class="header-text">
+                <h2>Janindu's Editor Page</h2>
+            </div>
+            <div class="content-section">
+                <!-- Profile section -->
+                <div class="profile-section">
+                    <img src="Img/teamMembers/S3.jpg" alt="profile_img" height="250">
+                    <div class="profile-details">
+                        <span>Name: Janindu Weerakkody</span><br>
+                        <span>Role: Student 3</span><br>
+                        <span>IIT ID: 20230797</span><br>
+                        <span>UoW ID: w2051782</span><br>
+                    </div>
+                </div>
+                <!-- Box container for page blocks -->
+                <div class="box-container">
+                    <!-- Page block 1 -->
+                    <div class="page-block">
+                        <h2>User Profile</h2>
+                        <p>I was responsible for developing the user profile page, which includes prompts to collect user information and a progressive display of user output. I ensured users have control over the information they provide and can customize the colour scheme and font within the extended view for enhanced personalization.</p>
+                        <button class="goToPage-btn" onclick="document.location='profile.html'">Go To Page >></button>
+                    </div>
+                    <!-- Page block 2 -->
+                    <div class="page-block">
+                        <h2>About Us</h2>
+                        <p> I created a team page to showcase the members who contributed to our website's development. The page includes interactive thumbnails with extended details of team members, such as their name, role, and tasks they were responsible for.</p>
+                        <button class="goToPage-btn" onclick="document.location='team.html'">Go To Page >></button>
+                    </div>
+                    <!-- Page block 3 -->
+                    <div class="page-block">
+                        <h2>Content page</h2>
+                        <p>I collaborated with my team members to create engaging content related to our website's theme. My content page is focused on "Conservation of Marine Biodiversity," providing valuable information and contributing to the overall user experience.</p>
+                        <button class="goToPage-btn" onclick="document.location='content3.html'">Go To Page >></button>
+                    </div>
+                    <!-- Page block 4 -->
+                    <div class="page-block">
+                        <h2>Editor Page</h2>
+                        <p>I developed a personalized page editor, where I can list the tasks I completed and showcase my contributions to the group project. This page is designed to be an external page, separate from our main website, allowing for creativity and individual initiative.</p>
+                        <button class="goToPage-btn" onclick="document.location='student3.html'">Go To Page >></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-
+    <!-- Footer -->
     <footer>
         <div class="waves">
             <div class="wave" id="wave1"></div>
             <div class="wave" id="wave2"></div>
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
-
             <button class="editor-btn" onclick="window.open('student3.html', '_blank')">Page Editor</button>
-
         </div>
+        <!-- Social media icons -->
         <div class="social">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61558004545546"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/aqualifesdg14/"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/AquaLifesdg14"><i class="fab fa-twitter"></i></a>
         </div>
-
+        <!-- Footer menu -->
         <ul class="menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="profile.html">Profile</a></li>
-            <li><a href="team.html">About Us</a></li>
+            <li><a href="team.html">Abouxt Us</a></li>
         </ul>
     </footer>
 
