@@ -10,7 +10,6 @@ const opt2No = document.getElementById('opt2No');
 
 const opt3No = document.getElementById('opt3No');
 const opt3Yes = document.getElementById('opt3Yes');
-
 const improvement = document.getElementById('text1');
 
 const satisfaction = document.querySelector('[name="1-10"]:checked');
