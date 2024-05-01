@@ -173,6 +173,7 @@ function sendEmail() {
     });
 }
 
+
 function generatePlainTextPreview() {
     const name = username.value.trim();
     const emailValue = email.value.trim();
